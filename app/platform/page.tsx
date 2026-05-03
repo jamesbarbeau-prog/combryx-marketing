@@ -82,7 +82,7 @@ export default function PlatformPage() {
 
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-8 py-20">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.24em] text-cb-gold mb-6 flex items-center gap-3">
-            <span className="w-10 h-px bg-cb-gold opacity-50"/>Combryx Platform · Full Lifecycle · Every Asset Type<span className="w-10 h-px bg-cb-gold opacity-50"/>
+            <span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>Combryx Platform · Full Lifecycle · Every Asset Type<span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(32px,6vw,88px)] leading-[1.05] tracking-[0.04em] text-cb-white mb-5 max-w-5xl">
             <span className="block text-[0.55em] font-body font-light text-cb-muted tracking-wider mb-3">From the land deal to the 7-year warranty.</span>
@@ -99,8 +99,8 @@ export default function PlatformPage() {
             ))}
           </div>
           <div className="animate-fade-up anim-d4 flex gap-3 justify-center flex-wrap">
-            <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 hover:-translate-y-0.5 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>See Pricing & Modules →</Link>
-            <Link href="#sectors" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">Explore by Sector ↓</Link>
+            <Link href="/pricing" className="btn-gold">See Pricing & Modules →</Link>
+            <Link href="#sectors" className="btn-ghost">Explore by Sector ↓</Link>
           </div>
         </div>
 
@@ -129,7 +129,7 @@ export default function PlatformPage() {
       <section id="sectors" className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>By Sector</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>By Sector</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Built for your<br/><span className="text-cb-gold">specific operation.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">You&apos;re not a &ldquo;construction company.&rdquo; You&apos;re a low-rise track builder, a mixed-use developer, a rental portfolio owner. Combryx is built around those distinctions.</p>
           </ScrollReveal>
@@ -142,7 +142,7 @@ export default function PlatformPage() {
       <section id="ai" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>The Intelligence Layer</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Intelligence Layer</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">AI that actually<br/><span className="text-cb-gold">understands construction.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Purpose-built automation agents trained on Ontario warranty law, construction finance, and property management operations. Every AI action is logged, auditable, and overridable.</p>
           </ScrollReveal>
@@ -167,7 +167,7 @@ export default function PlatformPage() {
       <section id="connected" className="bg-black py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="text-center mb-14">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>One System</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>One System</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">One operator. <span className="text-cb-gold">Multiple asset types.</span><br/>Zero system switching.</h2>
             <p className="text-cb-muted text-base max-w-xl mx-auto">A developer who builds low-rise communities, operates a rental portfolio, manages several condo corps, and acquires new land — all of that lives in one Combryx account.</p>
           </ScrollReveal>
@@ -221,10 +221,10 @@ export default function PlatformPage() {
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">FROM<br/><span className="text-cb-gold">LAND DEAL</span><br/>TO YEAR SEVEN.</h2>
             <p className="text-cb-muted text-base leading-relaxed mb-10">35+ years in the trade. One founder who worked inside Tarion and five Ontario builders. Every gap documented. Every workflow built from experience.</p>
             <div className="flex gap-3 justify-center flex-wrap">
-              <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 hover:-translate-y-0.5 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+              <Link href="/pricing" className="btn-gold">
                 Start with Warranty Core →
               </Link>
-              <Link href="mailto:demo@combryx.com" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">
+              <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a Demo
               </Link>
             </div>

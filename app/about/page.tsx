@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 pb-20 grid md:grid-cols-2 gap-16 items-end">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-5 flex items-center gap-3">
-              <span className="w-8 h-px bg-cb-gold opacity-60"/>Founded on the job site. Forged in the warranty room.
+              <span style={{ display:"inline-block", width:32, height:1, background:"#FFB800", opacity:0.6 }}/>Founded on the job site. Forged in the warranty room.
             </div>
             <h1 className="font-display text-[clamp(56px,8vw,100px)] leading-[0.93] tracking-[0.04em] text-cb-white mb-6">
               BUILT BY<br/>THE <span className="text-cb-gold">TRADE.</span><br/>FOR THE<br/>TRADE.
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
-              <span className="w-5 h-px bg-cb-gold opacity-60"/>The Journey
+              <span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Journey
             </div>
             <h2 className="font-display text-[clamp(32px,4vw,52px)] tracking-[0.04em] text-cb-white">From carpenter to<br/><span className="text-cb-gold">construction software</span> founder.</h2>
           </ScrollReveal>
@@ -146,7 +146,7 @@ export default function AboutPage() {
               <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
                 Start with Warranty Core →
               </Link>
-              <Link href="mailto:demo@combryx.com" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">
+              <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a Demo
               </Link>
             </div>

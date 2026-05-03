@@ -68,20 +68,20 @@ export default function HomePage() {
             <strong className="text-cb-white font-semibold">Built by a carpenter who worked inside Tarion — and inside five Ontario builders.</strong> Every feature exists because of a real gap found on a real job site. Buy what you need. Add modules as you grow.
           </p>
 
-          <div className="animate-fade-up anim-d3 flex gap-3 flex-wrap mb-16">
-            <Link href="/pricing" className="inline-flex items-center gap-2 bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md transition-all hover:bg-cb-gold2 hover:-translate-y-0.5 no-underline" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+          <div className="animate-fade-up anim-d3" style={{ display:'flex', gap:12, flexWrap:'wrap', marginBottom:64 }}>
+            <Link href="/pricing" className="btn-gold">
               Start with Warranty Core →
             </Link>
-            <Link href="/platform" className="inline-flex items-center gap-2 bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] transition-all hover:border-[rgba(255,255,255,0.3)] hover:text-cb-white no-underline">
+            <Link href="/platform" className="btn-ghost">
               View All Modules
             </Link>
           </div>
 
-          <div className="animate-fade-up anim-d4 flex gap-10 flex-wrap border-t border-[rgba(255,255,255,0.06)] pt-8 w-full">
+          <div className="animate-fade-up anim-d4" style={{ display:'flex', gap:40, flexWrap:'wrap', borderTop:'1px solid rgba(255,255,255,0.06)', paddingTop:32, width:'100%' }}>
             {[['100%','Tarion Form Compatible'],['6','Modular Add-ons'],['$0','Setup Fee'],['APK','Android Field App'],['35+','Years in the Trade']].map(([n,l]) => (
               <div key={l}>
-                <div className="font-display text-3xl tracking-[0.04em] text-cb-gold leading-none mb-1">{n}</div>
-                <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-cb-dim">{l}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:30, letterSpacing:'0.04em', color:'#FFB800', lineHeight:1, marginBottom:4 }}>{n}</div>
+                <div style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444444' }}>{l}</div>
               </div>
             ))}
           </div>
@@ -298,11 +298,11 @@ export default function HomePage() {
               BUILT FROM<br/>THE <span className="text-cb-gold">INSIDE.</span>
             </h2>
             <p className="text-cb-muted text-base leading-relaxed mb-10">Five builders. One warranty authority. Every gap documented and eliminated. Start with Warranty Core — running on day one, no setup fee, no locked contract.</p>
-            <div className="flex gap-3 justify-center flex-wrap mb-10">
-              <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline transition-all hover:bg-cb-gold2 hover:-translate-y-0.5" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+            <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginBottom:40 }}>
+              <Link href="/pricing" className="btn-gold">
                 Start Free Trial — Warranty Core
               </Link>
-              <Link href="mailto:demo@combryx.com" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:border-[rgba(255,255,255,0.3)] hover:text-cb-white transition-all">
+              <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo
               </Link>
             </div>

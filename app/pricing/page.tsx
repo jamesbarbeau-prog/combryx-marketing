@@ -38,7 +38,7 @@ export default function PricingPage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.06) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-5 flex items-center justify-center gap-3">
-            <span className="w-8 h-px bg-cb-gold opacity-60"/>Simple Pricing
+            <span style={{ display:"inline-block", width:32, height:1, background:"#FFB800", opacity:0.6 }}/>Simple Pricing
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(48px,7vw,88px)] leading-[0.95] tracking-[0.04em] text-cb-white mb-5">
             NO SETUP FEES.<br/>NO LOCKED CONTRACTS.<br/><span className="text-cb-gold">NO SURPRISES.</span>
@@ -81,7 +81,17 @@ export default function PricingPage() {
                   ))}
                 </div>
                 <Link href={`/success?plan=${p.plan}`}
-                  className={`block text-center font-mono text-[11px] font-semibold uppercase tracking-widest py-4 rounded-lg transition-all no-underline ${p.featured ? 'bg-cb-gold text-black hover:bg-cb-gold2 shadow-gold' : 'bg-cb-dark3 text-cb-gold border border-[rgba(255,184,0,0.3)] hover:bg-cb-gold hover:text-black'}`}>
+                  className={p.featured ? 'btn-gold' : ''}
+                  style={p.featured ? { display:'block', textAlign:'center' } : {
+                    display:'block', textAlign:'center',
+                    fontFamily:"'Fira Code',monospace", fontSize:11,
+                    fontWeight:600, letterSpacing:'0.1em',
+                    textTransform:'uppercase', padding:'16px',
+                    borderRadius:8, textDecoration:'none',
+                    background:'#1a1a1a', color:'#FFB800',
+                    border:'1px solid rgba(255,184,0,0.3)',
+                    transition:'all 0.2s',
+                  }}>
                   {p.cta} →
                 </Link>
               </ScrollReveal>
@@ -101,7 +111,7 @@ export default function PricingPage() {
       <section className="bg-black py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-14">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>How We Do Business</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>How We Do Business</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">We don&apos;t hold your data hostage.<br/>We don&apos;t lock you in.<br/><span className="text-cb-gold">We just have to be better every month.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Most software companies make leaving painful on purpose. That&apos;s not a business model — it&apos;s a trap. Combryx works differently. If we&apos;re not earning your subscription every month, you should leave. We think that pressure makes us build a better product.</p>
           </ScrollReveal>
@@ -151,10 +161,10 @@ export default function PricingPage() {
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-5">READY TO<br/><span className="text-cb-gold">START?</span></h2>
             <p className="text-cb-muted text-base mb-8">Start with Warranty Core. Running in two hours. $0 setup. Cancel anytime.</p>
             <div className="flex gap-3 justify-center flex-wrap mb-6">
-              <Link href="/success?plan=warranty" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 hover:-translate-y-0.5 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+              <Link href="/success?plan=warranty" className="btn-gold">
                 Start Warranty Core →
               </Link>
-              <Link href="mailto:demo@combryx.com" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">
+              <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo
               </Link>
             </div>

@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.06) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 py-20 text-center">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-7 flex items-center justify-center gap-3">
-            <span className="w-10 h-px bg-cb-gold opacity-50"/>Combryx · How It Works · Ontario Builders<span className="w-10 h-px bg-cb-gold opacity-50"/>
+            <span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>Combryx · How It Works · Ontario Builders<span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(56px,9vw,120px)] leading-[0.93] tracking-[0.04em] text-cb-white mb-6">
             TRADE<br/><span className="text-cb-gold text-glow-gold">LOGIC.</span><br/>MODERN<br/><span className="opacity-25">SYSTEM.</span>
@@ -54,10 +54,10 @@ export default function HowItWorksPage() {
             <strong className="text-cb-white font-semibold">Built by a carpenter who worked for Tarion and five Ontario builders.</strong> Every feature exists because of a real problem found on a real job site.
           </p>
           <div className="animate-fade-up anim-d3 flex gap-3 justify-center flex-wrap mb-16">
-            <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 hover:-translate-y-0.5 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+            <Link href="/pricing" className="btn-gold">
               Start with Warranty Core →
             </Link>
-            <Link href="#workflow" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">
+            <Link href="#workflow" className="btn-ghost">
               See How It Works ↓
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function HowItWorksPage() {
       <section className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>The Problem</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Problem</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Six reasons every Ontario<br/>builder needs a <span className="text-cb-gold">better system.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Documented across five real Ontario builders — in person, at the management level — before a single line of Combryx was written.</p>
           </ScrollReveal>
@@ -97,7 +97,7 @@ export default function HowItWorksPage() {
       <section className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>Before vs. After</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>Before vs. After</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,56px)] tracking-[0.04em] text-cb-white leading-[1.02]">What changes on <span className="text-cb-gold">day one.</span></h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-4">
@@ -133,7 +133,7 @@ export default function HowItWorksPage() {
       <section id="workflow" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>The Daily Flow</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Daily Flow</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,56px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">A day in the life.<br/><span className="text-cb-gold">Your operation, connected.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">No phone tag. No missing photos. No paper trail that disappears.</p>
           </ScrollReveal>
@@ -166,7 +166,7 @@ export default function HowItWorksPage() {
       <section id="features" className="bg-black py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span className="w-5 h-px bg-cb-gold opacity-60"/>What You Get</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>What You Get</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Six capabilities.<br/>One <span className="text-cb-gold">connected system.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Each capability solves a real problem found inside real Ontario builders. Not features invented in a boardroom.</p>
           </ScrollReveal>
@@ -197,10 +197,10 @@ export default function HowItWorksPage() {
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">JOIN<br/>THE <span className="text-cb-gold">HIVE.</span></h2>
             <p className="text-cb-muted text-base mb-8">Start with Warranty Core. Running in two hours. Cancel the month you decide it&apos;s not worth it. All your data comes with you — free, always.</p>
             <div className="flex gap-3 justify-center flex-wrap">
-              <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 hover:-translate-y-0.5 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
+              <Link href="/pricing" className="btn-gold">
                 Start Warranty Core — $149/mo →
               </Link>
-              <Link href="mailto:demo@combryx.com" className="inline-flex bg-transparent text-cb-muted font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md border border-[rgba(255,255,255,0.12)] no-underline hover:text-cb-white hover:border-[rgba(255,255,255,0.3)] transition-all">
+              <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo
               </Link>
             </div>

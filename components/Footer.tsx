@@ -12,12 +12,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-[rgba(255,255,255,0.05)]">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-7 h-7 bg-cb-gold flex items-center justify-center relative"
-                style={{ clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)' }}>
-                <span className="text-black text-[10px] font-bold absolute">✦</span>
+            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+              <div style={{ width:28, height:28, background:'#FFB800', clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)', display:'flex', alignItems:'center', justifyContent:'center', position:'relative' }}>
+                <span style={{ color:'#000', fontSize:10, fontWeight:'bold', position:'absolute' }}>✦</span>
               </div>
-              <span className="font-display text-lg tracking-widest text-cb-white">COM<span className="text-cb-gold">BRYX</span></span>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:'0.1em', color:'#F5F5F5' }}>COM<span style={{ color:'#FFB800' }}>BRYX</span></span>
             </div>
             <p className="text-cb-muted text-sm leading-relaxed mb-4">
               Modular construction ERP built for Ontario homebuilders. Tarion-compliant. Built by the trade, for the trade.
@@ -29,7 +28,7 @@ export default function Footer() {
               <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-cb-dim mb-4">{col.title}</div>
               <div className="flex flex-col gap-2.5">
                 {col.links.map(([label, href]) => (
-                  <Link key={label} href={href} className="text-cb-muted text-sm no-underline hover:text-cb-gold transition-colors duration-150">{label}</Link>
+                  <Link key={label} href={href} style={{ color:"#888888", fontSize:14, textDecoration:"none" }}>{label}</Link>
                 ))}
               </div>
             </div>
