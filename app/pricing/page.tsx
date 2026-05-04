@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const plans = [
   { tag:'Entry — Small Builders', name:'Warranty Core', price:'$149', period:'per community / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet on day one.',
     color:'#FFB800', featured:false, plan:'warranty', cta:'Start Warranty Core',
-    items:['Full warranty case management','Tarion 30-day, 1yr, 2yr, MSD deadline tracking','Work order scheduling + tech assignment','PDI digital sign-off + PDF generation','Defence Vault + conciliation prep export','AI triage + OBC/CPG answers (Lex Structura)','Field app — tech, PDI, assessment modes','Tarion XML import · Unlimited users · Unlimited cases'],
+    items:['Full warranty case management','Tarion CSS form schedule — Day 41, 183 & 366 auto-submissions','Work order scheduling + tech assignment','PDI digital sign-off + PDF generation','Defence Vault + conciliation prep export','AI triage + OBC/CPG answers (Lex Structura)','Field app — tech, PDI, assessment modes','Tarion XML import · Unlimited users · Unlimited cases'],
     addons:['Financial Ledger — add for $79/community/mo','Build Ops — add for $79/community/mo'] },
   { tag:'Most Popular — Growing Teams', name:'Builder Suite', price:'$349', period:'per community / month · 4 modules', tagline:'Construction lifecycle from phase gate to lender draw — connected.',
     color:'#FFB800', featured:true, plan:'builder', cta:'Start Builder Suite',

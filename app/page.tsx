@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 const modules = [
-  { letter:'E', color:'#FFB800', badge:'Base — Always Included', name:'Warranty & Asset Management', desc:'Complete Tarion-compliant warranty case management. PDI sign-off, work orders, scheduling, AI triage, and the Defence Vault — the only conciliation-ready audit package in Canadian builder software.', features:['Tarion 30-day, 1-year, 2-year & 7-year MSD deadline tracking','PDI digital sign-off with homeowner signature + PDF','Defence Vault — Tarion conciliation-ready export','AI triage classifies cases and drafts responses','Lex Structura — OBC Part 9 and CPG regulatory answers'], field:'Tech mode · PDI mode · Assessment mode' },
+  { letter:'E', color:'#FFB800', badge:'Base — Always Included', name:'Warranty & Asset Management', desc:'Complete Tarion-compliant warranty case management. PDI sign-off, work orders, scheduling, AI triage, and the Defence Vault — the only conciliation-ready audit package in Canadian builder software.', features:['Tarion CSS form schedule tracking (Day 41, 183, 366 auto-submissions)','PDI digital sign-off with homeowner signature + PDF','Defence Vault — Tarion conciliation-ready export','AI triage classifies cases and drafts responses','Lex Structura — OBC Part 9 and CPG regulatory answers'], field:'Tech mode · PDI mode · Assessment mode' },
   { letter:'B', color:'#06b6d4', badge:'Add-on Module', name:'Financial Ledger', desc:'Job costing, PO management, invoice OCR, and lender draw packages — all connected to your warranty and construction data.', features:['Real-time job costing by community and cost code','Invoice OCR — AI extracts, matches to POs automatically','Lender draw packages auto-assembled on phase sign-off','CapEx vs OpEx auto-classification','Budget vs actual alerts at 80% and 95%'], field:'Material orders · Budget visibility' },
   { letter:'C', color:'#3b82f6', badge:'Add-on Module', name:'Build & Field Ops', desc:'CPM scheduling, phase gate management, and sub-trade sign-offs from the field. When a super signs off a phase on site, the draw request assembles itself in the office.', features:['Dynamic CPM Gantt — drag to reschedule, cascade updates','Phase gate sign-off from field app — photo required','Sub-trade digital sign-off via shareable link (no install needed)','Material order requests → PM approval queue','Safety observation log with escalation'], field:'Phase sign-off · Safety · Orders' },
   { letter:'D', color:'#a855f7', badge:'Add-on Module', name:'Sales, Leasing & Storage', desc:'APS generation, design studio, locker/parking assignment — and the Smart Handover. When a unit is sold, automated cascades fire across every connected module.', features:['APS generation with e-signature (DocuSign / Dropbox Sign)','Design studio — buyers select finishes via their portal','Visual site plan — units colour-coded by status','Locker + parking auto-assign by proximity algorithm','Smart Handover: unit sold cascade fires automatically'], field:'Sales pipeline visibility' },
@@ -20,8 +20,8 @@ const modules = [
 ]
 
 const tarionItems = [
-  { n:'30', label:'Day Window', sub:'Statutory warranty', desc:'Tracked to the minute from PDI sign-off. Every deficiency captured, timestamped, and categorized automatically.' },
-  { n:'1', label:'Year Distribution', sub:'OBC violations · Structural', desc:'BRP deadline tracked with alerts at 30, 14, and 7 days. All outstanding items queued for review.' },
+  { n:'41', label:'Initial Form (Day 41)', sub:'Auto-submits Day 41 · BRP: 120 days', desc:'CPP / PDI signature starts the Tarion clock. Homeowner adds deficiencies Days 1–40. Form auto-submits Day 41 — no manual filing required. Builder gets 120-day BRP, with a 30-day pre-conciliation BRP if RFC is requested, for up to 150 days total.' },
+  { n:'1', label:'Year — Initial & Mid-Year Forms', sub:'OBC violations · Structural · BRP 120+30 days', desc:'Initial form auto-submits Day 41. Builder gets 120-day BRP, then a 30-day pre-conciliation BRP if the homeowner requests conciliation — 150 days total. Combryx tracks both periods and the homeowner RFC status.' },
   { n:'2', label:'Year Distribution', sub:'Water · MEP systems', desc:'Water penetration, electrical, plumbing, heating. Full case history per period per lot.' },
   { n:'7', label:'Year MSD', sub:'Major Structural Defects', desc:'Highest-risk window. Lex Structura flags RFC risk cases with OBC structural citations attached.' },
 ]
@@ -174,7 +174,7 @@ export default function HomePage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
               <span className="w-5 h-px bg-cb-gold opacity-60"/>Tarion &amp; ONHWPA Compliance
             </div>
-            <h2 className="font-display text-[clamp(36px,5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">The only system built<br/>around how <span className="text-cb-gold">Tarion actually works.</span></h2>
+            <h2 className="font-display text-[clamp(36px,5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">The only system that knows<br/>how <span className="text-cb-gold">the new CSS actually works.</span></h2>
             <p className="text-cb-muted text-base leading-relaxed max-w-xl mb-12">We didn&apos;t bolt on Tarion compliance as an afterthought. It&apos;s the foundation. Every deadline, every form, every statutory obligation — tracked automatically from the moment a unit closes.</p>
           </ScrollReveal>
 
@@ -199,10 +199,10 @@ export default function HomePage() {
                 <span className="font-mono text-[11px] text-cb-gold font-semibold uppercase tracking-widest">Bayview Heights — Unit Deadlines</span>
                 <span className="font-mono text-[9px] text-cb-dim">Live · Auto-updated</span>
               </div>
-              {[['Unit 804 — 30-Day','Jun 3, 2026','142 days','#22c55e','rgba(34,197,94,0.12)'],
-                ['Unit 512 — 1-Year BRP','May 14, 2026','11 days','#d97706','rgba(217,119,6,0.12)'],
+              {[['Unit 804 — Initial Form (Day 41)','Jun 3, 2026','In BRP','#22c55e','rgba(34,197,94,0.12)'],
+                ['Unit 512 — Mid-Year Form','May 14, 2026','BRP Day 108','#d97706','rgba(217,119,6,0.12)'],
                 ['Unit 301 — 2-Year','Apr 28, 2026','Expired','#dc2626','rgba(220,38,38,0.12)'],
-                ['Unit 215 — 1-Year BRP','Jul 22, 2026','160 days','#22c55e','rgba(34,197,94,0.12)'],
+                ['Unit 215 — Year-End Form','Jul 22, 2026','BRP Active','#22c55e','rgba(34,197,94,0.12)'],
                 ['Unit 119 — 7-Year MSD','Aug 30, 2028','2.3 yrs','#22c55e','rgba(34,197,94,0.12)']].map(([name,date,status,c,bg]) => (
                 <div key={name} className="px-6 py-4 border-b border-[rgba(255,255,255,0.04)] flex items-center justify-between gap-4 last:border-0">
                   <div>
