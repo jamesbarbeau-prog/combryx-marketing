@@ -135,6 +135,150 @@ export default function AboutPage() {
         </div>
       </div>
 
+
+      {/* ── THE BALANCE EQUATION ── */}
+      <section style={{ background:'#000', padding:'96px 0', position:'relative', overflow:'hidden' }}>
+        {/* hex grid bg */}
+        <div style={{ position:'absolute', inset:0, opacity:0.04, backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='%23FFB800' stroke-width='0.8'/%3E%3C/svg%3E")`, backgroundSize:'80px 92px' }}/>
+        <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 48px', position:'relative', zIndex:1 }}>
+
+          {/* header */}
+          <div style={{ textAlign:'center', marginBottom:64 }}>
+            <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#FFB800', marginBottom:14, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
+              <span style={{ width:32, height:1, background:'#FFB800', opacity:0.6, display:'inline-block' }}/>
+              The Combryx Formula
+              <span style={{ width:32, height:1, background:'#FFB800', opacity:0.6, display:'inline-block' }}/>
+            </div>
+            <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#F5F5F5', marginBottom:20 }}>
+              In math, <span style={{ color:'#FFB800' }}>x</span> is<br/>the balance.
+            </h2>
+            <p style={{ fontSize:16, color:'#888', lineHeight:1.8, maxWidth:600, margin:'0 auto' }}>
+              Most ERPs are built by people who love the answer but hate the work. They build for the boardroom and leave the site team to struggle. Combryx is the equal sign. We balance the hands and feet with the dollars and cents — so the math finally works for everyone.
+            </p>
+          </div>
+
+          {/* THE SCALE SVG */}
+          <div style={{ display:'flex', justifyContent:'center', marginBottom:72 }}>
+            <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style={{ width:'100%', maxWidth:680 }}>
+              {/* Base / fulcrum */}
+              <polygon points="300,290 278,320 322,320" fill="#FFB800" fillOpacity="0.9"/>
+              <rect x="292" y="210" width="16" height="82" fill="#FFB800" fillOpacity="0.7" rx="2"/>
+              {/* Balance beam */}
+              <rect x="80" y="205" width="440" height="8" rx="4" fill="#FFB800" fillOpacity="0.6"/>
+              {/* Pivot circle */}
+              <circle cx="300" cy="209" r="10" fill="#FFB800"/>
+              <circle cx="300" cy="209" r="5" fill="#000"/>
+
+              {/* LEFT CHAIN */}
+              {[0,1,2,3,4,5].map(i => (
+                <rect key={i} x={136} y={213+i*12} width="6" height="8" rx="1" fill="#FFB800" fillOpacity="0.4"/>
+              ))}
+              {/* RIGHT CHAIN */}
+              {[0,1,2,3,4,5].map(i => (
+                <rect key={i} x={460} y={213+i*12} width="6" height="8" rx="1" fill="#FFB800" fillOpacity="0.4"/>
+              ))}
+
+              {/* LEFT PAN — THE WHYS */}
+              <ellipse cx="139" cy="285" rx="75" ry="12" fill="#1a1a1a" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
+              <rect x="64" y="273" width="150" height="12" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
+              {/* Left pan items */}
+              {[
+                { y:245, text:'Why is this late?', size:11 },
+                { y:228, text:'Why is this broken?', size:10 },
+                { y:213, text:'Missing money?', size:10 },
+                { y:200, text:'No paper trail?', size:9 },
+              ].map((item,i) => (
+                <g key={i}>
+                  <text x="139" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#888" opacity={1-i*0.1}>{item.text}</text>
+                </g>
+              ))}
+              <text x="139" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#FFB800" opacity="0.7">THE WHYS</text>
+              <text x="139" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#555">Hands · Dirt · Reality</text>
+
+              {/* RIGHT PAN — THE ANSWERS */}
+              <ellipse cx="463" cy="285" rx="75" ry="12" fill="#1a1a1a" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
+              <rect x="388" y="273" width="150" height="12" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
+              {/* Right pan items */}
+              {[
+                { y:245, text:'Real-time data', size:11 },
+                { y:228, text:'Automated deadlines', size:10 },
+                { y:213, text:'Defence Vault', size:10 },
+                { y:200, text:'AI-powered triage', size:9 },
+              ].map((item,i) => (
+                <g key={i}>
+                  <text x="463" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#F5F5F5" opacity={1-i*0.08}>{item.text}</text>
+                </g>
+              ))}
+              <text x="463" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#FFB800" opacity="0.7">THE ANSWERS</text>
+              <text x="463" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#555">Dollars · Cents · Clarity</text>
+
+              {/* CENTRE X = COMBRYX */}
+              <circle cx="300" cy="130" r="52" fill="#0d0d0d" stroke="#FFB800" strokeWidth="2"/>
+              <circle cx="300" cy="130" r="44" fill="#000" stroke="#FFB800" strokeWidth="0.5" strokeOpacity="0.3"/>
+              <text x="300" y="120" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="44" letterSpacing="0.04em" fill="#FFB800">X</text>
+              <text x="300" y="148" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" letterSpacing="0.12em">COMBRYX</text>
+
+              {/* Connecting lines from X to pans */}
+              <line x1="248" y1="130" x2="200" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
+              <line x1="352" y1="130" x2="400" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
+
+              {/* EQUATION at top */}
+              <text x="300" y="35" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#FFB800" opacity="0.7">Whys + Combryx = x</text>
+              <text x="300" y="55" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#555">(where x = profit, quality, and peace of mind)</text>
+
+              {/* CEO line label */}
+              <line x1="80" y1="75" x2="245" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
+              <text x="55" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">LINE A</text>
+              <text x="55" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">CEO / Boardroom</text>
+
+              {/* Supervisor line label */}
+              <line x1="520" y1="75" x2="355" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
+              <text x="545" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">LINE B</text>
+              <text x="545" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Super / Site</text>
+            </svg>
+          </div>
+
+          {/* three column explainer */}
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:3, background:'rgba(255,255,255,0.04)', borderRadius:14, overflow:'hidden', border:'1px solid rgba(255,255,255,0.05)' }}>
+            {[
+              {
+                icon:'⚖️',
+                title:'x is the Missing Piece',
+                body:"In math we do not guess what x is. We isolate it. We strip away the noise until only the truth remains. The Whys pile up on one side — late trades, missing money, no paper trail. Combryx is the weight that balances the scale.",
+              },
+              {
+                icon:'=',
+                title:'Combryx is the Equal Sign',
+                body:'Without an equal sign, an equation is just noise. The CEO has goals. The supervisor has dirt. Without the intersection — without Combryx — they are two parallel lines moving in the same direction but never actually talking to each other.',
+              },
+              {
+                icon:'✕',
+                title:'x Marks the Intersection',
+                body:'In geometry, x is where two lines meet. Line A: the high-level goals, the dollars, the boardroom. Line B: the hands-on reality, the site, the trade. Combryx is the intersection. That is where the business actually works.',
+              },
+            ].map((c, i) => (
+              <div key={i} style={{ background:'#0a0a0a', padding:'32px 28px' }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:40, letterSpacing:'0.04em', color:'#FFB800', marginBottom:14, lineHeight:1 }}>{c.icon}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:20, letterSpacing:'0.04em', color:'#F5F5F5', marginBottom:12, lineHeight:1.1 }}>{c.title}</div>
+                <p style={{ fontSize:13, color:'#777', lineHeight:1.7 }}>{c.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* The pitch quote */}
+          <div style={{ marginTop:48, background:'#0a0a0a', border:'1px solid rgba(255,184,0,0.2)', borderRadius:12, padding:'40px 48px', textAlign:'center' }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(22px,3vw,36px)', letterSpacing:'0.04em', color:'#F5F5F5', lineHeight:1.2, marginBottom:16 }}>
+              &ldquo;We built Combryx to be the <span style={{ color:'#FFB800' }}>equal sign.</span><br/>
+              The balance between the boots on the ground<br/>and the dollars on the spreadsheet.&rdquo;
+            </div>
+            <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.16em', color:'#555' }}>
+              Combryx — Former Tarion · 5 Ontario Builders · Built from the inside out
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-black py-24 px-8 text-center">
         <div className="max-w-2xl mx-auto">
