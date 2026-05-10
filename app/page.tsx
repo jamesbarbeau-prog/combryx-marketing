@@ -4,6 +4,9 @@ import TrustStrip from '@/components/TrustStrip'
 import ScrollReveal from '@/components/ScrollReveal'
 import FaqAccordion from '@/components/FaqAccordion'
 import Lifecycle from '@/components/Lifecycle'
+import ModuleCards from '@/components/ModuleCards'
+import KnowledgeGap from '@/components/KnowledgeGap'
+import OutcomeStats from '@/components/OutcomeStats'
 
 export const metadata: Metadata = {
   title: 'Combryx — Built for Ontario Builders | Tarion Warranty ERP',
@@ -133,42 +136,9 @@ export default function HomePage() {
 
       <Lifecycle />
 
-      {/* ── MODULES ── */}
-      <section id="modules" className="bg-cb-dark2 py-24 px-8">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
-              <span className="w-5 h-px bg-cb-gold opacity-60"/>Plug-and-Play Modules
-            </div>
-            <h2 className="font-display text-[clamp(36px,5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Buy what you need.<br/>Add the rest when you&apos;re ready.</h2>
-            <p className="text-cb-muted text-base leading-relaxed max-w-xl mb-12">Every module works independently — and connects to all others automatically when added. Adding a module is one account toggle. No reinstall, no migration, no retraining.</p>
-          </ScrollReveal>
+      <ModuleCards />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.06)] rounded-xl overflow-hidden">
-            {modules.map((m, i) => (
-              <ScrollReveal key={m.letter} delay={i * 60} className="bg-cb-dark1 p-8 relative overflow-hidden hover:bg-cb-dark2 transition-colors group" style={{ borderTop:`3px solid ${m.color}` }}>
-                <div className="absolute bottom-3 right-4 font-display text-8xl leading-none opacity-[0.04] text-cb-white">{m.letter}</div>
-                <div className="inline-block font-mono text-[9px] uppercase tracking-[0.14em] px-2.5 py-1 rounded font-semibold mb-4"
-                  style={{ background: m.badge.includes('Base') ? 'rgba(255,184,0,0.12)' : 'rgba(59,130,246,0.10)', color: m.badge.includes('Base') ? '#FFB800' : '#93c5fd' }}>
-                  {m.badge}
-                </div>
-                <h3 className="font-body text-[15px] font-bold text-cb-white mb-3 leading-snug">{m.name}</h3>
-                <p className="text-cb-muted text-[13px] leading-relaxed mb-5">{m.desc}</p>
-                <div className="flex flex-col gap-1.5 mb-4">
-                  {m.features.map(f => (
-                    <div key={f} className="flex gap-2 text-[12px] text-cb-muted">
-                      <span className="text-cb-gold flex-shrink-0 mt-0.5 text-[10px]">→</span>{f}
-                    </div>
-                  ))}
-                </div>
-                <div className="font-mono text-[10px] text-cb-dim border-t border-[rgba(255,255,255,0.05)] pt-3 mt-3">
-                  Field app: <strong className="text-cb-silver">{m.field}</strong>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OutcomeStats />
 
       {/* ── TARION ── */}
       <section id="tarion" className="bg-black py-24 px-8">
@@ -227,7 +197,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PRICING ── */}
+      <KnowledgeGap />
+
+            {/* ── PRICING ── */}
       <section id="pricing" className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="text-center mb-14">
