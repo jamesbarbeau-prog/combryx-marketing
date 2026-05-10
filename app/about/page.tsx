@@ -150,10 +150,10 @@ export default function AboutPage() {
               <span style={{ width:32, height:1, background:'#FFB800', opacity:0.6, display:'inline-block' }}/>
             </div>
             <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#F5F5F5', marginBottom:20 }}>
-              In math, <span style={{ color:'#FFB800' }}>x</span> is<br/>the balance.
+              Every builder asks <span style={{ color:'#FFB800' }}>Why.</span><br/>Combryx is <span style={{ color:'#FFB800' }}>x.</span>
             </h2>
             <p style={{ fontSize:16, color:'#888', lineHeight:1.8, maxWidth:600, margin:'0 auto' }}>
-              Most ERPs are built by people who love the answer but hate the work. They build for the boardroom and leave the site team to struggle. Combryx is the equal sign. We balance the hands and feet with the dollars and cents — so the math finally works for everyone.
+              Every builder using old software is asking the same questions — Why is this late? Why did we lose that conciliation? Where is the signed PDI? Other ERPs were built by people who never lived those questions. Combryx was built by someone who did. x is the answer. Combryx is x.
             </p>
           </div>
 
@@ -192,8 +192,8 @@ export default function AboutPage() {
                   <text x="139" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#888" opacity={1-i*0.1}>{item.text}</text>
                 </g>
               ))}
-              <text x="139" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#FFB800" opacity="0.7">THE WHYS</text>
-              <text x="139" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#555">Hands · Dirt · Reality</text>
+              <text x="139" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#ef4444">EVERY BUILDER WHY</text>
+              <text x="139" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">What other ERPs leave unanswered</text>
 
               {/* RIGHT PAN — THE ANSWERS */}
               <ellipse cx="463" cy="285" rx="75" ry="12" fill="#1a1a1a" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
@@ -209,32 +209,32 @@ export default function AboutPage() {
                   <text x="463" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#F5F5F5" opacity={1-i*0.08}>{item.text}</text>
                 </g>
               ))}
-              <text x="463" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#FFB800" opacity="0.7">THE ANSWERS</text>
-              <text x="463" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#555">Dollars · Cents · Clarity</text>
+              <text x="463" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#22c55e">X = COMBRYX</text>
+              <text x="463" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">Built by someone who lived every Why</text>
 
               {/* CENTRE X = COMBRYX */}
               <circle cx="300" cy="130" r="52" fill="#0d0d0d" stroke="#FFB800" strokeWidth="2"/>
               <circle cx="300" cy="130" r="44" fill="#000" stroke="#FFB800" strokeWidth="0.5" strokeOpacity="0.3"/>
               <text x="300" y="120" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="44" letterSpacing="0.04em" fill="#FFB800">X</text>
-              <text x="300" y="148" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" letterSpacing="0.12em">COMBRYX</text>
+              <text x="300" y="145" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#FFB800" letterSpacing="0.12em">= COMBRYX</text>
 
               {/* Connecting lines from X to pans */}
               <line x1="248" y1="130" x2="200" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
               <line x1="352" y1="130" x2="400" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
 
               {/* EQUATION at top */}
-              <text x="300" y="35" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#FFB800" opacity="0.7">Whys + Combryx = x</text>
-              <text x="300" y="55" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#555">(where x = profit, quality, and peace of mind)</text>
+              <text x="300" y="35" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#FFB800" opacity="0.9">Every Builder WHY + Combryx = x</text>
+              <text x="300" y="55" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#888">x = the answer every builder is still waiting for</text>
 
               {/* CEO line label */}
               <line x1="80" y1="75" x2="245" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
-              <text x="55" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">LINE A</text>
-              <text x="55" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">CEO / Boardroom</text>
+              <text x="55" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE BOARDROOM</text>
+              <text x="55" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Wants answers (x)</text>
 
               {/* Supervisor line label */}
               <line x1="520" y1="75" x2="355" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
-              <text x="545" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">LINE B</text>
-              <text x="545" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Super / Site</text>
+              <text x="545" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE SITE</text>
+              <text x="545" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Living the Whys</text>
             </svg>
           </div>
 
@@ -268,8 +268,7 @@ export default function AboutPage() {
           {/* The pitch quote */}
           <div style={{ marginTop:48, background:'#0a0a0a', border:'1px solid rgba(255,184,0,0.2)', borderRadius:12, padding:'40px 48px', textAlign:'center' }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(22px,3vw,36px)', letterSpacing:'0.04em', color:'#F5F5F5', lineHeight:1.2, marginBottom:16 }}>
-              &ldquo;We built Combryx to be the <span style={{ color:'#FFB800' }}>equal sign.</span><br/>
-              The balance between the boots on the ground<br/>and the dollars on the spreadsheet.&rdquo;
+              &ldquo;Every Ontario builder using old software is asking WHY.<br/><span style={{ color:'#FFB800' }}>Combryx is x. The answer they have been waiting for.</span><br/>Built by someone who lived every single one of those WHYs.&rdquo;
             </div>
             <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.16em', color:'#555' }}>
               Combryx — Former Tarion · 5 Ontario Builders · Built from the inside out
