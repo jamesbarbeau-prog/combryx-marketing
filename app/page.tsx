@@ -3,7 +3,7 @@ import Link from 'next/link'
 import TrustStrip from '@/components/TrustStrip'
 import ScrollReveal from '@/components/ScrollReveal'
 import FaqAccordion from '@/components/FaqAccordion'
-import Lifecycle from '@/components/Lifecycle'
+import LifecycleSVG from '@/components/LifecycleSVG'
 import ModuleCards from '@/components/ModuleCards'
 import KnowledgeGap from '@/components/KnowledgeGap'
 import OutcomeStats from '@/components/OutcomeStats'
@@ -134,7 +134,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Lifecycle />
+      <LifecycleSVG />
 
       <ModuleCards />
 
