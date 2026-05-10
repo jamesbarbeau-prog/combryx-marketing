@@ -3,6 +3,7 @@ import Link from 'next/link'
 import TrustStrip from '@/components/TrustStrip'
 import ScrollReveal from '@/components/ScrollReveal'
 import FaqAccordion from '@/components/FaqAccordion'
+import Lifecycle from '@/components/Lifecycle'
 
 export const metadata: Metadata = {
   title: 'Combryx — Built for Ontario Builders | Tarion Warranty ERP',
@@ -129,6 +130,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Lifecycle />
 
       {/* ── MODULES ── */}
       <section id="modules" className="bg-cb-dark2 py-24 px-8">
