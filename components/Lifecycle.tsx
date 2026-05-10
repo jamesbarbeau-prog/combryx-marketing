@@ -10,7 +10,7 @@ const stages = [
     title: 'Find the land.\nModel the deal.\nGet the permit.',
     desc: 'AI pro-forma from your own comparable projects. Live municipal zoning API — permitted uses, density, setbacks. When the permit is approved, the first construction phase unlocks automatically. No manual trigger.',
     bullets: ['AI pro-forma in minutes — backed by your own portfolio data','Live zoning API — density, height, setbacks, OPA status','Permit tracker → approval unlocks Build phase automatically','Acquisition pipeline from first MLS look to close'],
-    photo: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80',
+    photo: photo: '/images/land.webp',
     connection: 'Permit approved → Build phase unlocked in Stage 2',
   },
   {
@@ -20,7 +20,7 @@ const stages = [
     title: 'Build it.\nTrack every phase.\nDrive the draws.',
     desc: 'CPM scheduling per lot. Phase gate sign-offs from the field app — photo required, no paper. When a site super signs off a phase on site, the lender draw package auto-assembles in the office. Sub-trades sign digitally via a link — no app install needed.',
     bullets: ['Dynamic CPM Gantt — drag to reschedule, dependencies cascade','Phase gate signed on site → lender draw assembled in office','Sub-trade digital sign-off via shareable link','Safety observation log with photo evidence and escalation'],
-    photo: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80',
+    photo: photo: '/images/build.webp',
     connection: 'Phase complete → draw request auto-assembled in Financial',
   },
   {
@@ -40,7 +40,7 @@ const stages = [
     title: 'CPP signed.\nTarion clock starts.\nDefence Vault open.',
     desc: 'CPP/PDI signature is the legal trigger. Day 41, 183, and 366 auto-submission windows initialized per unit. 120-day BRP tracked with RFC status — if the homeowner requests conciliation, the 30-day pre-conciliation BRP adds automatically. Defence Vault assembles from day one.',
     bullets: ['PDI on tablet — dual signature, PDF auto-sent, vaulted instantly','Day 41, 183 & 366 auto-submissions tracked per unit','120-day BRP + 30-day pre-conciliation = 150 days total','Lex Structura AI answers OBC Part 9 and CPG questions'],
-    photo: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=900&q=80',
+    photo: photo: '/images/tarion.webp',
     connection: 'Unit closed → trade keys revoked, homeowner access provisioned',
   },
   {
