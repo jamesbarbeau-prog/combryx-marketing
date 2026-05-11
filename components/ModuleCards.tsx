@@ -100,7 +100,7 @@ export default function ModuleCards() {
 
   return (
     <section style={{ background:'#111111', padding:'96px 0' }}>
-      <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 48px' }}>
+      <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 16px' }}>
         {/* header */}
         <div style={{ marginBottom:52 }}>
           <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#FFB800', marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
@@ -116,10 +116,10 @@ export default function ModuleCards() {
         </div>
 
         {/* grid */}
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(340px,1fr))', gap:3, background:'rgba(255,255,255,0.05)', borderRadius:14, overflow:'hidden', border:'1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:3, background:'rgba(255,255,255,0.05)', borderRadius:14, overflow:'hidden', border:'1px solid rgba(255,255,255,0.06)' }}>
           {modules.map((m, i) => (
             <div key={m.letter}
-              style={{ background:'#0d0d0d', padding:'28px 28px 24px', borderTop:`3px solid ${m.color}`, position:'relative', overflow:'hidden', cursor:'pointer', transition:'background 0.2s' }}
+              style={{ background:'#0d0d0d', padding:'20px 16px 18px', borderTop:`3px solid ${m.color}`, position:'relative', overflow:'hidden', cursor:'pointer', transition:'background 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.background='#141414')}
               onMouseLeave={e => (e.currentTarget.style.background='#0d0d0d')}
               onClick={() => setExpanded(expanded === i ? null : i)}>
@@ -142,7 +142,7 @@ export default function ModuleCards() {
               <div style={{ fontSize:12, color:'#666', lineHeight:1.6, marginBottom:20 }}>{m.why}</div>
 
               {/* icon grid */}
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:6 }}>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(88px, 1fr))', gap:6 }}>
                 {m.icons.map(ic => (
                   <div key={ic.label} style={{ background:'rgba(255,255,255,0.04)', border:'1px solid rgba(255,255,255,0.06)', borderRadius:7, padding:'10px 8px', textAlign:'center' }}>
                     <div style={{ fontSize:20, marginBottom:4 }}>{ic.icon}</div>

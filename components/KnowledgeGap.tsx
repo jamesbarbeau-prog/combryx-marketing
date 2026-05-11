@@ -17,7 +17,7 @@ const rows = [
 export default function KnowledgeGap() {
   return (
     <section style={{ background:'#0a0a0a', padding:'96px 0', borderTop:'1px solid rgba(255,184,0,0.08)' }}>
-      <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 48px' }}>
+      <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 16px' }}>
 
         {/* header */}
         <div style={{ marginBottom:48, maxWidth:680 }}>
@@ -37,14 +37,14 @@ export default function KnowledgeGap() {
         <div style={{ background:'#111', border:'1px solid rgba(255,255,255,0.06)', borderRadius:12, overflow:'hidden' }}>
 
           {/* table header */}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', background:'#000', borderBottom:'1px solid rgba(255,255,255,0.08)', padding:'0' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', background:'#000', overflowX:'auto', borderBottom:'1px solid rgba(255,255,255,0.08)', padding:'0' }}>
             <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444' }}>Capability</div>
             <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#FFB800', borderLeft:'1px solid rgba(255,255,255,0.06)', background:'rgba(255,184,0,0.04)' }}>✦ Combryx</div>
             <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444', borderLeft:'1px solid rgba(255,255,255,0.06)' }}>Other Platforms</div>
           </div>
 
           {rows.map((r, i) => (
-            <div key={r.feature} style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', borderBottom: i < rows.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none' }}>
+            <div key={r.feature} style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', borderBottom: i < rows.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none' }}>
               {/* feature name */}
               <div style={{ padding:'14px 20px', fontSize:13, fontWeight:600, color:'#C8C8C8', display:'flex', alignItems:'center' }}>{r.feature}</div>
 

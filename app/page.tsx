@@ -58,7 +58,7 @@ export default function HomePage() {
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.07]" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.06) 0%,transparent 70%)' }} />
 
-        <div className="relative z-10 flex flex-col items-start justify-center flex-1 px-8 md:px-16 lg:px-24 py-16 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 flex flex-col items-start justify-center flex-1 px-4 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto w-full">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-cb-gold opacity-60" />
             Built for Ontario Builders · Tarion Compliant · ONHWPA Ready
@@ -95,8 +95,8 @@ export default function HomePage() {
       <TrustStrip />
 
       {/* ── THE GAP ── */}
-      <section className="bg-cb-dark1 py-24 px-8">
-        <div className="max-w-5xl mx-auto">
+      <section className="bg-cb-dark1 py-16 px-4 md:px-8">
+        <div className="max-w-5xl mx-auto w-full">
           <ScrollReveal>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
               <span className="w-5 h-px bg-cb-gold opacity-60"/>Why Combryx Exists
@@ -141,8 +141,8 @@ export default function HomePage() {
       <OutcomeStats />
 
       {/* ── TARION ── */}
-      <section id="tarion" className="bg-black py-24 px-8">
-        <div className="max-w-6xl mx-auto">
+      <section id="tarion" className="bg-black py-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto w-full">
           <ScrollReveal>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
               <span className="w-5 h-px bg-cb-gold opacity-60"/>Tarion &amp; ONHWPA Compliance
@@ -200,8 +200,8 @@ export default function HomePage() {
       <KnowledgeGap />
 
             {/* ── PRICING ── */}
-      <section id="pricing" className="bg-cb-dark2 py-24 px-8">
-        <div className="max-w-6xl mx-auto">
+      <section id="pricing" className="bg-cb-dark2 py-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto w-full">
           <ScrollReveal className="text-center mb-14">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3">
               <span className="w-5 h-px bg-cb-gold opacity-60"/>Simple Pricing
@@ -250,8 +250,8 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-black py-24 px-8">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-black py-16 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto w-full">
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
               <span className="w-5 h-px bg-cb-gold opacity-60"/>FAQ
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="bg-cb-dark1 py-32 px-8 text-center relative overflow-hidden">
+      <section className="bg-cb-dark1 py-20 px-4 md:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.05) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-2xl mx-auto">
