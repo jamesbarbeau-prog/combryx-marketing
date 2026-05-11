@@ -366,7 +366,7 @@ export default function LifecycleSVG() {
   }, [])
 
   return (
-    <section style={{ background:'#080808', padding:'96px 0' }}>
+    <section style={{ background:'#080808', padding:'64px 0' }}>
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 48px' }}>
 
         {/* header */}
@@ -396,7 +396,7 @@ export default function LifecycleSVG() {
                   data-index={i}
                   style={{
                     display:'grid',
-                    gridTemplateColumns: flip ? '1fr 1fr' : '1fr 1fr',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                     gap:3,
                     opacity: vis ? 1 : 0,
                     transform: vis ? 'translateY(0)' : 'translateY(28px)',
@@ -410,9 +410,9 @@ export default function LifecycleSVG() {
                   <div style={{
                     order: flip ? 1 : 0,
                     background:'#0d0d0d',
-                    padding:'40px 32px',
+                    padding:'28px 20px',
                     display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
-                    position:'relative', minHeight:280,
+                    position:'relative', minHeight:220,
                     borderRight: flip ? 'none' : `1px solid rgba(255,255,255,0.05)`,
                     borderLeft: flip ? `1px solid rgba(255,255,255,0.05)` : 'none',
                   }}>
@@ -438,7 +438,7 @@ export default function LifecycleSVG() {
                   <div style={{
                     order: flip ? 0 : 1,
                     background:'#0a0a0a',
-                    padding:'40px 36px',
+                    padding:'28px 20px',
                     display:'flex', flexDirection:'column', justifyContent:'center',
                   }}>
                     <h3 style={{

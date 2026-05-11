@@ -165,3 +165,56 @@ body {
 /* ══ FAQ ══ */
 .faq-answer { display: none; }
 .faq-item.open .faq-answer { display: block; }
+
+/* ══ GLOBAL MOBILE FIXES ══ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── Section padding on mobile ── */
+@media (max-width: 640px) {
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  .wrap, [class*="wrap"] { padding-left: 16px !important; padding-right: 16px !important; }
+}
+
+/* ── Lifecycle SVG cards ── */
+@media (max-width: 768px) {
+  .lifecycle-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Module cards grid ── */
+@media (max-width: 600px) {
+  .module-grid-inner {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Knowledge gap table ── */
+@media (max-width: 768px) {
+  .kg-table-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .kg-table-header { display: none !important; }
+}
+
+/* ── Pricing cards ── */
+@media (max-width: 768px) {
+  .pricing-featured-card {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* ── Demo page ── */
+@media (max-width: 768px) {
+  .demo-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -9,6 +9,7 @@ const links = [
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/about',        label: 'Our Story' },
   { href: '/pricing',      label: 'Pricing' },
+  { href: '/demo',         label: 'See It Live' },
 ]
 
 export default function Nav() {
@@ -31,11 +32,13 @@ export default function Nav() {
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         height: 56,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 24px',
+        padding: '0 16px',
         background: scrolled ? 'rgba(0,0,0,0.98)' : 'rgba(0,0,0,0.85)',
         backdropFilter: 'blur(24px)',
         borderBottom: '1px solid rgba(255,184,0,0.10)',
         transition: 'background 0.3s',
+        overflow: 'hidden',
+        boxSizing: 'border-box' as const,
       }}>
         {/* Logo */}
         <Link href="/" style={{ display:'flex', alignItems:'center', gap:9, textDecoration:'none', flexShrink:0 }}>

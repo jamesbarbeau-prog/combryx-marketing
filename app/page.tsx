@@ -72,7 +72,7 @@ export default function HomePage() {
             <strong className="text-cb-white font-semibold">Built by a carpenter who worked inside Tarion — and inside five Ontario builders.</strong> Every feature exists because of a real gap found on a real job site. Buy what you need. Add modules as you grow.
           </p>
 
-          <div className="animate-fade-up anim-d3" style={{ display:'flex', gap:12, flexWrap:'wrap', marginBottom:64 }}>
+          <div className="animate-fade-up anim-d3" style={{ display:'flex', gap:12, flexWrap:'wrap', marginBottom:48 }}>
             <Link href="/pricing" className="btn-gold">
               Start with Warranty Core →
             </Link>
