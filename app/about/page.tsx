@@ -159,82 +159,78 @@ export default function AboutPage() {
 
           {/* THE SCALE SVG */}
           <div style={{ display:'flex', justifyContent:'center', marginBottom:72 }}>
-            <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" style={{ width:'100%', maxWidth:680 }}>
-              {/* Base / fulcrum */}
-              <polygon points="300,290 278,320 322,320" fill="#FFB800" fillOpacity="0.9"/>
-              <rect x="292" y="210" width="16" height="82" fill="#FFB800" fillOpacity="0.7" rx="2"/>
+            <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style={{ width:"100%", maxWidth:780 }}>
+
+              {/* Equation at top */}
+              <text x="350" y="28" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#FFB800">Every Builder WHY + Combryx = x</text>
+              <text x="350" y="48" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#666">x = the answer every builder is still waiting for</text>
+
+              {/* Corner labels */}
+              <text x="60" y="68" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE BOARDROOM</text>
+              <text x="60" y="80" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Wants answers (x)</text>
+              <text x="640" y="68" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE SITE</text>
+              <text x="640" y="80" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Living the Whys</text>
+
+              {/* Connecting lines from X circle to beam */}
+              <line x1="290" y1="155" x2="220" y2="248" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
+              <line x1="410" y1="155" x2="480" y2="248" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
+              {/* Lines to corners */}
+              <line x1="285" y1="110" x2="100" y2="80" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
+              <line x1="415" y1="110" x2="600" y2="80" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
+
+              {/* X = COMBRYX circle */}
+              <circle cx="350" cy="120" r="58" fill="#0d0d0d" stroke="#FFB800" strokeWidth="2"/>
+              <circle cx="350" cy="120" r="50" fill="#000" stroke="#FFB800" strokeWidth="0.5" strokeOpacity="0.3"/>
+              <text x="350" y="110" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="50" letterSpacing="0.04em" fill="#FFB800">X</text>
+              <text x="350" y="132" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#FFB800" letterSpacing="0.12em">= COMBRYX</text>
+
               {/* Balance beam */}
-              <rect x="80" y="205" width="440" height="8" rx="4" fill="#FFB800" fillOpacity="0.6"/>
-              {/* Pivot circle */}
-              <circle cx="300" cy="209" r="10" fill="#FFB800"/>
-              <circle cx="300" cy="209" r="5" fill="#000"/>
+              <rect x="100" y="248" width="500" height="9" rx="4" fill="#FFB800" fillOpacity="0.65"/>
+              {/* Pivot */}
+              <circle cx="350" cy="252" r="11" fill="#FFB800"/>
+              <circle cx="350" cy="252" r="5" fill="#000"/>
+              {/* Fulcrum stem */}
+              <rect x="343" y="261" width="14" height="80" fill="#FFB800" fillOpacity="0.65" rx="2"/>
+              {/* Base triangle */}
+              <polygon points="350,341 322,378 378,378" fill="#FFB800" fillOpacity="0.8"/>
 
               {/* LEFT CHAIN */}
-              {[0,1,2,3,4,5].map(i => (
-                <rect key={i} x={136} y={213+i*12} width="6" height="8" rx="1" fill="#FFB800" fillOpacity="0.4"/>
+              {[0,1,2,3].map((i) => (
+                <rect key={i} x={156} y={257+i*11} width="7" height="7" rx="1" fill="#FFB800" fillOpacity="0.35"/>
               ))}
               {/* RIGHT CHAIN */}
-              {[0,1,2,3,4,5].map(i => (
-                <rect key={i} x={460} y={213+i*12} width="6" height="8" rx="1" fill="#FFB800" fillOpacity="0.4"/>
+              {[0,1,2,3].map((i) => (
+                <rect key={i} x={538} y={257+i*11} width="7" height="7" rx="1" fill="#FFB800" fillOpacity="0.35"/>
               ))}
 
-              {/* LEFT PAN — THE WHYS */}
-              <ellipse cx="139" cy="285" rx="75" ry="12" fill="#1a1a1a" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
-              <rect x="64" y="273" width="150" height="12" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
-              {/* Left pan items */}
-              {[
-                { y:245, text:'Why is this late?', size:11 },
-                { y:228, text:'Why is this broken?', size:10 },
-                { y:213, text:'Missing money?', size:10 },
-                { y:200, text:'No paper trail?', size:9 },
-              ].map((item,i) => (
-                <g key={i}>
-                  <text x="139" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#888" opacity={1-i*0.1}>{item.text}</text>
-                </g>
-              ))}
-              <text x="139" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#ef4444">EVERY BUILDER WHY</text>
-              <text x="139" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">What other ERPs leave unanswered</text>
+              {/* LEFT PAN */}
+              <ellipse cx="160" cy="305" rx="80" ry="13" fill="#1a1200" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.7"/>
+              <rect x="80" y="292" width="160" height="13" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
 
-              {/* RIGHT PAN — THE ANSWERS */}
-              <ellipse cx="463" cy="285" rx="75" ry="12" fill="#1a1a1a" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
-              <rect x="388" y="273" width="150" height="12" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
-              {/* Right pan items */}
-              {[
-                { y:245, text:'Real-time data', size:11 },
-                { y:228, text:'Automated deadlines', size:10 },
-                { y:213, text:'Defence Vault', size:10 },
-                { y:200, text:'AI-powered triage', size:9 },
-              ].map((item,i) => (
-                <g key={i}>
-                  <text x="463" y={item.y} textAnchor="middle" fontFamily="monospace" fontSize={item.size} fill="#F5F5F5" opacity={1-i*0.08}>{item.text}</text>
-                </g>
-              ))}
-              <text x="463" y="304" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="13" letterSpacing="0.1em" fill="#22c55e">X = COMBRYX</text>
-              <text x="463" y="318" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">Built by someone who lived every Why</text>
+              {/* LEFT WHY ITEMS — above the pan, well clear */}
+              <text x="160" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#F5F5F5" opacity="0.9">Why did we lose that conciliation?</text>
+              <text x="160" y="234" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#C8C8C8" opacity="0.8">Why did nobody track the BRP?</text>
+              <text x="160" y="249" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#aaa" opacity="0.7">Where is the signed PDI?</text>
+              <text x="160" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Why is the draw still not in?</text>
 
-              {/* CENTRE X = COMBRYX */}
-              <circle cx="300" cy="130" r="52" fill="#0d0d0d" stroke="#FFB800" strokeWidth="2"/>
-              <circle cx="300" cy="130" r="44" fill="#000" stroke="#FFB800" strokeWidth="0.5" strokeOpacity="0.3"/>
-              <text x="300" y="120" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="44" letterSpacing="0.04em" fill="#FFB800">X</text>
-              <text x="300" y="145" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#FFB800" letterSpacing="0.12em">= COMBRYX</text>
+              {/* LEFT PAN LABELS — below pan */}
+              <text x="160" y="330" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="14" letterSpacing="0.1em" fill="#ef4444">EVERY BUILDER WHY</text>
+              <text x="160" y="346" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">What other ERPs leave unanswered</text>
 
-              {/* Connecting lines from X to pans */}
-              <line x1="248" y1="130" x2="200" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
-              <line x1="352" y1="130" x2="400" y2="209" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3"/>
+              {/* RIGHT PAN */}
+              <ellipse cx="540" cy="305" rx="80" ry="13" fill="#001a08" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.7"/>
+              <rect x="460" y="292" width="160" height="13" rx="2" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.4"/>
 
-              {/* EQUATION at top */}
-              <text x="300" y="35" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#FFB800" opacity="0.9">Every Builder WHY + Combryx = x</text>
-              <text x="300" y="55" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#888">x = the answer every builder is still waiting for</text>
+              {/* RIGHT ANSWER ITEMS — above the pan, well clear */}
+              <text x="540" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#F5F5F5" opacity="0.9">Defence Vault — conciliation ready</text>
+              <text x="540" y="234" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#C8C8C8" opacity="0.8">Day 41 BRP tracked automatically</text>
+              <text x="540" y="249" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#aaa" opacity="0.7">PDI signed, vaulted, timestamped</text>
+              <text x="540" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Phase signed — draw auto-assembled</text>
 
-              {/* CEO line label */}
-              <line x1="80" y1="75" x2="245" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
-              <text x="55" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE BOARDROOM</text>
-              <text x="55" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Wants answers (x)</text>
+              {/* RIGHT PAN LABELS — below pan */}
+              <text x="540" y="330" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="14" letterSpacing="0.1em" fill="#22c55e">X = COMBRYX</text>
+              <text x="540" y="346" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">Built by someone who lived every Why</text>
 
-              {/* Supervisor line label */}
-              <line x1="520" y1="75" x2="355" y2="120" stroke="#FFB800" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="3 3"/>
-              <text x="545" y="72" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888">THE SITE</text>
-              <text x="545" y="84" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#555">Living the Whys</text>
             </svg>
           </div>
 
