@@ -309,7 +309,7 @@ const steps = [
     desc:"You open Combryx to start the day. Every active case, every BRP countdown, and every unit's Tarion status is live — updated from field activity the night before. No phone calls to find out what happened yesterday.",
     outcome:'12 open cases · 3 BRP windows active · 1 RFC filed overnight — all visible in 3 seconds',
     Screen: Screen1,
-    color:'#FFB800',
+    color:'#D97706',
   },
   {
     n:'02',
@@ -319,7 +319,7 @@ const steps = [
     desc:"The inspector walks Unit 445 with the tablet. Each room has a structured checklist. Any deficiency gets a photo before the item can be submitted. At the end, the homeowner signs directly on screen. PDF generated on-device, emailed to the homeowner, uploaded to the Defence Vault — before the inspector leaves the building.",
     outcome:'Signed legal PDI document in the Vault · Tarion clock starts automatically · Outstanding items become warranty cases',
     Screen: Screen2,
-    color:'#3b82f6',
+    color:'#1D4ED8',
   },
   {
     n:'03',
@@ -329,7 +329,7 @@ const steps = [
     desc:"Mike's day is pre-loaded: addresses, unit numbers, issue descriptions, scheduled times. He taps Unit 112 — it opens in Maps. On arrival he marks it complete, takes the required photo, and drives to the next lot. The coordinator sees the update appear in real time. Works in basement parkades. Works with no signal.",
     outcome:'Job completed in 15 seconds · Coordinator notified automatically · Photo stored in case file',
     Screen: Screen3,
-    color:'#22c55e',
+    color:'#15803D',
   },
   {
     n:'04',
@@ -339,7 +339,7 @@ const steps = [
     desc:"The system catches it before anyone calls. Unit 204's homeowner filed an RFC on Day 42 of the BRP. Combryx automatically appends the 30-day pre-conciliation BRP — extending the total window to 150 days. The coordinator sees exactly how many days remain, which cases are outstanding, and what needs to happen before the conciliation date.",
     outcome:'150-day window tracked automatically · Lex Structura flags 2 CPG items · Coordinator notified instantly',
     Screen: Screen4,
-    color:'#ef4444',
+    color:'#DC2626',
   },
   {
     n:'05',
@@ -349,7 +349,7 @@ const steps = [
     desc:"Tarion calls to schedule a conciliation for Unit 204. The director opens the case, clicks Export Vault Package. Every status change, every photo, every interaction log, every signed document — organized into a PDF formatted for Tarion's process. CPG citations from Lex Structura attached automatically. This is what winning a conciliation looks like.",
     outcome:'Complete audit trail exported in 60 seconds · CPG citations included · No scrambling through folders',
     Screen: Screen5,
-    color:'#a855f7',
+    color:'#4338CA',
   },
 ]
 
@@ -368,9 +368,9 @@ function WaitlistForm() {
 
   if (submitted) return (
     <div style={{ textAlign:'center', padding:'48px 0' }}>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:48, letterSpacing:'0.04em', color:'#FFB800', marginBottom:12 }}>YOU ARE IN.</div>
-      <p style={{ fontSize:14, color:'#888', marginBottom:8 }}>We will be in touch at <strong style={{ color:'#F5F5F5' }}>{email}</strong> when early access opens.</p>
-      <p style={{ fontSize:13, color:'#555' }}>In the meantime — <Link href="mailto:demo@combryx.com" style={{ color:'#FFB800' }}>email us directly</Link> to book a live walkthrough.</p>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:48, letterSpacing:'0.04em', color:'#D97706', marginBottom:12 }}>YOU ARE IN.</div>
+      <p style={{ fontSize:14, color:'#475569', marginBottom:8 }}>We will be in touch at <strong style={{ color:'#0F172A' }}>{email}</strong> when early access opens.</p>
+      <p style={{ fontSize:13, color:'#64748B' }}>In the meantime — <Link href="mailto:demo@combryx.com" style={{ color:'#D97706' }}>email us directly</Link> to book a live walkthrough.</p>
     </div>
   )
 
@@ -379,26 +379,26 @@ function WaitlistForm() {
       <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
           <div>
-            <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#555', display:'block', marginBottom:6 }}>Your Name</label>
+            <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B', display:'block', marginBottom:6 }}>Your Name</label>
             <input value={name} onChange={e => setName(e.target.value)} placeholder="James Barbeau"
-              style={{ width:'100%', background:'#111', border:'1px solid #333', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#F5F5F5', outline:'none' }}/>
+              style={{ width:'100%', background:'#FFFFFF', border:'1px solid #CBD5E1', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#0F172A', outline:'none' }}/>
           </div>
           <div>
-            <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#555', display:'block', marginBottom:6 }}>Company</label>
+            <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B', display:'block', marginBottom:6 }}>Company</label>
             <input value={company} onChange={e => setCompany(e.target.value)} placeholder="Bayview Homes"
-              style={{ width:'100%', background:'#111', border:'1px solid #333', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#F5F5F5', outline:'none' }}/>
+              style={{ width:'100%', background:'#FFFFFF', border:'1px solid #CBD5E1', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#0F172A', outline:'none' }}/>
           </div>
         </div>
         <div>
-          <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#555', display:'block', marginBottom:6 }}>Work Email</label>
+          <label style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B', display:'block', marginBottom:6 }}>Work Email</label>
           <input value={email} onChange={e => setEmail(e.target.value)} placeholder="you@yourbuilder.com" type="email"
-            style={{ width:'100%', background:'#111', border:'1px solid #333', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#F5F5F5', outline:'none' }}/>
+            style={{ width:'100%', background:'#FFFFFF', border:'1px solid #CBD5E1', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#0F172A', outline:'none' }}/>
         </div>
         <button onClick={handleSubmit}
-          style={{ background:'#FFB800', color:'#000', fontFamily:"'Fira Code',monospace", fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', padding:'14px', borderRadius:7, border:'none', cursor:'pointer', boxShadow:'0 0 24px rgba(255,184,0,0.3)', marginTop:4 }}>
+          style={{ background:'#D97706', color:'#000', fontFamily:"'Fira Code',monospace", fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', padding:'14px', borderRadius:7, border:'none', cursor:'pointer', boxShadow:'0 0 24px rgba(217,119,6,0.3)', marginTop:4 }}>
           Join Early Access →
         </button>
-        <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#444', textTransform:'uppercase', letterSpacing:'0.1em' }}>
+        <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#64748B', textTransform:'uppercase', letterSpacing:'0.1em' }}>
           No credit card · No commitment · First access when we launch
         </p>
       </div>
@@ -412,37 +412,37 @@ export default function DemoWalkthrough() {
   const s = steps[active]
 
   return (
-    <div style={{ background:'#080808', minHeight:'100vh', paddingTop:56 }}>
+    <div style={{ background:'#F1F3F6', minHeight:'100vh', paddingTop:56 }}>
 
       {/* Hero */}
-      <div style={{ background:'#000', borderBottom:'1px solid rgba(255,184,0,0.1)', padding:'48px 20px 36px', textAlign:'center', position:'relative', overflow:'hidden' }}>
+      <div style={{ background:'#F1F3F6', borderBottom:'1px solid rgba(217,119,6,0.1)', padding:'48px 20px 36px', textAlign:'center', position:'relative', overflow:'hidden' }}>
         <div style={{ position:'absolute', inset:0, opacity:0.04, backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='%23FFB800' stroke-width='0.8'/%3E%3C/svg%3E")`, backgroundSize:'80px 92px' }}/>
         <div style={{ position:'relative', zIndex:1 }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#FFB800', marginBottom:12, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
-            <span style={{ width:32, height:1, background:'#FFB800', opacity:0.5, display:'inline-block' }}/>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:12, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
+            <span style={{ width:32, height:1, background:'#D97706', opacity:0.5, display:'inline-block' }}/>
             Combryx · Workflow Demo · Early Access Preview
-            <span style={{ width:32, height:1, background:'#FFB800', opacity:0.5, display:'inline-block' }}/>
+            <span style={{ width:32, height:1, background:'#D97706', opacity:0.5, display:'inline-block' }}/>
           </div>
-          <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#F5F5F5', marginBottom:16 }}>
-            A REAL WARRANTY DAY.<br/><span style={{ color:'#FFB800' }}>BUILT INTO ONE SYSTEM.</span>
+          <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#0F172A', marginBottom:16 }}>
+            A REAL WARRANTY DAY.<br/><span style={{ color:'#D97706' }}>BUILT INTO ONE SYSTEM.</span>
           </h1>
-          <p style={{ fontSize:16, color:'#888', lineHeight:1.75, maxWidth:560, margin:'0 auto 24px' }}>
+          <p style={{ fontSize:16, color:'#475569', lineHeight:1.75, maxWidth:560, margin:'0 auto 24px' }}>
             Five steps. One Ontario builder warranty day. From the morning dashboard to the conciliation package — this is what Combryx looks like in use.
           </p>
-          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,184,0,0.1)', border:'1px solid rgba(255,184,0,0.3)', borderRadius:100, padding:'8px 20px' }}>
-            <span style={{ width:8, height:8, borderRadius:'50%', background:'#FFB800', display:'inline-block', animation:'pulse 2s ease-in-out infinite' }}/>
-            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color:'#FFB800', textTransform:'uppercase', letterSpacing:'0.14em' }}>UI Preview — Early Access Waitlist Open</span>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(217,119,6,0.1)', border:'1px solid rgba(217,119,6,0.3)', borderRadius:100, padding:'8px 20px' }}>
+            <span style={{ width:8, height:8, borderRadius:'50%', background:'#D97706', display:'inline-block', animation:'pulse 2s ease-in-out infinite' }}/>
+            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color:'#D97706', textTransform:'uppercase', letterSpacing:'0.14em' }}>UI Preview — Early Access Waitlist Open</span>
           </div>
         </div>
       </div>
 
       {/* Step navigator */}
-      <div style={{ background:'#000', borderBottom:'1px solid rgba(255,255,255,0.05)', padding:'0 16px', display:'flex', gap:0, overflowX:'auto', scrollbarWidth:'none' }}>
+      <div style={{ background:'#F1F3F6', borderBottom:'1px solid rgba(15,23,42,0.1)', padding:'0 16px', display:'flex', gap:0, overflowX:'auto', scrollbarWidth:'none' }}>
         {steps.map((step, i) => (
           <button key={i} onClick={() => setActive(i)}
             style={{ background:'none', border:'none', cursor:'pointer', padding:'16px 20px', display:'flex', flexDirection:'column', gap:3, alignItems:'flex-start', borderBottom:`2px solid ${active===i ? step.color : 'transparent'}`, transition:'all 0.2s', flexShrink:0, whiteSpace:'nowrap' }}>
-            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color: active===i ? step.color : '#444' }}>Step {step.n}</span>
-            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color: active===i ? '#F5F5F5' : '#555' }}>{step.time}</span>
+            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color: active===i ? step.color : '#64748B' }}>Step {step.n}</span>
+            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color: active===i ? '#0F172A' : '#64748B' }}>{step.time}</span>
           </button>
         ))}
       </div>
@@ -453,14 +453,14 @@ export default function DemoWalkthrough() {
 
           {/* Left — screen */}
           <div>
-            <div style={{ background:'#0d0d0d', borderRadius:12, padding:3, border:`1px solid ${s.color}33` }}>
+            <div style={{ background:'#FFFFFF', borderRadius:12, padding:3, border:`1px solid ${s.color}33` }}>
               <s.Screen />
             </div>
             {/* Step dots */}
             <div style={{ display:'flex', gap:8, justifyContent:'center', marginTop:20 }}>
               {steps.map((_, i) => (
                 <button key={i} onClick={() => setActive(i)}
-                  style={{ width: active===i ? 24 : 8, height:8, borderRadius:4, background: active===i ? steps[i].color : '#222', border:'none', cursor:'pointer', transition:'all 0.3s', padding:0 }}/>
+                  style={{ width: active===i ? 24 : 8, height:8, borderRadius:4, background: active===i ? steps[i].color : '#E2E8F0', border:'none', cursor:'pointer', transition:'all 0.3s', padding:0 }}/>
               ))}
             </div>
           </div>
@@ -476,8 +476,8 @@ export default function DemoWalkthrough() {
                   <div style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:s.color, marginBottom:2 }}>{s.time} · {s.actor}</div>
                 </div>
               </div>
-              <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(22px,2.5vw,32px)', letterSpacing:'0.04em', color:'#F5F5F5', lineHeight:1.1, marginBottom:14 }}>{s.title}</h2>
-              <p style={{ fontSize:14, color:'#777', lineHeight:1.8, marginBottom:20 }}>{s.desc}</p>
+              <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(22px,2.5vw,32px)', letterSpacing:'0.04em', color:'#0F172A', lineHeight:1.1, marginBottom:14 }}>{s.title}</h2>
+              <p style={{ fontSize:14, color:'#475569', lineHeight:1.8, marginBottom:20 }}>{s.desc}</p>
               <div style={{ background:`${s.color}10`, border:`1px solid ${s.color}30`, borderRadius:8, padding:'12px 16px', fontFamily:"'Fira Code',monospace", fontSize:11, color:s.color, lineHeight:1.6 }}>
                 → {s.outcome}
               </div>
@@ -486,7 +486,7 @@ export default function DemoWalkthrough() {
             {/* Navigation */}
             <div style={{ display:'flex', gap:10, marginTop:8 }}>
               <button onClick={() => setActive(Math.max(0, active-1))}
-                style={{ flex:1, background:'#111', border:'1px solid #222', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.1em', color: active===0 ? '#333' : '#888', cursor: active===0 ? 'default' : 'pointer' }}>
+                style={{ flex:1, background:'#FFFFFF', border:'1px solid #E2E8F0', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.1em', color: active===0 ? '#CBD5E1' : '#475569', cursor: active===0 ? 'default' : 'pointer' }}>
                 ← Previous
               </button>
               {active < steps.length - 1 ? (
@@ -496,7 +496,7 @@ export default function DemoWalkthrough() {
                 </button>
               ) : (
                 <button onClick={() => document.getElementById('waitlist')?.scrollIntoView({behavior:'smooth'})}
-                  style={{ flex:2, background:'#FFB800', border:'none', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, fontWeight:600, textTransform:'uppercase', letterSpacing:'0.1em', color:'#000', cursor:'pointer' }}>
+                  style={{ flex:2, background:'#D97706', border:'none', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, fontWeight:600, textTransform:'uppercase', letterSpacing:'0.1em', color:'#000', cursor:'pointer' }}>
                   Join Early Access →
                 </button>
               )}
@@ -505,10 +505,10 @@ export default function DemoWalkthrough() {
             {/* Progress */}
             <div style={{ display:'flex', flexDirection:'column', gap:4 }}>
               <div style={{ display:'flex', justifyContent:'space-between' }}>
-                <span style={{ fontFamily:"'Fira Code',monospace", fontSize:9, color:'#444', textTransform:'uppercase', letterSpacing:'0.1em' }}>Workflow progress</span>
+                <span style={{ fontFamily:"'Fira Code',monospace", fontSize:9, color:'#64748B', textTransform:'uppercase', letterSpacing:'0.1em' }}>Workflow progress</span>
                 <span style={{ fontFamily:"'Fira Code',monospace", fontSize:9, color:s.color }}>{active+1} of {steps.length}</span>
               </div>
-              <div style={{ height:4, background:'#111', borderRadius:2 }}>
+              <div style={{ height:4, background:'#FFFFFF', borderRadius:2 }}>
                 <div style={{ height:4, background:s.color, borderRadius:2, width:`${((active+1)/steps.length)*100}%`, transition:'width 0.4s ease' }}/>
               </div>
             </div>
@@ -517,30 +517,30 @@ export default function DemoWalkthrough() {
       </div>
 
       {/* What you are seeing */}
-      <div style={{ background:'#000', borderTop:'1px solid rgba(255,255,255,0.04)', borderBottom:'1px solid rgba(255,255,255,0.04)', padding:'24px 20px' }}>
+      <div style={{ background:'#F1F3F6', borderTop:'1px solid rgba(15,23,42,0.1)', borderBottom:'1px solid rgba(15,23,42,0.1)', padding:'24px 20px' }}>
         <div style={{ maxWidth:1200, margin:'0 auto', display:'flex', gap:12, alignItems:'center', flexWrap:'wrap' }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.14em', color:'#FFB800', flexShrink:0 }}>What you are seeing:</div>
-          <div style={{ fontSize:13, color:'#555', lineHeight:1.6 }}>
-            These are UI design previews — not fake screenshots of a finished product. Combryx is in active development. Every screen shown reflects a real planned workflow based on 35+ years in the trade and experience inside 5 Ontario builders and Tarion. <span style={{ color:'#888' }}>Early access waitlist is open below.</span>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.14em', color:'#D97706', flexShrink:0 }}>What you are seeing:</div>
+          <div style={{ fontSize:13, color:'#64748B', lineHeight:1.6 }}>
+            These are UI design previews — not fake screenshots of a finished product. Combryx is in active development. Every screen shown reflects a real planned workflow based on 35+ years in the trade and experience inside 5 Ontario builders and Tarion. <span style={{ color:'#475569' }}>Early access waitlist is open below.</span>
           </div>
         </div>
       </div>
 
       {/* Waitlist */}
-      <div id="waitlist" style={{ background:'#080808', padding:'56px 20px' }}>
+      <div id="waitlist" style={{ background:'#F1F3F6', padding:'56px 20px' }}>
         <div style={{ maxWidth:640, margin:'0 auto', textAlign:'center' }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#FFB800', marginBottom:14 }}>Early Access</div>
-          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,64px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#F5F5F5', marginBottom:14 }}>
-            Be first in.<br/><span style={{ color:'#FFB800' }}>No setup fee. Ever.</span>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:14 }}>Early Access</div>
+          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,64px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#0F172A', marginBottom:14 }}>
+            Be first in.<br/><span style={{ color:'#D97706' }}>No setup fee. Ever.</span>
           </h2>
-          <p style={{ fontSize:14, color:'#666', lineHeight:1.75, marginBottom:36, maxWidth:440, margin:'0 auto 36px' }}>
+          <p style={{ fontSize:14, color:'#475569', lineHeight:1.75, marginBottom:36, maxWidth:440, margin:'0 auto 36px' }}>
             Early access builders get priority onboarding, direct line to the founder, and the ability to shape which features ship first. Join the waitlist.
           </p>
           <WaitlistForm />
           <div style={{ marginTop:32, display:'flex', gap:24, justifyContent:'center', flexWrap:'wrap' }}>
             {['No credit card','Cancel anytime','Ontario-specific','Built by Tarion insider'].map(t => (
-              <span key={t} style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.1em', color:'#444', display:'flex', alignItems:'center', gap:6 }}>
-                <span style={{ color:'#FFB800', fontSize:9 }}>✓</span>{t}
+              <span key={t} style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.1em', color:'#64748B', display:'flex', alignItems:'center', gap:6 }}>
+                <span style={{ color:'#D97706', fontSize:9 }}>✓</span>{t}
               </span>
             ))}
           </div>

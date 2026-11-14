@@ -45,9 +45,9 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col justify-between pt-14 overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black">
+      <section className="relative min-h-screen flex flex-col justify-between pt-14 overflow-hidden bg-gradient-to-b from-white to-cb-dark1">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.07]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.06) 0%,transparent 70%)' }} />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.06) 0%,transparent 70%)' }} />
 
         <div className="relative z-10 flex flex-col items-start justify-center flex-1 px-4 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto w-full">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-6 flex items-center gap-3">
@@ -72,11 +72,11 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="animate-fade-up anim-d4" style={{ display:'flex', gap:40, flexWrap:'wrap', borderTop:'1px solid rgba(255,255,255,0.06)', paddingTop:32, width:'100%' }}>
+          <div className="animate-fade-up anim-d4" style={{ display:'flex', gap:40, flexWrap:'wrap', borderTop:'1px solid rgba(15,23,42,0.1)', paddingTop:32, width:'100%' }}>
             {[['100%','Tarion Form Compatible'],['2','Optional Add-ons'],['$0','Setup Fee'],['2','Low-Rise + High-Rise'],['35+','Years in the Trade']].map(([n,l]) => (
               <div key={l}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:30, letterSpacing:'0.04em', color:'#FFB800', lineHeight:1, marginBottom:4 }}>{n}</div>
-                <div style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444444' }}>{l}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:30, letterSpacing:'0.04em', color:'#D97706', lineHeight:1, marginBottom:4 }}>{n}</div>
+                <div style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B' }}>{l}</div>
               </div>
             ))}
           </div>
@@ -97,20 +97,20 @@ export default function HomePage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-px bg-[rgba(255,184,0,0.08)] border border-[rgba(255,184,0,0.1)] rounded-xl overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-px bg-[rgba(217,119,6,0.08)] border border-[rgba(217,119,6,0.1)] rounded-xl overflow-hidden">
             <ScrollReveal className="bg-cb-dark2 p-10">
-              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-red-400 font-semibold mb-4">What every other system gets wrong</div>
+              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-red-600 font-semibold mb-4">What every other system gets wrong</div>
               <div className="font-display text-2xl text-cb-white mb-6">Good software. Built by people who never sat inside the process.</div>
               <div className="flex flex-col gap-4">
                 {['They read the Tarion handbook. We processed the claims, ran the inspections, and sat in the conciliation rooms.','They track deadlines. We know what happens when you miss one by a single day — and built every alert around that exact consequence.','They built for general construction. We built for Ontario\'s specific statutory obligations under ONHWPA.','Systems designed by software engineers who have never set foot on a job site or navigated an OBC compliance issue.'].map(t => (
                   <div key={t} className="flex gap-3 text-sm text-cb-muted leading-relaxed">
-                    <span className="text-red-400 flex-shrink-0 mt-0.5">✗</span>{t}
+                    <span className="text-red-600 flex-shrink-0 mt-0.5">✗</span>{t}
                   </div>
                 ))}
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={150} className="bg-[rgba(255,184,0,0.04)] border-l border-[rgba(255,184,0,0.15)] p-10">
+            <ScrollReveal delay={150} className="bg-[rgba(217,119,6,0.04)] border-l border-[rgba(217,119,6,0.15)] p-10">
               <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-cb-gold font-semibold mb-4">The Combryx difference</div>
               <div className="font-display text-2xl text-cb-white mb-6">Built by someone who knows what you&apos;re actually up against.</div>
               <div className="flex flex-col gap-4">
@@ -130,7 +130,7 @@ export default function HomePage() {
       <OutcomeStats />
 
       {/* ── TARION ── */}
-      <section id="tarion" className="bg-black py-16 px-4 md:px-8">
+      <section id="tarion" className="bg-cb-dark1 py-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto w-full">
           <ScrollReveal>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
@@ -143,7 +143,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="flex flex-col gap-4">
               {tarionItems.map((t, i) => (
-                <ScrollReveal key={t.n} delay={i * 80} className="bg-cb-dark2 border border-[rgba(255,184,0,0.12)] rounded-xl p-6">
+                <ScrollReveal key={t.n} delay={i * 80} className="bg-cb-dark2 border border-[rgba(217,119,6,0.12)] rounded-xl p-6">
                   <div className="flex gap-5 items-start">
                     <div className="font-display text-5xl text-cb-gold leading-none flex-shrink-0 tracking-[0.04em]">{t.n}</div>
                     <div>
@@ -156,17 +156,17 @@ export default function HomePage() {
               ))}
             </div>
 
-            <ScrollReveal delay={200} className="bg-cb-dark2 border border-[rgba(255,184,0,0.2)] rounded-xl overflow-hidden">
-              <div className="bg-[rgba(255,184,0,0.08)] border-b border-[rgba(255,184,0,0.15)] px-6 py-4 flex items-center justify-between">
+            <ScrollReveal delay={200} className="bg-cb-dark2 border border-[rgba(217,119,6,0.2)] rounded-xl overflow-hidden">
+              <div className="bg-[rgba(217,119,6,0.08)] border-b border-[rgba(217,119,6,0.15)] px-6 py-4 flex items-center justify-between">
                 <span className="font-mono text-[11px] text-cb-gold font-semibold uppercase tracking-widest">Bayview Heights — Unit Deadlines</span>
                 <span className="font-mono text-[9px] text-cb-dim">Live · Auto-updated</span>
               </div>
-              {[['Unit 804 — Initial Form (Day 41)','Jun 3, 2026','In BRP','#22c55e','rgba(34,197,94,0.12)'],
+              {[['Unit 804 — Initial Form (Day 41)','Jun 3, 2026','In BRP','#15803D','rgba(34,197,94,0.12)'],
                 ['Unit 512 — Mid-Year Form','May 14, 2026','BRP Day 108','#d97706','rgba(217,119,6,0.12)'],
                 ['Unit 301 — 2-Year','Apr 28, 2026','Expired','#dc2626','rgba(220,38,38,0.12)'],
-                ['Unit 215 — Year-End Form','Jul 22, 2026','BRP Active','#22c55e','rgba(34,197,94,0.12)'],
-                ['Unit 119 — 7-Year MSD','Aug 30, 2028','2.3 yrs','#22c55e','rgba(34,197,94,0.12)']].map(([name,date,status,c,bg]) => (
-                <div key={name} className="px-6 py-4 border-b border-[rgba(255,255,255,0.04)] flex items-center justify-between gap-4 last:border-0">
+                ['Unit 215 — Year-End Form','Jul 22, 2026','BRP Active','#15803D','rgba(34,197,94,0.12)'],
+                ['Unit 119 — 7-Year MSD','Aug 30, 2028','2.3 yrs','#15803D','rgba(34,197,94,0.12)']].map(([name,date,status,c,bg]) => (
+                <div key={name} className="px-6 py-4 border-b border-[rgba(15,23,42,0.1)] flex items-center justify-between gap-4 last:border-0">
                   <div>
                     <div className="font-body text-sm font-semibold text-cb-white">{name}</div>
                     <div className="font-mono text-[10px] text-cb-dim">{date}</div>
@@ -174,7 +174,7 @@ export default function HomePage() {
                   <span className="font-mono text-[10px] font-bold px-2.5 py-1 rounded-md flex-shrink-0" style={{ color:c, background:bg }}>{status}</span>
                 </div>
               ))}
-              <div className="px-6 py-4 bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.04)]">
+              <div className="px-6 py-4 bg-[rgba(15,23,42,0.04)] border-t border-[rgba(15,23,42,0.1)]">
                 {['Tarion conciliation request (RFC) tracking','QDef import — migrate in one afternoon','ONHWPA statutory obligation tracking','OBC Part 9 AI answers (Lex Structura)'].map(t => (
                   <div key={t} className="flex gap-2 text-[12px] text-cb-muted py-1">
                     <span className="text-cb-gold text-[10px] flex-shrink-0 mt-0.5">→</span>{t}
@@ -199,22 +199,22 @@ export default function HomePage() {
             <p className="text-cb-muted text-base max-w-lg mx-auto">Priced per community or tower, per month. Unlimited users. Full data export always free. Cancel anytime.</p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-px bg-[rgba(255,255,255,0.06)] rounded-xl overflow-hidden border border-[rgba(255,255,255,0.06)]">
+          <div className="grid md:grid-cols-3 gap-px bg-[rgba(15,23,42,0.1)] rounded-xl overflow-hidden border border-[rgba(15,23,42,0.1)]">
             {pricing.map((p, i) => (
               <ScrollReveal key={p.name} delay={i * 80}
                 className={`p-9 relative ${p.featured ? 'bg-cb-dark1 border-2 border-cb-gold -mx-px z-10 rounded-xl' : 'bg-cb-dark1'}`}>
-                {p.featured && <div className="absolute -top-px left-6 bg-cb-gold text-black font-mono text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-b-md">Start Here</div>}
+                {p.featured && <div className="absolute -top-px left-6 bg-cb-gold text-white font-mono text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-b-md">Start Here</div>}
                 <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-cb-dim mb-3">{p.tag}</div>
                 <div className={`font-display text-2xl tracking-[0.04em] mb-2 ${p.featured ? 'text-cb-gold' : 'text-cb-white'}`}>{p.name}</div>
                 <p className="text-cb-muted text-sm leading-relaxed mb-6">{p.tagline}</p>
-                <div className="mb-6 pb-5 border-b border-[rgba(255,255,255,0.07)]">
+                <div className="mb-6 pb-5 border-b border-[rgba(15,23,42,0.1)]">
                   <div className={`font-display text-5xl tracking-[0.04em] leading-none mb-1 ${p.featured ? 'text-cb-gold' : 'text-cb-white'}`}>{p.price}</div>
                   <div className="font-mono text-[10px] text-cb-dim">{p.period}</div>
                 </div>
                 <div className="flex flex-col gap-2.5 mb-8">
                   {p.items.map(item => (
                     <div key={item} className="flex gap-2.5 text-[13px] text-cb-muted">
-                      <span className={`flex-shrink-0 mt-0.5 text-[11px] font-bold ${p.featured ? 'text-cb-gold' : 'text-green-400'}`}>✓</span>{item}
+                      <span className={`flex-shrink-0 mt-0.5 text-[11px] font-bold ${p.featured ? 'text-cb-gold' : 'text-green-700'}`}>✓</span>{item}
                     </div>
                   ))}
                   {p.locked.map(item => (
@@ -224,7 +224,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <Link href={p.href}
-                  className={`block text-center font-mono text-[11px] font-semibold uppercase tracking-widest py-3.5 rounded-md transition-all no-underline ${p.featured ? 'bg-cb-gold text-black hover:bg-cb-gold2' : 'bg-cb-dark3 text-cb-gold border border-[rgba(255,184,0,0.3)] hover:bg-cb-gold hover:text-black'}`}>
+                  className={`block text-center font-mono text-[11px] font-semibold uppercase tracking-widest py-3.5 rounded-md transition-all no-underline ${p.featured ? 'bg-cb-gold text-white hover:bg-cb-gold2' : 'bg-cb-dark3 text-cb-gold border border-[rgba(217,119,6,0.3)] hover:bg-cb-gold hover:text-white'}`}>
                   {p.cta} →
                 </Link>
               </ScrollReveal>
@@ -239,7 +239,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="bg-black py-16 px-4 md:px-8">
+      <section className="bg-cb-dark1 py-16 px-4 md:px-8">
         <div className="max-w-3xl mx-auto w-full">
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
@@ -254,7 +254,7 @@ export default function HomePage() {
       {/* ── FINAL CTA ── */}
       <section className="bg-cb-dark1 py-20 px-4 md:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(255,184,0,0.05) 0%,transparent 70%)' }}/>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.05) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-2xl mx-auto">
           <ScrollReveal>
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-5">The warranty system founded by a Tarion insider</div>

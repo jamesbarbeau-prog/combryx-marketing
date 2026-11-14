@@ -15,53 +15,53 @@ const rows = [
 
 export default function KnowledgeGap() {
   return (
-    <section style={{ background:'#0a0a0a', padding:'96px 0', borderTop:'1px solid rgba(255,184,0,0.08)' }}>
+    <section style={{ background:'#F1F3F6', padding:'96px 0', borderTop:'1px solid rgba(217,119,6,0.08)' }}>
       <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 16px' }}>
 
         {/* header */}
         <div style={{ marginBottom:48, maxWidth:680 }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#FFB800', marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
-            <span style={{ width:24, height:1, background:'#FFB800', opacity:0.6, display:'inline-block' }}/>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
+            <span style={{ width:24, height:1, background:'#D97706', opacity:0.6, display:'inline-block' }}/>
             The Knowledge Gap
           </div>
-          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,60px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#F5F5F5', marginBottom:16 }}>
-            Not a feature comparison.<br/>A <span style={{ color:'#FFB800' }}>knowledge gap.</span>
+          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,60px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#0F172A', marginBottom:16 }}>
+            Not a feature comparison.<br/>A <span style={{ color:'#D97706' }}>knowledge gap.</span>
           </h2>
-          <p style={{ fontSize:15, color:'#888', lineHeight:1.75 }}>
+          <p style={{ fontSize:15, color:'#475569', lineHeight:1.75 }}>
             Other platforms are built by great developers who read the Tarion handbook. Combryx is built by someone who processed the claims, ran the inspections, and sat in the conciliation rooms. That gap cannot be closed by any company that never worked inside a builder or a warranty authority.
           </p>
         </div>
 
         {/* table */}
-        <div style={{ background:'#111', border:'1px solid rgba(255,255,255,0.06)', borderRadius:12, overflow:'hidden' }}>
+        <div style={{ background:'#FFFFFF', border:'1px solid rgba(15,23,42,0.1)', borderRadius:12, overflow:'hidden' }}>
 
           {/* table header */}
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', background:'#000', overflowX:'auto', borderBottom:'1px solid rgba(255,255,255,0.08)', padding:'0' }}>
-            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444' }}>Capability</div>
-            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#FFB800', borderLeft:'1px solid rgba(255,255,255,0.06)', background:'rgba(255,184,0,0.04)' }}>✦ Combryx</div>
-            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#444', borderLeft:'1px solid rgba(255,255,255,0.06)' }}>Other Platforms</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', background:'#F1F3F6', overflowX:'auto', borderBottom:'1px solid rgba(15,23,42,0.1)', padding:'0' }}>
+            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B' }}>Capability</div>
+            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#D97706', borderLeft:'1px solid rgba(15,23,42,0.1)', background:'rgba(217,119,6,0.04)' }}>✦ Combryx</div>
+            <div style={{ padding:'14px 20px', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B', borderLeft:'1px solid rgba(15,23,42,0.1)' }}>Other Platforms</div>
           </div>
 
           {rows.map((r, i) => (
-            <div key={r.feature} style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', borderBottom: i < rows.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none' }}>
+            <div key={r.feature} style={{ display:'grid', gridTemplateColumns:'repeat(3, minmax(0,1fr))', borderBottom: i < rows.length - 1 ? '1px solid rgba(15,23,42,0.1)' : 'none' }}>
               {/* feature name */}
-              <div style={{ padding:'14px 20px', fontSize:13, fontWeight:600, color:'#C8C8C8', display:'flex', alignItems:'center' }}>{r.feature}</div>
+              <div style={{ padding:'14px 20px', fontSize:13, fontWeight:600, color:'#334155', display:'flex', alignItems:'center' }}>{r.feature}</div>
 
               {/* Combryx */}
-              <div style={{ padding:'14px 20px', borderLeft:'1px solid rgba(255,255,255,0.06)', background:'rgba(255,184,0,0.03)', display:'flex', flexDirection:'column', justifyContent:'center', gap:3 }}>
+              <div style={{ padding:'14px 20px', borderLeft:'1px solid rgba(15,23,42,0.1)', background:'rgba(217,119,6,0.03)', display:'flex', flexDirection:'column', justifyContent:'center', gap:3 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                  <span style={{ color:'#22c55e', fontSize:15, fontWeight:700, flexShrink:0 }}>✓</span>
-                  <span style={{ fontSize:12, color:'#888', lineHeight:1.5 }}>{r.usNote}</span>
+                  <span style={{ color:'#15803D', fontSize:15, fontWeight:700, flexShrink:0 }}>✓</span>
+                  <span style={{ fontSize:12, color:'#475569', lineHeight:1.5 }}>{r.usNote}</span>
                 </div>
               </div>
 
               {/* Others */}
-              <div style={{ padding:'14px 20px', borderLeft:'1px solid rgba(255,255,255,0.06)', display:'flex', flexDirection:'column', justifyContent:'center', gap:3 }}>
+              <div style={{ padding:'14px 20px', borderLeft:'1px solid rgba(15,23,42,0.1)', display:'flex', flexDirection:'column', justifyContent:'center', gap:3 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:8 }}>
                   <span style={{ color: r.them === 'partial' ? '#d97706' : '#dc2626', fontSize:13, flexShrink:0 }}>
                     {r.them === true ? '✓' : r.them === 'partial' ? '~' : '✗'}
                   </span>
-                  <span style={{ fontSize:12, color:'#555', lineHeight:1.5 }}>{r.themNote}</span>
+                  <span style={{ fontSize:12, color:'#64748B', lineHeight:1.5 }}>{r.themNote}</span>
                 </div>
               </div>
             </div>
@@ -70,11 +70,11 @@ export default function KnowledgeGap() {
 
         {/* bottom note */}
         <div style={{ marginTop:28, display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16 }}>
-          <p style={{ fontSize:12, color:'#444', fontFamily:"'Fira Code',monospace" }}>
+          <p style={{ fontSize:12, color:'#64748B', fontFamily:"'Fira Code',monospace" }}>
             ~ Partial &nbsp;·&nbsp; ✗ Not available &nbsp;·&nbsp; ✓ Available or on the roadmap where marked
           </p>
           <Link href="/pricing" style={{
-            background:'#FFB800', color:'#000',
+            background:'#D97706', color:'#000',
             fontFamily:"'Fira Code',monospace", fontSize:11, fontWeight:600,
             letterSpacing:'0.1em', textTransform:'uppercase',
             padding:'12px 24px', borderRadius:6, textDecoration:'none',

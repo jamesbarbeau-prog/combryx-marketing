@@ -51,7 +51,7 @@ export default function Nav() {
 
       <nav
         className="nav-root"
-        style={{ background: scrolled ? 'rgba(0,0,0,0.98)' : 'rgba(0,0,0,0.90)' }}>
+        style={{ background: scrolled ? 'rgba(15,23,42,0.98)' : 'rgba(15,23,42,0.90)' }}>
 
         {/* Logo — always visible, shrinks on very small screens */}
         <Link href="/" style={{ display:'flex', alignItems:'center', gap:8, textDecoration:'none', flexShrink:0, minWidth:0 }}>
@@ -73,7 +73,7 @@ export default function Nav() {
             <Link key={l.href} href={l.href} style={{
               fontFamily:"'Fira Code',monospace", fontSize:10,
               textTransform:'uppercase', letterSpacing:'0.08em',
-              color: pathname === l.href ? '#FFB800' : '#888',
+              color: pathname === l.href ? '#FFB800' : '#CBD5E1',
               padding:'0 12px', height:56, display:'flex', alignItems:'center',
               textDecoration:'none',
               borderBottom: pathname === l.href ? '2px solid #FFB800' : '2px solid transparent',
@@ -117,7 +117,7 @@ export default function Nav() {
       {open && (
         <div className="nav-overlay" style={{
           position:'fixed', top:56, left:0, right:0, bottom:0,
-          background:'rgba(0,0,0,0.98)', backdropFilter:'blur(24px)',
+          background:'rgba(15,23,42,0.98)', backdropFilter:'blur(24px)',
           zIndex:99, flexDirection:'column',
           borderTop:'1px solid rgba(255,184,0,0.1)', overflowY:'auto',
         }}>
@@ -147,7 +147,7 @@ export default function Nav() {
             }}>
               Get Started — $129/community →
             </Link>
-            <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#444', marginTop:12, textTransform:'uppercase', letterSpacing:'0.1em' }}>
+            <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#94A3B8', marginTop:12, textTransform:'uppercase', letterSpacing:'0.1em' }}>
               No setup fee · Cancel anytime
             </p>
           </div>

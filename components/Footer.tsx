@@ -8,15 +8,15 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-[rgba(255,184,0,0.08)] pt-14 pb-8 px-8">
+    <footer className="bg-cb-dark1 border-t border-[rgba(217,119,6,0.08)] pt-14 pb-8 px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-[rgba(255,255,255,0.05)]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-[rgba(15,23,42,0.1)]">
           <div>
             <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
-              <div style={{ width:28, height:28, background:'#FFB800', clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)', display:'flex', alignItems:'center', justifyContent:'center', position:'relative' }}>
+              <div style={{ width:28, height:28, background:'#D97706', clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)', display:'flex', alignItems:'center', justifyContent:'center', position:'relative' }}>
                 <span style={{ color:'#000', fontSize:10, fontWeight:'bold', position:'absolute' }}>✦</span>
               </div>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:'0.1em', color:'#F5F5F5' }}>COM<span style={{ color:'#FFB800' }}>BRYX</span></span>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:'0.1em', color:'#0F172A' }}>COM<span style={{ color:'#D97706' }}>BRYX</span></span>
             </div>
             <p className="text-cb-muted text-sm leading-relaxed mb-4">
               Warranty management software for Ontario homebuilders — low-rise and high-rise. Built around Tarion. Built by the trade, for the trade.
@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-cb-dim mb-4">{col.title}</div>
               <div className="flex flex-col gap-2.5">
                 {col.links.map(([label, href]) => (
-                  <Link key={label} href={href} style={{ color:"#888888", fontSize:14, textDecoration:"none" }}>{label}</Link>
+                  <Link key={label} href={href} style={{ color:"#475569", fontSize:14, textDecoration:"none" }}>{label}</Link>
                 ))}
               </div>
             </div>
