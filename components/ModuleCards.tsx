@@ -47,7 +47,7 @@ const modules = [
       { icon:'Camera', label:'360 Stages', sub:'Framing to close · per home' },
       { icon:'ScanSearch', label:'AI Walk-Through', sub:'Checks selections at QCI' },
     ],
-    href:'/platform',
+    href:'/portals',
   },
 ]
 

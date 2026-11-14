@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const cols = [
   { title: 'Product', links: [['Combryx Warranty','/pricing'],['Conciliation Manager','/pricing'],['Design Centre (coming)','/pricing'],['What\'s Included','/platform']] },
-  { title: 'Platform', links: [['How It Works','/how-it-works'],['Platform Overview','/platform'],['Tarion Compliance','/how-it-works#tarion'],['See It Live','/demo']] },
+  { title: 'Platform', links: [['How It Works','/how-it-works'],['Platform Overview','/platform'],['Portals & Design Centre','/portals'],['Tarion Compliance','/how-it-works#tarion'],['See It Live','/demo']] },
   { title: 'Company', links: [['About','/about'],['Pricing','/pricing'],['Book a Demo','mailto:demo@combryx.com'],['Support','mailto:support@combryx.com'],['Privacy Policy','#']] },
 ]
 

@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://combryx.com/about',         lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://combryx.com/how-it-works',  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://combryx.com/platform',      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://combryx.com/portals',       lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://combryx.com/demo',         lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.95 },
     { url: 'https://combryx.com/pricing',       lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.95 },
   ]
