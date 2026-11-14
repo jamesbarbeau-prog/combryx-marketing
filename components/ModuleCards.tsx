@@ -5,8 +5,8 @@ import IconTile from '@/components/Icon'
 
 const modules = [
   {
-    letter:'W', color:'#D97706', badge:'Base — Always Included',
-    name:'Combryx Warranty',
+    letter:'W', color:'#EA580C', badge:'Base — Always Included',
+    name:'Builder Guardian Warranty',
     outcome:'Every form, item, trade and deadline in one place — low-rise and high-rise.',
     why:'Built for the warranty department only. It sits beside whatever your construction and sales teams already use.',
     icons:[
@@ -20,10 +20,10 @@ const modules = [
     href:'/how-it-works#features',
   },
   {
-    letter:'C', color:'#4338CA', badge:'Add-on — Managers Only',
+    letter:'C', color:'#1E3A8A', badge:'Add-on — Managers Only',
     name:'Conciliation Manager',
     outcome:'Never lose a Tarion conciliation from poor documentation again.',
-    why:'Cases, CARs, cash offers and the builder comments package — for freehold and common elements. Now being built into Combryx.',
+    why:'Cases, CARs, cash offers and the builder comments package — for freehold and common elements. Now being built into Builder Guardian.',
     icons:[
       { icon:'ClipboardList', label:'Case Stages', sub:'Booked → assessed → CAR' },
       { icon:'Hourglass', label:'Timers', sub:'Every cycle on its own clock' },
@@ -35,7 +35,7 @@ const modules = [
     href:'/platform',
   },
   {
-    letter:'D', color:'#1D4ED8', badge:'Add-on — Coming',
+    letter:'D', color:'#475569', badge:'Add-on — Coming',
     name:'Design Centre',
     outcome:'Owners choose and sign their selections before they sit down with sales.',
     why:'Shorter design appointments, a clean site instruction list, and a record warranty can check years later.',
@@ -59,15 +59,15 @@ export default function ModuleCards() {
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 16px' }}>
         {/* header */}
         <div style={{ marginBottom:52 }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
-            <span style={{ width:24, height:1, background:'#D97706', opacity:0.6, display:'inline-block' }}/>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#EA580C', marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
+            <span style={{ width:24, height:1, background:'#EA580C', opacity:0.6, display:'inline-block' }}/>
             One Product · Two Add-ons
           </div>
           <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,60px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#0F172A', marginBottom:12 }}>
             Built for the warranty team.<br/>Nothing you don&apos;t need.
           </h2>
           <p style={{ fontSize:15, color:'#475569', lineHeight:1.75, maxWidth:580 }}>
-            Combryx Warranty is the whole product. Add the Conciliation Manager for your managers, and the Design Centre when it launches. It works beside your existing construction and sales software.
+            Builder Guardian Warranty is the whole product. Add the Conciliation Manager for your managers, and the Design Centre when it launches. It works beside your existing construction and sales software.
           </p>
         </div>
 
@@ -83,8 +83,8 @@ export default function ModuleCards() {
 
               {/* badge */}
               <div style={{ display:'inline-block', fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', padding:'3px 10px', borderRadius:4, fontWeight:600, marginBottom:14,
-                background: m.badge === 'Base — Always Included' ? 'rgba(217,119,6,0.14)' : 'rgba(67,56,202,0.10)',
-                color: m.badge === 'Base — Always Included' ? '#92400E' : '#4338CA' }}>
+                background: m.badge === 'Base — Always Included' ? 'rgba(234,88,12,0.14)' : 'rgba(30,58,138,0.10)',
+                color: m.badge === 'Base — Always Included' ? '#9A3412' : '#1E3A8A' }}>
                 {m.badge}
               </div>
 

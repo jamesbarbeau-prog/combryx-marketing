@@ -9,7 +9,7 @@ import {
 const C = {
   ink:'#0F172A', steel:'#475569', dim:'#64748B', line:'#E2E8F0', line2:'#CBD5E1',
   canvas:'#F1F3F6', tile:'#F8FAFC', navy:'#1E3A8A', navyBg:'#EFF6FF',
-  amber:'#D97706', amberText:'#92400E', amberBg:'#FEF3C7',
+  amber:'#EA580C', amberText:'#9A3412', amberBg:'#FFEDD5',
   indigo:'#4338CA', green:'#15803D', greenBg:'#DCFCE7', red:'#B91C1C',
 }
 const mono = "'Fira Code',monospace"
@@ -20,7 +20,7 @@ function Phone({ title, sub, children }: { title: string; sub: string; children:
   return (
     <div style={{ width:'100%', maxWidth:360, margin:'0 auto', background:'#FFFFFF', border:`1px solid ${C.line2}`, borderRadius:28, boxShadow:'0 2px 4px rgba(15,23,42,0.06), 0 24px 48px rgba(15,23,42,0.12)', overflow:'hidden' }}>
       <div style={{ background:C.ink, padding:'14px 18px 12px' }}>
-        <div style={{ fontFamily:mono, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:'#FBBF24', marginBottom:3 }}>{sub}</div>
+        <div style={{ fontFamily:mono, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:'#FB923C', marginBottom:3 }}>{sub}</div>
         <div style={{ fontSize:15, fontWeight:600, color:'#F8FAFC' }}>{title}</div>
       </div>
       <div style={{ padding:16, background:C.canvas, minHeight:440 }}>{children}</div>
@@ -299,12 +299,12 @@ const tabs = [
     body:'Every home is captured in 360 at each stage from framing to close. Owners can look around and ask about anything that seems wrong. Warranty keeps the same record for the life of the home.',
     steps:['The site team captures each room at framing, insulation, pre-drywall and close.','The owner opens a stage and looks around the room.','A question is pinned to the exact view and sent to the builder.','The answer comes back in the portal and by email.','Years later, warranty can check what is behind the wall before opening it.'],
     Mock: Stages360 },
-  { key:'owner', label:'Owner Portal', icon:Home, tag:'Included with Combryx Warranty · Coming',
+  { key:'owner', label:'Owner Portal', icon:Home, tag:'Included with Builder Guardian Warranty · Coming',
     title:'One link for everything about their home.',
     body:'No account to create. The owner sees every warranty item, picks appointment times, checks before and after photos and confirms the fix.',
     steps:['A private link is created automatically for every owner.','They see each item from their Tarion form and where it stands.','They pick an appointment time from the slots offered.','After the repair they see the photos and confirm it is fixed.','Every offer, booking and missed appointment is logged for the builder.'],
     Mock: OwnerPortal },
-  { key:'trade', label:'Trade Portal', icon:HardHat, tag:'Included with Combryx Warranty · Coming',
+  { key:'trade', label:'Trade Portal', icon:HardHat, tag:'Included with Builder Guardian Warranty · Coming',
     title:'One tap from the email. No login.',
     body:'Trades open the work order from the email and tap where the job is at. The builder never re-types a reply.',
     steps:['The trade gets the work order by email with a private link.','They see the address, the item and the due date.','They tap done, scheduled with a date, or not scheduled.','When done, they add an after photo from their phone.','The builder’s list, the owner and the aging report all update on their own.'],

@@ -5,7 +5,7 @@ import IconTile from '@/components/Icon'
 
 export const metadata: Metadata = {
   title: 'How It Works — Ontario Builder Warranty Software',
-  description: 'See exactly how Combryx connects the field and the office. Daily workflow, before/after comparison, interactive hive, and the Tarion edge explained.',
+  description: 'See exactly how Builder Guardian connects the field and the office. Daily workflow, before/after comparison, interactive hive, and the Tarion edge explained.',
   alternates: { canonical: 'https://combryx.com/how-it-works' },
 }
 
@@ -28,12 +28,12 @@ const workflow = [
 ]
 
 const pillars = [
-  { color:'#D97706', icon:'ShieldCheck', outcome:'The Foundation', title:'Warranty Management That Actually Works', body:'End-to-end warranty case management built around how Ontario statutory warranty actually operates. Everything timestamped, photographed, and documented automatically.', proof:['Open, track, resolve, and appeal warranty cases','Work order scheduling with auto-reminders to trades','AI triage classifies incoming cases and drafts responses','Every interaction logged — becomes evidence if needed'] },
+  { color:'#EA580C', icon:'ShieldCheck', outcome:'The Foundation', title:'Warranty Management That Actually Works', body:'End-to-end warranty case management built around how Ontario statutory warranty actually operates. Everything timestamped, photographed, and documented automatically.', proof:['Open, track, resolve, and appeal warranty cases','Work order scheduling with auto-reminders to trades','AI triage classifies incoming cases and drafts responses','Every interaction logged — becomes evidence if needed'] },
   { color:'#DC2626', icon:'Scale', outcome:'The Tarion Edge', title:'CSS Form Schedule & BRP Deadlines. Tracked Precisely.', body:'CPP / PDI signature starts the Tarion clock. The three auto-submission windows (Day 41, 183, 366), the 120-day BRP, and the homeowner RFC status are all tracked simultaneously — so you always know exactly where you stand and how much repair time remains.', proof:['Tarion clock starts at CPP/PDI signature — automatically','Day 41, 183 & 366 auto-submission windows tracked per unit','120-day BRP + 30-day pre-conciliation BRP (150 days total)','RFC status tracked — alerts the moment a homeowner requests conciliation','Lex Structura AI answers OBC Part 9 and CPG questions'] },
   { color:'#4338CA', icon:'Lock', outcome:'The Differentiator', title:'Defence Vault — Conciliation Ready. Always.', body:'Every case generates an automatic audit trail. One click exports a PDF package formatted for Tarion conciliation. Built by someone who has sat in that room and knows exactly what an adjudicator looks for.', proof:['Per-case audit trail built from day one','One-click conciliation export formatted for Tarion','CPG citations attached automatically via Lex Structura','Cases you should win — you will now win'] },
   { color:'#15803D', icon:'Smartphone', outcome:'The Field · Coming', title:'The App That Works Without Signal', body:'Designed for the field guy, not the office manager. Three taps max for any common task. Works offline in concrete parkades and unfinished basements. Syncs silently when signal returns.', proof:['Log a defect with a photo in under 30 seconds','PDI walkthrough with dual signature and auto-PDF','QCI and PDI assessments in the field','Role-based — tech sees jobs, PM sees everything'] },
-  { color:'#0E7490', icon:'Puzzle', outcome:'The Product', title:'One Product. Two Add-ons.', body:'Combryx Warranty is complete on its own. Add the Conciliation Manager for your managers, and the Design Centre when it launches. It runs beside your existing construction and sales software.', proof:['Combryx Warranty is a complete product on its own','Conciliation Manager — managers only, freehold and common elements','Design Centre — owner selections, 360 records, AI walk-through (coming)','Imports from and exports to your existing builder system'] },
-  { color:'#C2410C', icon:'Unlock', outcome:'The Guarantee', title:'No Hostage. No Contract. No Exit Fee.', body:'Month-to-month. Cancel from settings. Full data export in CSV, Excel, and PDF — anytime, free. Custom development at a transparent hourly rate. If Combryx isn\'t earning your subscription, you should leave — and we make that easy.', proof:['Cancel anytime — billing stops that month','Full export always free — photos with metadata','Custom workflows and integrations on demand','Same-day support from someone who knows the trade'] },
+  { color:'#0E7490', icon:'Puzzle', outcome:'The Product', title:'One Product. Two Add-ons.', body:'Builder Guardian Warranty is complete on its own. Add the Conciliation Manager for your managers, and the Design Centre when it launches. It runs beside your existing construction and sales software.', proof:['Builder Guardian Warranty is a complete product on its own','Conciliation Manager — managers only, freehold and common elements','Design Centre — owner selections, 360 records, AI walk-through (coming)','Imports from and exports to your existing builder system'] },
+  { color:'#C2410C', icon:'Unlock', outcome:'The Guarantee', title:'No Hostage. No Contract. No Exit Fee.', body:'Month-to-month. Cancel from settings. Full data export in CSV, Excel, and PDF — anytime, free. Custom development at a transparent hourly rate. If Builder Guardian isn\'t earning your subscription, you should leave — and we make that easy.', proof:['Cancel anytime — billing stops that month','Full export always free — photos with metadata','Custom workflows and integrations on demand','Same-day support from someone who knows the trade'] },
 ]
 
 export default function HowItWorksPage() {
@@ -43,10 +43,10 @@ export default function HowItWorksPage() {
       <section className="relative min-h-screen flex flex-col justify-center pt-14 overflow-hidden bg-cb-dark1">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.06]"/>
         <div className="absolute inset-0" style={{ background:'repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(15,23,42,0.04) 3px,rgba(15,23,42,0.04) 4px)' }}/>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.06) 0%,transparent 70%)' }}/>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(234,88,12,0.06) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 py-20 text-center">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-7 flex items-center justify-center gap-3">
-            <span style={{ display:"inline-block", width:40, height:1, background:"#D97706", opacity:0.5 }}/>Combryx · How It Works · Ontario Builders<span style={{ display:"inline-block", width:40, height:1, background:"#D97706", opacity:0.5 }}/>
+            <span style={{ display:"inline-block", width:40, height:1, background:"#EA580C", opacity:0.5 }}/>Builder Guardian · How It Works · Ontario Builders<span style={{ display:"inline-block", width:40, height:1, background:"#EA580C", opacity:0.5 }}/>
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(56px,9vw,120px)] leading-[0.93] tracking-[0.04em] text-cb-white mb-6">
             TRADE<br/><span className="text-cb-gold text-glow-gold">LOGIC.</span><br/>MODERN<br/><span className="opacity-25">SYSTEM.</span>
@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
           </p>
           <div className="animate-fade-up anim-d3 flex gap-3 justify-center flex-wrap mb-16">
             <Link href="/pricing" className="btn-gold">
-              Start with Combryx Warranty →
+              Start with Builder Guardian Warranty →
             </Link>
             <Link href="#workflow" className="btn-ghost">
               See How It Works ↓
@@ -77,9 +77,9 @@ export default function HowItWorksPage() {
       <section className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>The Problem</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>The Problem</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Six reasons every Ontario<br/>builder needs a <span className="text-cb-gold">better system.</span></h2>
-            <p className="text-cb-muted text-base max-w-xl">Documented across five real Ontario builders — in person, at the management level — before a single line of Combryx was written.</p>
+            <p className="text-cb-muted text-base max-w-xl">Documented across five real Ontario builders — in person, at the management level — before a single line of Builder Guardian was written.</p>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(15,23,42,0.1)] border border-[rgba(15,23,42,0.1)] rounded-xl overflow-hidden">
             {pain.map((p, i) => (
@@ -98,13 +98,13 @@ export default function HowItWorksPage() {
       <section className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>Before vs. After</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>Before vs. After</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,56px)] tracking-[0.04em] text-cb-white leading-[1.02]">What changes on <span className="text-cb-gold">day one.</span></h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-4">
             <ScrollReveal className="bg-cb-dark1 border border-[rgba(239,68,68,0.15)] rounded-xl overflow-hidden">
               <div className="px-6 py-4 bg-[rgba(239,68,68,0.1)] border-b border-[rgba(239,68,68,0.12)]">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-red-600 font-semibold">✗ Before Combryx</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-red-600 font-semibold">✗ Before Builder Guardian</span>
               </div>
               <div className="p-6 flex flex-col gap-3">
                 {['Tarion deadlines tracked in a spreadsheet — or not tracked at all','PDI walkthrough on paper — signed form filed in a cabinet','Tech completion updates via text or phone call to coordinator','Conciliation prep is a scramble through multiple folders and drives','OBC and CPG questions answered by memory or internet searches','No-shows logged in a notepad, rescheduling done by phone tag','Homeowner interactions undocumented — no audit trail','Signed into a contract that charges to export your own data'].map(t => (
@@ -116,7 +116,7 @@ export default function HowItWorksPage() {
             </ScrollReveal>
             <ScrollReveal delay={150} className="bg-cb-dark1 border border-[rgba(34,197,94,0.15)] rounded-xl overflow-hidden">
               <div className="px-6 py-4 bg-[rgba(34,197,94,0.08)] border-b border-[rgba(34,197,94,0.12)]">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-green-700 font-semibold">✓ With Combryx</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-green-700 font-semibold">✓ With Builder Guardian</span>
               </div>
               <div className="p-6 flex flex-col gap-3">
                 {['CSS form schedule tracked per unit — Day 41, 183 & 366 auto-submissions monitored from CPP signature','PDI on the tablet — homeowner signs on glass, PDF auto-emailed and vaulted','Tech taps "complete" — coordinator sees it in real time, photo in the case file','Defence Vault exports a conciliation-ready package with one click','Lex Structura answers CPG and OBC questions with specific citations','No-show tap → case updated → coordinator notified → reschedule queue','Every homeowner interaction timestamped — becomes evidence if needed','Full data export anytime, free, no ticket, no waiting period — forever'].map(t => (
@@ -134,7 +134,7 @@ export default function HowItWorksPage() {
       <section id="workflow" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>The Daily Flow</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>The Daily Flow</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,56px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">A day in the life.<br/><span className="text-cb-gold">Your operation, connected.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">No phone tag. No missing photos. No paper trail that disappears. The field app, PDI and owner steps shown here are on the roadmap.</p>
           </ScrollReveal>
@@ -146,7 +146,7 @@ export default function HowItWorksPage() {
                   <div className="font-mono text-[9px] text-cb-dim mt-1">{s.time}</div>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-cb-gold flex-shrink-0 mt-2" style={{ boxShadow:'0 0 0 4px rgba(217,119,6,0.15)' }}/>
+                  <div className="w-3 h-3 rounded-full bg-cb-gold flex-shrink-0 mt-2" style={{ boxShadow:'0 0 0 4px rgba(234,88,12,0.15)' }}/>
                   {i < workflow.length - 1 && <div className="flex-1 w-px bg-gradient-to-b from-cb-gold to-[rgba(15,23,42,0.1)] mt-1.5"/>}
                 </div>
                 <div className="bg-cb-dark2 border border-[rgba(15,23,42,0.1)] border-l-[3px] border-l-cb-gold rounded-r-lg p-6 hover:bg-cb-dark3 transition-colors">
@@ -167,7 +167,7 @@ export default function HowItWorksPage() {
       <section id="features" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>What You Get</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>What You Get</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Six capabilities.<br/>One <span className="text-cb-gold">connected system.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Each capability solves a real problem found inside real Ontario builders. Not features invented in a boardroom.</p>
           </ScrollReveal>
@@ -196,10 +196,10 @@ export default function HowItWorksPage() {
         <ScrollReveal>
           <div className="max-w-xl mx-auto">
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">JOIN<br/>THE <span className="text-cb-gold">HIVE.</span></h2>
-            <p className="text-cb-muted text-base mb-8">Start with Combryx Warranty. Cancel the month you decide it&apos;s not worth it. All your data comes with you — free, always.</p>
+            <p className="text-cb-muted text-base mb-8">Start with Builder Guardian Warranty. Cancel the month you decide it&apos;s not worth it. All your data comes with you — free, always.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/pricing" className="btn-gold">
-                Start Combryx Warranty — $129/mo →
+                Start Builder Guardian Warranty — $129/mo →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo

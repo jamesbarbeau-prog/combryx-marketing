@@ -7,16 +7,16 @@ import Link from 'next/link'
 const Screen1 = () => (
   <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
     {/* App chrome */}
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
+    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#F97316" strokeWidth="1" strokeOpacity="0.3"/>
     {/* Top bar */}
     <rect width="560" height="44" rx="8" fill="#111"/>
     <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
+    <circle cx="20" cy="22" r="5" fill="#F97316" fillOpacity="0.8"/>
+    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#F97316" fontWeight="bold">GUARDIAN</text>
     <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Warranty · PDI · Field App · Conciliation</text>
     {/* Sidebar */}
     <rect x="0" y="44" width="140" height="336" fill="#0d0d0d" rx="0"/>
-    <rect x="0" y="44" width="1" height="336" fill="#FFB800" fillOpacity="0.15"/>
+    <rect x="0" y="44" width="1" height="336" fill="#F97316" fillOpacity="0.15"/>
     {[
       {y:70, icon:'🛡', label:'Warranty', active:true},
       {y:100, icon:'📋', label:'PDI', active:false},
@@ -26,10 +26,10 @@ const Screen1 = () => (
       {y:220, icon:'🔐', label:'Vault', active:false},
     ].map(item => (
       <g key={item.y}>
-        {item.active && <rect x="0" y={item.y-12} width="140" height="24" fill="#FFB800" fillOpacity="0.1"/>}
-        {item.active && <rect x="0" y={item.y-12} width="2" height="24" fill="#FFB800"/>}
-        <text x="16" y={item.y+4} fontSize="12" fill={item.active ? '#FFB800' : '#555'}>{item.icon}</text>
-        <text x="34" y={item.y+4} fontFamily="monospace" fontSize="9" fill={item.active ? '#FFB800' : '#555'}>{item.label}</text>
+        {item.active && <rect x="0" y={item.y-12} width="140" height="24" fill="#F97316" fillOpacity="0.1"/>}
+        {item.active && <rect x="0" y={item.y-12} width="2" height="24" fill="#F97316"/>}
+        <text x="16" y={item.y+4} fontSize="12" fill={item.active ? '#F97316' : '#555'}>{item.icon}</text>
+        <text x="34" y={item.y+4} fontFamily="monospace" fontSize="9" fill={item.active ? '#F97316' : '#555'}>{item.label}</text>
       </g>
     ))}
     {/* Main content */}
@@ -37,7 +37,7 @@ const Screen1 = () => (
     <text x="156" y="86" fontFamily="monospace" fontSize="8" fill="#666">Bayview Heights — 47 active units</text>
     {/* Stats row */}
     {[
-      {x:156, label:'Open Cases', n:'12', color:'#FFB800'},
+      {x:156, label:'Open Cases', n:'12', color:'#F97316'},
       {x:256, label:'BRP Active', n:'3', color:'#f97316'},
       {x:356, label:'RFC Pending', n:'1', color:'#ef4444'},
       {x:456, label:'Closed Today', n:'5', color:'#22c55e'},
@@ -51,7 +51,7 @@ const Screen1 = () => (
     {/* Case list */}
     <text x="156" y="158" fontFamily="monospace" fontSize="8" fill="#555" letterSpacing="0.1em">ACTIVE CASES</text>
     {[
-      {unit:'Unit 112', issue:'Drywall crack — living room', status:'BRP Day 45', statusColor:'#FFB800', trade:'Mike Chen'},
+      {unit:'Unit 112', issue:'Drywall crack — living room', status:'BRP Day 45', statusColor:'#F97316', trade:'Mike Chen'},
       {unit:'Unit 204', issue:'Window seal failure', status:'RFC Pending', statusColor:'#ef4444', trade:'Unassigned'},
       {unit:'Unit 318', issue:'HVAC noise complaint', status:'BRP Day 12', statusColor:'#22c55e', trade:'ProHeat Ltd'},
       {unit:'Unit 067', issue:'Tile grout — master bath', status:'BRP Day 88', statusColor:'#f97316', trade:'TilePro Inc'},
@@ -59,7 +59,7 @@ const Screen1 = () => (
     ].map((c, i) => (
       <g key={i}>
         <rect x="156" y={168+i*32} width="390" height="28" rx="3" fill={i===1 ? '#1a0a0a' : '#0f0f0f'} stroke={i===1 ? '#ef4444' : '#1a1a1a'} strokeWidth="0.8"/>
-        <text x="165" y={184+i*32} fontFamily="monospace" fontSize="9" fill="#FFB800" fontWeight="bold">{c.unit}</text>
+        <text x="165" y={184+i*32} fontFamily="monospace" fontSize="9" fill="#F97316" fontWeight="bold">{c.unit}</text>
         <text x="218" y={184+i*32} fontFamily="monospace" fontSize="9" fill="#888">{c.issue}</text>
         <rect x="390" y={170+i*32} width="72" height="16" rx="3" fill={c.statusColor} fillOpacity="0.15"/>
         <text x="426" y={182+i*32} textAnchor="middle" fontFamily="monospace" fontSize="7" fill={c.statusColor}>{c.status}</text>
@@ -71,19 +71,19 @@ const Screen1 = () => (
 
 const Screen2 = () => (
   <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
+    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#F97316" strokeWidth="1" strokeOpacity="0.3"/>
     <rect width="560" height="44" rx="8" fill="#111"/>
     <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
+    <circle cx="20" cy="22" r="5" fill="#F97316" fillOpacity="0.8"/>
+    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#F97316" fontWeight="bold">GUARDIAN</text>
     <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">PDI Walkthrough — Unit 445</text>
     {/* PDI form */}
     <text x="20" y="72" fontFamily="'Bebas Neue',sans-serif" fontSize="18" letterSpacing="0.06em" fill="#F5F5F5">PDI SIGN-OFF</text>
     <text x="20" y="86" fontFamily="monospace" fontSize="8" fill="#666">Unit 445 · Bayview Heights · Sarah Thompson</text>
     {/* Progress bar */}
     <rect x="20" y="94" width="520" height="6" rx="3" fill="#1a1a1a"/>
-    <rect x="20" y="94" width="364" height="6" rx="3" fill="#FFB800"/>
-    <text x="390" y="102" fontFamily="monospace" fontSize="8" fill="#FFB800">7 of 10 rooms complete</text>
+    <rect x="20" y="94" width="364" height="6" rx="3" fill="#F97316"/>
+    <text x="390" y="102" fontFamily="monospace" fontSize="8" fill="#F97316">7 of 10 rooms complete</text>
     {/* Room checklist */}
     {[
       {room:'Living Room', status:'complete', items:2, defects:1},
@@ -96,25 +96,25 @@ const Screen2 = () => (
       <g key={i}>
         <rect x="20" y={112+i*34} width="250" height="28" rx="4"
           fill={r.status==='active'?'#1a1200':r.status==='complete'?'#0a1a0a':'#0f0f0f'}
-          stroke={r.status==='active'?'#FFB800':r.status==='complete'?'#22c55e':'#1a1a1a'} strokeWidth="1"/>
+          stroke={r.status==='active'?'#F97316':r.status==='complete'?'#22c55e':'#1a1a1a'} strokeWidth="1"/>
         <text x="32" y={130+i*34} fontFamily="monospace" fontSize="9"
-          fill={r.status==='active'?'#FFB800':r.status==='complete'?'#22c55e':'#555'}>{r.room}</text>
+          fill={r.status==='active'?'#F97316':r.status==='complete'?'#22c55e':'#555'}>{r.room}</text>
         <text x="32" y={140+i*34} fontFamily="monospace" fontSize="7" fill="#444">{r.items} checks · {r.defects} defects</text>
         <text x="240" y={131+i*34} fontFamily="monospace" fontSize="8"
-          fill={r.status==='active'?'#FFB800':r.status==='complete'?'#22c55e':'#333'}>
+          fill={r.status==='active'?'#F97316':r.status==='complete'?'#22c55e':'#333'}>
           {r.status==='complete'?'✓':r.status==='active'?'→':'○'}
         </text>
       </g>
     ))}
     {/* Active defect panel */}
-    <rect x="286" y="112" width="254" height="180" rx="6" fill="#111" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.5"/>
-    <text x="296" y="128" fontFamily="monospace" fontSize="8" fill="#FFB800" letterSpacing="0.1em">DEFECT #2 — MASTER ENSUITE</text>
+    <rect x="286" y="112" width="254" height="180" rx="6" fill="#111" stroke="#F97316" strokeWidth="1" strokeOpacity="0.5"/>
+    <text x="296" y="128" fontFamily="monospace" fontSize="8" fill="#F97316" letterSpacing="0.1em">DEFECT #2 — MASTER ENSUITE</text>
     <rect x="296" y="134" width="234" height="90" rx="4" fill="#1a1a1a"/>
     <text x="413" y="184" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#555">📷 Photo Required</text>
     <text x="413" y="197" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#444">Tap to capture</text>
     <text x="296" y="242" fontFamily="monospace" fontSize="8" fill="#888">Category:</text>
-    <rect x="296" y="248" width="70" height="16" rx="3" fill="#FFB800" fillOpacity="0.15" stroke="#FFB800" strokeWidth="0.5"/>
-    <text x="331" y="259" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="#FFB800">Tile/Grout</text>
+    <rect x="296" y="248" width="70" height="16" rx="3" fill="#F97316" fillOpacity="0.15" stroke="#F97316" strokeWidth="0.5"/>
+    <text x="331" y="259" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="#F97316">Tile/Grout</text>
     <text x="296" y="278" fontFamily="monospace" fontSize="8" fill="#888">Description: Grout gap at shower base</text>
     {/* Signature area */}
     <rect x="20" y="320" width="520" height="46" rx="6" fill="#0f1a0f" stroke="#22c55e" strokeWidth="1" strokeOpacity="0.5"/>
@@ -126,30 +126,30 @@ const Screen2 = () => (
 
 const Screen3 = () => (
   <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
+    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#F97316" strokeWidth="1" strokeOpacity="0.3"/>
     <rect width="560" height="44" rx="8" fill="#111"/>
     <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
+    <circle cx="20" cy="22" r="5" fill="#F97316" fillOpacity="0.8"/>
+    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#F97316" fontWeight="bold">GUARDIAN</text>
     <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Field App — Tech View</text>
     {/* Phone mockup inside screen */}
-    <rect x="155" y="50" width="250" height="320" rx="20" fill="#111" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.6"/>
+    <rect x="155" y="50" width="250" height="320" rx="20" fill="#111" stroke="#F97316" strokeWidth="1.5" strokeOpacity="0.6"/>
     <rect x="190" y="55" width="180" height="8" rx="4" fill="#1a1a1a"/>
     {/* Phone content */}
-    <text x="280" y="86" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="16" letterSpacing="0.06em" fill="#FFB800">TODAY</text>
+    <text x="280" y="86" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="16" letterSpacing="0.06em" fill="#F97316">TODAY</text>
     <text x="280" y="98" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#666">Monday · 3 jobs assigned</text>
     {/* Job cards */}
     {[
       {unit:'Unit 112', time:'9:00 AM', issue:'Drywall repair', status:'Done', statusC:'#22c55e'},
-      {unit:'Unit 204', time:'11:30 AM', issue:'Window seal', status:'Next', statusC:'#FFB800'},
+      {unit:'Unit 204', time:'11:30 AM', issue:'Window seal', status:'Next', statusC:'#F97316'},
       {unit:'Unit 318', time:'2:00 PM', issue:'HVAC noise', status:'Later', statusC:'#555'},
     ].map((j,i) => (
       <g key={i}>
         <rect x="168" y={112+i*68} width="224" height="58" rx="6"
           fill={j.status==='Done'?'#0a1a0a':j.status==='Next'?'#1a1200':'#0f0f0f'}
-          stroke={j.status==='Done'?'#22c55e':j.status==='Next'?'#FFB800':'#1a1a1a'} strokeWidth="1"/>
+          stroke={j.status==='Done'?'#22c55e':j.status==='Next'?'#F97316':'#1a1a1a'} strokeWidth="1"/>
         <text x="180" y={128+i*68} fontFamily="monospace" fontSize="10" fontWeight="bold"
-          fill={j.status==='Done'?'#22c55e':j.status==='Next'?'#FFB800':'#888'}>{j.unit}</text>
+          fill={j.status==='Done'?'#22c55e':j.status==='Next'?'#F97316':'#888'}>{j.unit}</text>
         <text x="180" y={140+i*68} fontFamily="monospace" fontSize="8" fill="#666">{j.time} · {j.issue}</text>
         <rect x="310" y={116+i*68} width="44" height="16" rx="3" fill={j.statusC} fillOpacity="0.2"/>
         <text x="332" y={127+i*68} textAnchor="middle" fontFamily="monospace" fontSize="7" fill={j.statusC}>{j.status}</text>
@@ -165,7 +165,7 @@ const Screen3 = () => (
       </g>
     ))}
     {/* FAB button */}
-    <circle cx="280" cy="340" r="18" fill="#FFB800"/>
+    <circle cx="280" cy="340" r="18" fill="#F97316"/>
     <text x="280" y="346" textAnchor="middle" fontSize="14" fill="#000">📷</text>
     {/* Side panel - desktop */}
     <text x="28" y="72" fontFamily="monospace" fontSize="8" fill="#666" letterSpacing="0.08em">LIVE UPDATES</text>
@@ -190,9 +190,9 @@ const Screen3 = () => (
     <rect x="430" y="106" width="100" height="8" rx="2" fill="#22c55e" fillOpacity="0.6"/>
     <text x="480" y="114" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#000">Unit 112 Done</text>
     <text x="430" y="128" fontFamily="monospace" fontSize="7" fill="#555">Tom Park — Field</text>
-    <rect x="430" y="134" width="70" height="8" rx="2" fill="#FFB800" fillOpacity="0.6"/>
+    <rect x="430" y="134" width="70" height="8" rx="2" fill="#F97316" fillOpacity="0.6"/>
     <text x="465" y="142" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#000">En route</text>
-    <text x="430" y="165" fontFamily="monospace" fontSize="8" fill="#FFB800">No signal? No problem.</text>
+    <text x="430" y="165" fontFamily="monospace" fontSize="8" fill="#F97316">No signal? No problem.</text>
     <text x="430" y="177" fontFamily="monospace" fontSize="7" fill="#555">Offline queue syncs</text>
     <text x="430" y="188" fontFamily="monospace" fontSize="7" fill="#555">automatically.</text>
   </svg>
@@ -200,11 +200,11 @@ const Screen3 = () => (
 
 const Screen4 = () => (
   <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
+    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#F97316" strokeWidth="1" strokeOpacity="0.3"/>
     <rect width="560" height="44" rx="8" fill="#111"/>
     <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
+    <circle cx="20" cy="22" r="5" fill="#F97316" fillOpacity="0.8"/>
+    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#F97316" fontWeight="bold">GUARDIAN</text>
     <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Tarion Deadline Tracker — Bayview Heights</text>
     {/* Header */}
     <text x="20" y="70" fontFamily="'Bebas Neue',sans-serif" fontSize="18" letterSpacing="0.06em" fill="#F5F5F5">TARION DEADLINE TRACKER</text>
@@ -212,7 +212,7 @@ const Screen4 = () => (
     {/* Timeline header row */}
     <rect x="20" y="92" width="520" height="24" rx="3" fill="#111"/>
     {['UNIT','HOMEOWNER','CLOSE DATE','DAY 41 FORM','BRP STATUS','120D EXPIRES','RFC STATUS'].map((h,i) => (
-      <text key={h} x={[28,88,180,258,340,428,490][i]} y={108} fontFamily="monospace" fontSize="7" fill="#FFB800" letterSpacing="0.08em">{h}</text>
+      <text key={h} x={[28,88,180,258,340,428,490][i]} y={108} fontFamily="monospace" fontSize="7" fill="#F97316" letterSpacing="0.08em">{h}</text>
     ))}
     {/* Deadline rows */}
     {[
@@ -226,11 +226,11 @@ const Screen4 = () => (
         <rect x="20" y={118+i*34} width="520" height="28" rx="2"
           fill={r.rfc==='FILED D42'?'#1a0808':i%2===0?'#0d0d0d':'#0a0a0a'}
           stroke={r.rfc==='FILED D42'?'#ef4444':'transparent'} strokeWidth="0.8"/>
-        <text x="28" y={136+i*34} fontFamily="monospace" fontSize="9" fill="#FFB800">{r.unit}</text>
+        <text x="28" y={136+i*34} fontFamily="monospace" fontSize="9" fill="#F97316">{r.unit}</text>
         <text x="88" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#888">{r.name}</text>
         <text x="180" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#666">{r.close}</text>
         <text x="258" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#22c55e">{r.d41}</text>
-        <text x="340" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#FFB800">{r.brp}</text>
+        <text x="340" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#F97316">{r.brp}</text>
         <text x="428" y={136+i*34} fontFamily="monospace" fontSize="8" fill="#888">{r.exp}</text>
         <text x="490" y={136+i*34} fontFamily="monospace" fontSize="8" fill={r.rfc_c}>{r.rfc}</text>
       </g>
@@ -258,17 +258,17 @@ const Screen4 = () => (
 
 const Screen5 = () => (
   <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
+    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#F97316" strokeWidth="1" strokeOpacity="0.3"/>
     <rect width="560" height="44" rx="8" fill="#111"/>
     <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
+    <circle cx="20" cy="22" r="5" fill="#F97316" fillOpacity="0.8"/>
+    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#F97316" fontWeight="bold">GUARDIAN</text>
     <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Defence Vault — Unit 204 · Conciliation Export</text>
     {/* Header */}
     <text x="20" y="70" fontFamily="'Bebas Neue',sans-serif" fontSize="18" letterSpacing="0.06em" fill="#F5F5F5">DEFENCE VAULT</text>
     <text x="20" y="84" fontFamily="monospace" fontSize="8" fill="#666">Unit 204 · Mehta, P. · RFC Filed Day 42 · Export Ready</text>
     {/* Export button */}
-    <rect x="400" y="60" width="150" height="32" rx="5" fill="#FFB800"/>
+    <rect x="400" y="60" width="150" height="32" rx="5" fill="#F97316"/>
     <text x="475" y="80" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#000" fontWeight="bold">EXPORT VAULT PDF →</text>
     {/* Timeline audit */}
     <text x="20" y="106" fontFamily="monospace" fontSize="8" fill="#666" letterSpacing="0.08em">CASE AUDIT TRAIL</text>
@@ -282,7 +282,7 @@ const Screen5 = () => (
       {date:'May 02', time:'09:00', event:'Work order assigned — Mike Chen · Window seal', type:'action', icon:'🔧'},
       {date:'May 08', time:'11:45', event:'Repair completed · 3 photos uploaded · Homeowner notified', type:'complete', icon:'✅'},
     ].map((e,i) => {
-      const typeColor = {legal:'#3b82f6',system:'#888',tarion:'#22c55e',alert:'#ef4444',action:'#FFB800',complete:'#22c55e'}[e.type] || '#888'
+      const typeColor = {legal:'#3b82f6',system:'#888',tarion:'#22c55e',alert:'#ef4444',action:'#F97316',complete:'#22c55e'}[e.type] || '#888'
       return (
         <g key={i}>
           <rect x="20" y={112+i*28} width="520" height="24" rx="2" fill={i%2===0?'#0d0d0d':'#0a0a0a'}/>
@@ -306,10 +306,10 @@ const steps = [
     time:'7:00 AM',
     actor:'Warranty Coordinator — Office',
     title:'Good morning. Your warranty dashboard is already up to date.',
-    desc:"You open Combryx to start the day. Every active case, every BRP countdown, and every unit's Tarion status is live — updated from field activity the night before. No phone calls to find out what happened yesterday.",
+    desc:"You open Builder Guardian to start the day. Every active case, every BRP countdown, and every unit's Tarion status is live — updated from field activity the night before. No phone calls to find out what happened yesterday.",
     outcome:'12 open cases · 3 BRP windows active · 1 RFC filed overnight — all visible in 3 seconds',
     Screen: Screen1,
-    color:'#D97706',
+    color:'#EA580C',
   },
   {
     n:'02',
@@ -336,7 +336,7 @@ const steps = [
     time:'11:45 AM',
     actor:'Warranty Coordinator — Tarion deadline alert fires',
     title:'RFC alert. Unit 204 homeowner filed conciliation on Day 42.',
-    desc:"The system catches it before anyone calls. Unit 204's homeowner filed an RFC on Day 42 of the BRP. Combryx automatically appends the 30-day pre-conciliation BRP — extending the total window to 150 days. The coordinator sees exactly how many days remain, which cases are outstanding, and what needs to happen before the conciliation date.",
+    desc:"The system catches it before anyone calls. Unit 204's homeowner filed an RFC on Day 42 of the BRP. Builder Guardian automatically appends the 30-day pre-conciliation BRP — extending the total window to 150 days. The coordinator sees exactly how many days remain, which cases are outstanding, and what needs to happen before the conciliation date.",
     outcome:'150-day window tracked automatically · Lex Structura flags 2 CPG items · Coordinator notified instantly',
     Screen: Screen4,
     color:'#DC2626',
@@ -368,9 +368,9 @@ function WaitlistForm() {
 
   if (submitted) return (
     <div style={{ textAlign:'center', padding:'48px 0' }}>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:48, letterSpacing:'0.04em', color:'#D97706', marginBottom:12 }}>YOU ARE IN.</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:48, letterSpacing:'0.04em', color:'#EA580C', marginBottom:12 }}>YOU ARE IN.</div>
       <p style={{ fontSize:14, color:'#475569', marginBottom:8 }}>We will be in touch at <strong style={{ color:'#0F172A' }}>{email}</strong> when early access opens.</p>
-      <p style={{ fontSize:13, color:'#64748B' }}>In the meantime — <Link href="mailto:demo@combryx.com" style={{ color:'#D97706' }}>email us directly</Link> to book a live walkthrough.</p>
+      <p style={{ fontSize:13, color:'#64748B' }}>In the meantime — <Link href="mailto:demo@combryx.com" style={{ color:'#EA580C' }}>email us directly</Link> to book a live walkthrough.</p>
     </div>
   )
 
@@ -395,7 +395,7 @@ function WaitlistForm() {
             style={{ width:'100%', background:'#FFFFFF', border:'1px solid #CBD5E1', borderRadius:6, padding:'10px 14px', fontFamily:'monospace', fontSize:13, color:'#0F172A', outline:'none' }}/>
         </div>
         <button onClick={handleSubmit}
-          style={{ background:'#D97706', color:'#000', fontFamily:"'Fira Code',monospace", fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', padding:'14px', borderRadius:7, border:'none', cursor:'pointer', boxShadow:'0 0 24px rgba(217,119,6,0.3)', marginTop:4 }}>
+          style={{ background:'#EA580C', color:'#000', fontFamily:"'Fira Code',monospace", fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', padding:'14px', borderRadius:7, border:'none', cursor:'pointer', boxShadow:'0 0 24px rgba(234,88,12,0.3)', marginTop:4 }}>
           Join Early Access →
         </button>
         <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#64748B', textTransform:'uppercase', letterSpacing:'0.1em' }}>
@@ -415,23 +415,23 @@ export default function DemoWalkthrough() {
     <div style={{ background:'#F1F3F6', minHeight:'100vh', paddingTop:56 }}>
 
       {/* Hero */}
-      <div style={{ background:'#F1F3F6', borderBottom:'1px solid rgba(217,119,6,0.1)', padding:'48px 20px 36px', textAlign:'center', position:'relative', overflow:'hidden' }}>
+      <div style={{ background:'#F1F3F6', borderBottom:'1px solid rgba(234,88,12,0.1)', padding:'48px 20px 36px', textAlign:'center', position:'relative', overflow:'hidden' }}>
         <div style={{ position:'absolute', inset:0, opacity:0.04, backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='%23FFB800' stroke-width='0.8'/%3E%3C/svg%3E")`, backgroundSize:'80px 92px' }}/>
         <div style={{ position:'relative', zIndex:1 }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:12, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
-            <span style={{ width:32, height:1, background:'#D97706', opacity:0.5, display:'inline-block' }}/>
-            Combryx · Workflow Demo · Early Access Preview
-            <span style={{ width:32, height:1, background:'#D97706', opacity:0.5, display:'inline-block' }}/>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#EA580C', marginBottom:12, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
+            <span style={{ width:32, height:1, background:'#EA580C', opacity:0.5, display:'inline-block' }}/>
+            Builder Guardian · Workflow Demo · Early Access Preview
+            <span style={{ width:32, height:1, background:'#EA580C', opacity:0.5, display:'inline-block' }}/>
           </div>
           <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#0F172A', marginBottom:16 }}>
-            A REAL WARRANTY DAY.<br/><span style={{ color:'#D97706' }}>BUILT INTO ONE SYSTEM.</span>
+            A REAL WARRANTY DAY.<br/><span style={{ color:'#EA580C' }}>BUILT INTO ONE SYSTEM.</span>
           </h1>
           <p style={{ fontSize:16, color:'#475569', lineHeight:1.75, maxWidth:560, margin:'0 auto 24px' }}>
-            Five steps. One Ontario builder warranty day. From the morning dashboard to the conciliation package — this is what Combryx looks like in use.
+            Five steps. One Ontario builder warranty day. From the morning dashboard to the conciliation package — this is what Builder Guardian looks like in use.
           </p>
-          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(217,119,6,0.1)', border:'1px solid rgba(217,119,6,0.3)', borderRadius:100, padding:'8px 20px' }}>
-            <span style={{ width:8, height:8, borderRadius:'50%', background:'#D97706', display:'inline-block', animation:'pulse 2s ease-in-out infinite' }}/>
-            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color:'#D97706', textTransform:'uppercase', letterSpacing:'0.14em' }}>UI Preview — Early Access Waitlist Open</span>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(234,88,12,0.1)', border:'1px solid rgba(234,88,12,0.3)', borderRadius:100, padding:'8px 20px' }}>
+            <span style={{ width:8, height:8, borderRadius:'50%', background:'#EA580C', display:'inline-block', animation:'pulse 2s ease-in-out infinite' }}/>
+            <span style={{ fontFamily:"'Fira Code',monospace", fontSize:10, color:'#EA580C', textTransform:'uppercase', letterSpacing:'0.14em' }}>UI Preview — Early Access Waitlist Open</span>
           </div>
         </div>
       </div>
@@ -496,7 +496,7 @@ export default function DemoWalkthrough() {
                 </button>
               ) : (
                 <button onClick={() => document.getElementById('waitlist')?.scrollIntoView({behavior:'smooth'})}
-                  style={{ flex:2, background:'#D97706', border:'none', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, fontWeight:600, textTransform:'uppercase', letterSpacing:'0.1em', color:'#000', cursor:'pointer' }}>
+                  style={{ flex:2, background:'#EA580C', border:'none', borderRadius:7, padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:10, fontWeight:600, textTransform:'uppercase', letterSpacing:'0.1em', color:'#000', cursor:'pointer' }}>
                   Join Early Access →
                 </button>
               )}
@@ -519,9 +519,9 @@ export default function DemoWalkthrough() {
       {/* What you are seeing */}
       <div style={{ background:'#F1F3F6', borderTop:'1px solid rgba(15,23,42,0.1)', borderBottom:'1px solid rgba(15,23,42,0.1)', padding:'24px 20px' }}>
         <div style={{ maxWidth:1200, margin:'0 auto', display:'flex', gap:12, alignItems:'center', flexWrap:'wrap' }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.14em', color:'#D97706', flexShrink:0 }}>What you are seeing:</div>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.14em', color:'#EA580C', flexShrink:0 }}>What you are seeing:</div>
           <div style={{ fontSize:13, color:'#64748B', lineHeight:1.6 }}>
-            These are UI design previews — not fake screenshots of a finished product. Combryx is in active development. Every screen shown reflects a real planned workflow based on 35+ years in the trade and experience inside 5 Ontario builders and Tarion. <span style={{ color:'#475569' }}>Early access waitlist is open below.</span>
+            These are UI design previews — not fake screenshots of a finished product. Builder Guardian is in active development. Every screen shown reflects a real planned workflow based on 35+ years in the trade and experience inside 5 Ontario builders and Tarion. <span style={{ color:'#475569' }}>Early access waitlist is open below.</span>
           </div>
         </div>
       </div>
@@ -529,9 +529,9 @@ export default function DemoWalkthrough() {
       {/* Waitlist */}
       <div id="waitlist" style={{ background:'#F1F3F6', padding:'56px 20px' }}>
         <div style={{ maxWidth:640, margin:'0 auto', textAlign:'center' }}>
-          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:14 }}>Early Access</div>
+          <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#EA580C', marginBottom:14 }}>Early Access</div>
           <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(36px,5vw,64px)', letterSpacing:'0.04em', lineHeight:0.97, color:'#0F172A', marginBottom:14 }}>
-            Be first in.<br/><span style={{ color:'#D97706' }}>No setup fee. Ever.</span>
+            Be first in.<br/><span style={{ color:'#EA580C' }}>No setup fee. Ever.</span>
           </h2>
           <p style={{ fontSize:14, color:'#475569', lineHeight:1.75, marginBottom:36, maxWidth:440, margin:'0 auto 36px' }}>
             Early access builders get priority onboarding, direct line to the founder, and the ability to shape which features ship first. Join the waitlist.
@@ -540,7 +540,7 @@ export default function DemoWalkthrough() {
           <div style={{ marginTop:32, display:'flex', gap:24, justifyContent:'center', flexWrap:'wrap' }}>
             {['No credit card','Cancel anytime','Ontario-specific','Built by Tarion insider'].map(t => (
               <span key={t} style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.1em', color:'#64748B', display:'flex', alignItems:'center', gap:6 }}>
-                <span style={{ color:'#D97706', fontSize:9 }}>✓</span>{t}
+                <span style={{ color:'#EA580C', fontSize:9 }}>✓</span>{t}
               </span>
             ))}
           </div>

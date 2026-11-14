@@ -11,7 +11,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
         <div key={i} className={`bg-cb-dark2 border rounded-lg overflow-hidden transition-colors ${open === i ? 'border-cb-gold' : 'border-[rgba(15,23,42,0.1)]'}`}>
           <button
             className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 font-body text-[14px] font-semibold hover:text-cb-gold transition-colors"
-            style={{ color: open === i ? '#D97706' : '#0F172A' }}
+            style={{ color: open === i ? '#EA580C' : '#0F172A' }}
             onClick={() => setOpen(open === i ? null : i)}>
             {f.q}
             <span className="text-cb-gold flex-shrink-0 text-xl leading-none transition-transform" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>+</span>

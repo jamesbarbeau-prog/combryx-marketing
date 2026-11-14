@@ -6,9 +6,9 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://combryx.com'),
-  title: { default: 'Combryx — Warranty Management for Ontario Builders | Tarion', template: '%s | Combryx' },
+  title: { default: 'Builder Guardian — Warranty Management for Ontario Builders | Tarion', template: '%s | Builder Guardian' },
   description: 'Warranty management software for Ontario homebuilders, low-rise and high-rise. Tarion form import, deadline tracking, AI triage, work orders and a Conciliation Manager add-on. Built by a Tarion insider.',
-  openGraph: { siteName: 'Combryx', locale: 'en_CA', type: 'website' },
+  openGraph: { siteName: 'Builder Guardian', locale: 'en_CA', type: 'website' },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
 }

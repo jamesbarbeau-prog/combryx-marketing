@@ -8,37 +8,37 @@ import KnowledgeGap from '@/components/KnowledgeGap'
 import OutcomeStats from '@/components/OutcomeStats'
 
 export const metadata: Metadata = {
-  title: 'Combryx — Warranty Management for Ontario Builders | Tarion',
+  title: 'Builder Guardian — Warranty Management for Ontario Builders | Tarion',
   description: 'Warranty management software for Ontario homebuilders, low-rise and high-rise. Tarion form import, deadlines, AI triage, work orders and a Conciliation Manager add-on. Built by a Tarion insider. From $129/community.',
   alternates: { canonical: 'https://combryx.com' },
 }
 
 const tarionItems = [
   { n:'41', label:'Initial Form (Day 41)', sub:'Auto-submits Day 41 · BRP: 120 days', desc:'CPP / PDI signature starts the Tarion clock. Homeowner adds deficiencies Days 1–40. Form auto-submits Day 41 — no manual filing required. Builder gets 120-day BRP, with a 30-day pre-conciliation BRP if RFC is requested, for up to 150 days total.' },
-  { n:'1', label:'Year — Initial & Mid-Year Forms', sub:'OBC violations · Structural · BRP 120+30 days', desc:'Initial form auto-submits Day 41. Builder gets 120-day BRP, then a 30-day pre-conciliation BRP if the homeowner requests conciliation — 150 days total. Combryx tracks both periods and the homeowner RFC status.' },
+  { n:'1', label:'Year — Initial & Mid-Year Forms', sub:'OBC violations · Structural · BRP 120+30 days', desc:'Initial form auto-submits Day 41. Builder gets 120-day BRP, then a 30-day pre-conciliation BRP if the homeowner requests conciliation — 150 days total. Builder Guardian tracks both periods and the homeowner RFC status.' },
   { n:'2', label:'Year Distribution', sub:'Water · MEP systems', desc:'Water penetration, electrical, plumbing, heating. Full case history per period per lot.' },
   { n:'7', label:'Year MSD', sub:'Major Structural Defects', desc:'Highest-risk window. Lex Structura flags RFC risk cases with OBC structural citations attached.' },
 ]
 
 const pricing = [
-  { tag:'Base — Start Here', name:'Combryx Warranty', price:'$129', period:'per community or tower / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet.', featured:true, plan:'warranty', cta:'Start Combryx Warranty', href:'/pricing?plan=warranty',
+  { tag:'Base — Start Here', name:'Builder Guardian Warranty', price:'$129', period:'per community or tower / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet.', featured:true, plan:'warranty', cta:'Start Builder Guardian Warranty', href:'/pricing?plan=warranty',
     items:['Sites, towers, lots, suites and owner records','Tarion form import — items created automatically','Statutory deadline and BRP tracking per home','AI triage + OBC/CPG answers (Lex Structura)','Work orders to trades and technicians','PO approvals + warranty cost ledger','Aging reports + automatic weekly emails per site','QDef import · Excel/PDF export · Unlimited users'],
     locked:['Coming: Tarion API sync · owner portal · QCI & PDI · offline field app'] },
   { tag:'Add-on — Managers Only', name:'Conciliation Manager', price:'+$199', period:'per builder / month', tagline:'Walk into every Tarion conciliation with the whole file in order.', featured:false, plan:'conciliation', cta:'Add Conciliation Manager', href:'/pricing?plan=conciliation',
     items:['Cases tracked from inspection booked to CAR','Inspection cycles, CARs and deadline timers','Cash offers and releases','Builder comments package with evidence attached','Management control centre by community','Freehold and common elements (high-rise)','Visible to managers only'],
-    locked:['Coming: now being built into Combryx'] },
+    locked:['Coming: now being built into Builder Guardian'] },
   { tag:'Add-on — Coming', name:'Design Centre', price:'Coming', period:'priced at launch', tagline:'Owners choose and sign their selections online before the sales centre visit.', featured:false, plan:'design', cta:'Join the Waitlist', href:'/demo#waitlist',
     items:['Owner selections in the portal, every option explained','Signed selection record per home','Site instruction list from the final choices','Upgrade and credit ledger for your build system','360 tours and stage records, framing to close','AI walk-through checks selections at QCI'],
     locked:[] },
 ]
 
 const faqs = [
-  { q:'Can I migrate from QDef without losing my data?', a:'Yes. Combryx Warranty includes a QDef import. Your communities, lots, homeowner records, and open items come across, and we provide a migration guide and email support throughout.' },
-  { q:'Does Combryx replace my construction or sales software?', a:'No. Combryx is built for the warranty department only. It takes lots and owners from the system you already use, by spreadsheet import or API, and sends warranty data back out by export.' },
-  { q:'Do I need the add-ons?', a:'No. Combryx Warranty is a complete product on its own. The Conciliation Manager is an add-on for managers. The Design Centre is a separate add-on that is still being built.' },
+  { q:'Can I migrate from QDef without losing my data?', a:'Yes. Builder Guardian Warranty includes a QDef import. Your communities, lots, homeowner records, and open items come across, and we provide a migration guide and email support throughout.' },
+  { q:'Does Builder Guardian replace my construction or sales software?', a:'No. Builder Guardian is built for the warranty department only. It takes lots and owners from the system you already use, by spreadsheet import or API, and sends warranty data back out by export.' },
+  { q:'Do I need the add-ons?', a:'No. Builder Guardian Warranty is a complete product on its own. The Conciliation Manager is an add-on for managers. The Design Centre is a separate add-on that is still being built.' },
   { q:'Does it handle high-rise?', a:'Yes. Towers and suites sit alongside communities and lots, and the Conciliation Manager switches between freehold and common elements.' },
   { q:'What if I want to leave? What happens to my data?', a:'Full data export in CSV, Excel, and PDF — anytime, free, no ticket, no waiting period. Data retained 90 days after cancellation. We don\'t make leaving hard. That\'s a deliberate policy.' },
-  { q:'Is Combryx built specifically for Ontario?', a:'Built from the ground up for Ontario\'s homebuilding ecosystem — by someone who worked inside Tarion and inside five Ontario builders. Not a US platform with Canadian checkboxes. The statutory warranty deadlines, CPG tolerances, and ONHWPA obligations are the foundation.' },
+  { q:'Is Builder Guardian built specifically for Ontario?', a:'Built from the ground up for Ontario\'s homebuilding ecosystem — by someone who worked inside Tarion and inside five Ontario builders. Not a US platform with Canadian checkboxes. The statutory warranty deadlines, CPG tolerances, and ONHWPA obligations are the foundation.' },
 ]
 
 export default function HomePage() {
@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex flex-col justify-between pt-14 overflow-hidden bg-gradient-to-b from-white to-cb-dark1">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.07]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.06) 0%,transparent 70%)' }} />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(234,88,12,0.06) 0%,transparent 70%)' }} />
 
         <div className="relative z-10 flex flex-col items-start justify-center flex-1 px-4 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto w-full">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-6 flex items-center gap-3">
@@ -65,7 +65,7 @@ export default function HomePage() {
 
           <div className="animate-fade-up anim-d3" style={{ display:'flex', gap:12, flexWrap:'wrap', marginBottom:48 }}>
             <Link href="/pricing" className="btn-gold">
-              Start with Combryx Warranty →
+              Start with Builder Guardian Warranty →
             </Link>
             <Link href="/platform" className="btn-ghost">
               See What&apos;s Included
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="animate-fade-up anim-d4" style={{ display:'flex', gap:40, flexWrap:'wrap', borderTop:'1px solid rgba(15,23,42,0.1)', paddingTop:32, width:'100%' }}>
             {[['100%','Tarion Form Compatible'],['2','Optional Add-ons'],['$0','Setup Fee'],['2','Low-Rise + High-Rise'],['35+','Years in the Trade']].map(([n,l]) => (
               <div key={l}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:30, letterSpacing:'0.04em', color:'#D97706', lineHeight:1, marginBottom:4 }}>{n}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:30, letterSpacing:'0.04em', color:'#EA580C', lineHeight:1, marginBottom:4 }}>{n}</div>
                 <div style={{ fontFamily:"'Fira Code',monospace", fontSize:9, textTransform:'uppercase', letterSpacing:'0.14em', color:'#64748B' }}>{l}</div>
               </div>
             ))}
@@ -90,14 +90,14 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto w-full">
           <ScrollReveal>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
-              <span className="w-5 h-px bg-cb-gold opacity-60"/>Why Combryx Exists
+              <span className="w-5 h-px bg-cb-gold opacity-60"/>Why Builder Guardian Exists
             </div>
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-8">
               Every builder software company<br/>learned Tarion from the outside.<br/><span className="text-cb-gold">We didn&apos;t.</span>
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-px bg-[rgba(217,119,6,0.08)] border border-[rgba(217,119,6,0.1)] rounded-xl overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-px bg-[rgba(234,88,12,0.08)] border border-[rgba(234,88,12,0.1)] rounded-xl overflow-hidden">
             <ScrollReveal className="bg-cb-dark2 p-10">
               <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-red-600 font-semibold mb-4">What every other system gets wrong</div>
               <div className="font-display text-2xl text-cb-white mb-6">Good software. Built by people who never sat inside the process.</div>
@@ -110,8 +110,8 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={150} className="bg-[rgba(217,119,6,0.04)] border-l border-[rgba(217,119,6,0.15)] p-10">
-              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-cb-gold font-semibold mb-4">The Combryx difference</div>
+            <ScrollReveal delay={150} className="bg-[rgba(234,88,12,0.04)] border-l border-[rgba(234,88,12,0.15)] p-10">
+              <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-cb-gold font-semibold mb-4">The Builder Guardian difference</div>
               <div className="font-display text-2xl text-cb-white mb-6">Built by someone who knows what you&apos;re actually up against.</div>
               <div className="flex flex-col gap-4">
                 {['Founder worked inside Tarion — not reading the guidelines, processing them and understanding the intent behind every rule.','5 Ontario builders worked in before building this — every gap found, every workaround documented, then eliminated.','Lex Structura AI loaded with OBC Part 9, CPG, ONHWPA, and Registrar Bulletins — answers like a trained adjudicator.','Defence Vault designed knowing exactly how Tarion conciliation unfolds. Not guessed. Experienced.'].map(t => (
@@ -143,7 +143,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="flex flex-col gap-4">
               {tarionItems.map((t, i) => (
-                <ScrollReveal key={t.n} delay={i * 80} className="bg-cb-dark2 border border-[rgba(217,119,6,0.12)] rounded-xl p-6">
+                <ScrollReveal key={t.n} delay={i * 80} className="bg-cb-dark2 border border-[rgba(234,88,12,0.12)] rounded-xl p-6">
                   <div className="flex gap-5 items-start">
                     <div className="font-display text-5xl text-cb-gold leading-none flex-shrink-0 tracking-[0.04em]">{t.n}</div>
                     <div>
@@ -156,13 +156,13 @@ export default function HomePage() {
               ))}
             </div>
 
-            <ScrollReveal delay={200} className="bg-cb-dark2 border border-[rgba(217,119,6,0.2)] rounded-xl overflow-hidden">
-              <div className="bg-[rgba(217,119,6,0.08)] border-b border-[rgba(217,119,6,0.15)] px-6 py-4 flex items-center justify-between">
+            <ScrollReveal delay={200} className="bg-cb-dark2 border border-[rgba(234,88,12,0.2)] rounded-xl overflow-hidden">
+              <div className="bg-[rgba(234,88,12,0.08)] border-b border-[rgba(234,88,12,0.15)] px-6 py-4 flex items-center justify-between">
                 <span className="font-mono text-[11px] text-cb-gold font-semibold uppercase tracking-widest">Bayview Heights — Unit Deadlines</span>
                 <span className="font-mono text-[9px] text-cb-dim">Live · Auto-updated</span>
               </div>
               {[['Unit 804 — Initial Form (Day 41)','Jun 3, 2026','In BRP','#15803D','rgba(34,197,94,0.12)'],
-                ['Unit 512 — Mid-Year Form','May 14, 2026','BRP Day 108','#d97706','rgba(217,119,6,0.12)'],
+                ['Unit 512 — Mid-Year Form','May 14, 2026','BRP Day 108','#EA580C','rgba(234,88,12,0.12)'],
                 ['Unit 301 — 2-Year','Apr 28, 2026','Expired','#dc2626','rgba(220,38,38,0.12)'],
                 ['Unit 215 — Year-End Form','Jul 22, 2026','BRP Active','#15803D','rgba(34,197,94,0.12)'],
                 ['Unit 119 — 7-Year MSD','Aug 30, 2028','2.3 yrs','#15803D','rgba(34,197,94,0.12)']].map(([name,date,status,c,bg]) => (
@@ -224,7 +224,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <Link href={p.href}
-                  className={`block text-center font-mono text-[11px] font-semibold uppercase tracking-widest py-3.5 rounded-md transition-all no-underline ${p.featured ? 'bg-cb-gold text-white hover:bg-cb-gold2' : 'bg-cb-dark3 text-cb-gold border border-[rgba(217,119,6,0.3)] hover:bg-cb-gold hover:text-white'}`}>
+                  className={`block text-center font-mono text-[11px] font-semibold uppercase tracking-widest py-3.5 rounded-md transition-all no-underline ${p.featured ? 'bg-cb-gold text-white hover:bg-cb-gold2' : 'bg-cb-dark3 text-cb-gold border border-[rgba(234,88,12,0.3)] hover:bg-cb-gold hover:text-white'}`}>
                   {p.cta} →
                 </Link>
               </ScrollReveal>
@@ -254,17 +254,17 @@ export default function HomePage() {
       {/* ── FINAL CTA ── */}
       <section className="bg-cb-dark1 py-20 px-4 md:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.05) 0%,transparent 70%)' }}/>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(234,88,12,0.05) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-2xl mx-auto">
           <ScrollReveal>
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-5">The warranty system founded by a Tarion insider</div>
             <h2 className="font-display text-[clamp(48px,8vw,96px)] tracking-[0.04em] leading-[0.95] text-cb-white mb-6">
               BUILT FROM<br/>THE <span className="text-cb-gold">INSIDE.</span>
             </h2>
-            <p className="text-cb-muted text-base leading-relaxed mb-10">Five builders. One warranty authority. Every gap documented and eliminated. Start with Combryx Warranty — no setup fee, no locked contract.</p>
+            <p className="text-cb-muted text-base leading-relaxed mb-10">Five builders. One warranty authority. Every gap documented and eliminated. Start with Builder Guardian Warranty — no setup fee, no locked contract.</p>
             <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap', marginBottom:40 }}>
               <Link href="/pricing" className="btn-gold">
-                Start with Combryx Warranty
+                Start with Builder Guardian Warranty
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo
