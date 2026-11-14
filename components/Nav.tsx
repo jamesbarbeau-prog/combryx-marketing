@@ -145,7 +145,7 @@ export default function Nav() {
               padding:'20px', borderRadius:8, textDecoration:'none',
               boxShadow:'0 0 24px rgba(255,184,0,0.3)',
             }}>
-              Get Started — $149/community →
+              Get Started — $129/community →
             </Link>
             <p style={{ textAlign:'center', fontFamily:"'Fira Code',monospace", fontSize:10, color:'#444', marginTop:12, textTransform:'uppercase', letterSpacing:'0.1em' }}>
               No setup fee · Cancel anytime

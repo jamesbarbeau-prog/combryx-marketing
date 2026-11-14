@@ -1,5 +1,5 @@
 const items = [
-  'Tarion Compliant','ONHWPA Ready','OBC Part 9','Field App Included',
+  'Tarion Compliant','ONHWPA Ready','OBC Part 9','Low-Rise & High-Rise',
   'No Lock-In','Full Data Export','Custom Dev On Demand','Built by the Trade',
   '35+ Years Experience','Ontario Specific',
 ]

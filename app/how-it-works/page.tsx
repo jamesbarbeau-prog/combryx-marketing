@@ -3,7 +3,7 @@ import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'How It Works — Ontario Builder Warranty & ERP Software',
+  title: 'How It Works — Ontario Builder Warranty Software',
   description: 'See exactly how Combryx connects the field and the office. Daily workflow, before/after comparison, interactive hive, and the Tarion edge explained.',
   alternates: { canonical: 'https://combryx.com/how-it-works' },
 }
@@ -30,8 +30,8 @@ const pillars = [
   { color:'#FFB800', icon:'🛡️', outcome:'The Foundation', title:'Warranty Management That Actually Works', body:'End-to-end warranty case management built around how Ontario statutory warranty actually operates. Everything timestamped, photographed, and documented automatically.', proof:['Open, track, resolve, and appeal warranty cases','Work order scheduling with auto-reminders to trades','AI triage classifies incoming cases and drafts responses','Every interaction logged — becomes evidence if needed'] },
   { color:'#ef4444', icon:'⚖️', outcome:'The Tarion Edge', title:'CSS Form Schedule & BRP Deadlines. Tracked Precisely.', body:'CPP / PDI signature starts the Tarion clock. The three auto-submission windows (Day 41, 183, 366), the 120-day BRP, and the homeowner RFC status are all tracked simultaneously — so you always know exactly where you stand and how much repair time remains.', proof:['Tarion clock starts at CPP/PDI signature — automatically','Day 41, 183 & 366 auto-submission windows tracked per unit','120-day BRP + 30-day pre-conciliation BRP (150 days total)','RFC status tracked — alerts the moment a homeowner requests conciliation','Lex Structura AI answers OBC Part 9 and CPG questions'] },
   { color:'#a855f7', icon:'🔐', outcome:'The Differentiator', title:'Defence Vault — Conciliation Ready. Always.', body:'Every case generates an automatic audit trail. One click exports a PDF package formatted for Tarion conciliation. Built by someone who has sat in that room and knows exactly what an adjudicator looks for.', proof:['Per-case audit trail built from day one','One-click conciliation export formatted for Tarion','CPG citations attached automatically via Lex Structura','Cases you should win — you will now win'] },
-  { color:'#22c55e', icon:'📱', outcome:'The Field', title:'The App That Works Without Signal', body:'Designed for the field guy, not the office manager. Three taps max for any common task. Works offline in concrete parkades and unfinished basements. Syncs silently when signal returns.', proof:['Log a defect with a photo in under 30 seconds','PDI walkthrough with dual signature and auto-PDF','Phase sign-off from site triggers draw request in office','Role-based — tech sees jobs, PM sees everything'] },
-  { color:'#06b6d4', icon:'🧩', outcome:'The Business Model', title:'Buy One Module. Grow into the Rest.', body:'Start with Warranty Core. Add Financial, Build Ops, Sales, Pre-Con, or IoT when ready — each module connects automatically to everything already running. No reinstall, no migration.', proof:['Warranty Core is a complete product on its own','Each added module creates new automated connections','Phase sign-off triggers lender draw automatically','Unit closed: keys revoked, homeowner provisioned'] },
+  { color:'#22c55e', icon:'📱', outcome:'The Field · Coming', title:'The App That Works Without Signal', body:'Designed for the field guy, not the office manager. Three taps max for any common task. Works offline in concrete parkades and unfinished basements. Syncs silently when signal returns.', proof:['Log a defect with a photo in under 30 seconds','PDI walkthrough with dual signature and auto-PDF','QCI and PDI assessments in the field','Role-based — tech sees jobs, PM sees everything'] },
+  { color:'#06b6d4', icon:'🧩', outcome:'The Product', title:'One Product. Two Add-ons.', body:'Combryx Warranty is complete on its own. Add the Conciliation Manager for your managers, and the Design Centre when it launches. It runs beside your existing construction and sales software.', proof:['Combryx Warranty is a complete product on its own','Conciliation Manager — managers only, freehold and common elements','Design Centre — owner selections, 360 records, AI walk-through (coming)','Imports from and exports to your existing builder system'] },
   { color:'#f97316', icon:'🔓', outcome:'The Guarantee', title:'No Hostage. No Contract. No Exit Fee.', body:'Month-to-month. Cancel from settings. Full data export in CSV, Excel, and PDF — anytime, free. Custom development at a transparent hourly rate. If Combryx isn\'t earning your subscription, you should leave — and we make that easy.', proof:['Cancel anytime — billing stops that month','Full export always free — photos with metadata','Custom workflows and integrations on demand','Same-day support from someone who knows the trade'] },
 ]
 
@@ -55,7 +55,7 @@ export default function HowItWorksPage() {
           </p>
           <div className="animate-fade-up anim-d3 flex gap-3 justify-center flex-wrap mb-16">
             <Link href="/pricing" className="btn-gold">
-              Start with Warranty Core →
+              Start with Combryx Warranty →
             </Link>
             <Link href="#workflow" className="btn-ghost">
               See How It Works ↓
@@ -135,7 +135,7 @@ export default function HowItWorksPage() {
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Daily Flow</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,56px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">A day in the life.<br/><span className="text-cb-gold">Your operation, connected.</span></h2>
-            <p className="text-cb-muted text-base max-w-xl">No phone tag. No missing photos. No paper trail that disappears.</p>
+            <p className="text-cb-muted text-base max-w-xl">No phone tag. No missing photos. No paper trail that disappears. The field app, PDI and owner steps shown here are on the roadmap.</p>
           </ScrollReveal>
           <div className="flex flex-col gap-0">
             {workflow.map((s, i) => (
@@ -195,10 +195,10 @@ export default function HowItWorksPage() {
         <ScrollReveal>
           <div className="max-w-xl mx-auto">
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">JOIN<br/>THE <span className="text-cb-gold">HIVE.</span></h2>
-            <p className="text-cb-muted text-base mb-8">Start with Warranty Core. Running in two hours. Cancel the month you decide it&apos;s not worth it. All your data comes with you — free, always.</p>
+            <p className="text-cb-muted text-base mb-8">Start with Combryx Warranty. Cancel the month you decide it&apos;s not worth it. All your data comes with you — free, always.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/pricing" className="btn-gold">
-                Start Warranty Core — $149/mo →
+                Start Combryx Warranty — $129/mo →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo

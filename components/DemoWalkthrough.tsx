@@ -13,7 +13,7 @@ const Screen1 = () => (
     <rect y="36" width="560" height="8" fill="#111"/>
     <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
     <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
-    <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Warranty · PDI · Field App · Finance</text>
+    <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Warranty · PDI · Field App · Conciliation</text>
     {/* Sidebar */}
     <rect x="0" y="44" width="140" height="336" fill="#0d0d0d" rx="0"/>
     <rect x="0" y="44" width="1" height="336" fill="#FFB800" fillOpacity="0.15"/>
@@ -21,7 +21,7 @@ const Screen1 = () => (
       {y:70, icon:'🛡', label:'Warranty', active:true},
       {y:100, icon:'📋', label:'PDI', active:false},
       {y:130, icon:'📅', label:'Schedule', active:false},
-      {y:160, icon:'💰', label:'Financial', active:false},
+      {y:160, icon:'💰', label:'POs', active:false},
       {y:190, icon:'📱', label:'Field App', active:false},
       {y:220, icon:'🔐', label:'Vault', active:false},
     ].map(item => (
@@ -299,57 +299,6 @@ const Screen5 = () => (
   </svg>
 )
 
-const Screen6 = () => (
-  <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-    <rect width="560" height="380" rx="8" fill="#0a0a0a" stroke="#FFB800" strokeWidth="1" strokeOpacity="0.3"/>
-    <rect width="560" height="44" rx="8" fill="#111"/>
-    <rect y="36" width="560" height="8" fill="#111"/>
-    <circle cx="20" cy="22" r="5" fill="#FFB800" fillOpacity="0.8"/>
-    <text x="34" y="26" fontFamily="monospace" fontSize="10" fill="#FFB800" fontWeight="bold">COMBRYX</text>
-    <text x="120" y="26" fontFamily="monospace" fontSize="9" fill="#888">Financial Ledger — Lender Draw Package</text>
-    <text x="20" y="70" fontFamily="'Bebas Neue',sans-serif" fontSize="18" letterSpacing="0.06em" fill="#F5F5F5">LENDER DRAW #4</text>
-    <text x="20" y="84" fontFamily="monospace" fontSize="8" fill="#22c55e">AUTO-ASSEMBLED · Phase 4 signed by T. Morrison on site at 2:14 PM</text>
-    {/* Draw summary */}
-    {[
-      {label:'Phase', value:'Phase 4 — Framing Complete', color:'#F5F5F5'},
-      {label:'Draw Amount', value:'$284,500.00 CAD', color:'#FFB800'},
-      {label:'Cumulative', value:'$1,142,000 of $2,800,000', color:'#888'},
-      {label:'Lender', value:'First National Financial', color:'#888'},
-      {label:'Status', value:'Ready for submission', color:'#22c55e'},
-    ].map((r,i) => (
-      <g key={i}>
-        <text x="28" y={104+i*22} fontFamily="monospace" fontSize="8" fill="#555">{r.label}</text>
-        <text x="160" y={104+i*22} fontFamily="monospace" fontSize="9" fill={r.color}>{r.value}</text>
-      </g>
-    ))}
-    {/* Budget vs actual */}
-    <text x="20" y="218" fontFamily="monospace" fontSize="8" fill="#666" letterSpacing="0.08em">BUDGET VS ACTUAL — PHASE 4</text>
-    {[
-      {code:'03-100', desc:'Lumber & Framing', budget:180000, actual:174200},
-      {code:'04-200', desc:'Hardware & Fasteners', budget:12000, actual:11800},
-      {code:'05-100', desc:'Labour — Framing Crew', budget:85000, actual:92400},
-      {code:'06-300', desc:'Crane Rental', budget:8000, actual:6800},
-    ].map((r,i) => {
-      const over = r.actual > r.budget
-      const pct = Math.round(r.actual/r.budget*100)
-      return (
-        <g key={i}>
-          <text x="28" y={236+i*28} fontFamily="monospace" fontSize="7" fill="#666">{r.code}</text>
-          <text x="80" y={236+i*28} fontFamily="monospace" fontSize="8" fill="#888">{r.desc}</text>
-          <rect x="280" y={224+i*28} width="160" height="10" rx="2" fill="#1a1a1a"/>
-          <rect x="280" y={224+i*28} width={Math.min(160,160*pct/100)} height="10" rx="2" fill={over?'#ef4444':'#22c55e'} fillOpacity="0.7"/>
-          <text x="450" y={234+i*28} fontFamily="monospace" fontSize="7" fill={over?'#ef4444':'#22c55e'}>{pct}%</text>
-          <text x="480" y={234+i*28} fontFamily="monospace" fontSize="7" fill="#555">${(r.actual/1000).toFixed(0)}k</text>
-        </g>
-      )
-    })}
-    {/* Invoice OCR */}
-    <rect x="20" y="342" width="520" height="28" rx="4" fill="#1a1200" stroke="#FFB800" strokeWidth="0.8"/>
-    <text x="30" y="354" fontFamily="monospace" fontSize="8" fill="#FFB800">FINANCIAL GHOST AI · 3 invoices processed · Labour overage flagged (108%)</text>
-    <text x="30" y="366" fontFamily="monospace" fontSize="7" fill="#666">Framing crew invoice $92,400 vs PO $85,000 — VPO required before approval</text>
-  </svg>
-)
-
 /* ── STEP DATA ── */
 const steps = [
   {
@@ -401,16 +350,6 @@ const steps = [
     outcome:'Complete audit trail exported in 60 seconds · CPG citations included · No scrambling through folders',
     Screen: Screen5,
     color:'#a855f7',
-  },
-  {
-    n:'06',
-    time:'3:45 PM',
-    actor:'Project Manager — Phase 4 signed on site',
-    title:'Site super signs Phase 4. Lender draw assembles itself in the office.',
-    desc:"The site super signs off Phase 4 framing from the field app at 2:14 PM. By 3:45 PM the lender draw package is assembled in the office: phase completion photos, gate sign-off, budget vs actual breakdown, and all sub-trade confirmations. Finance reviews and submits. Nobody had to ask 'did the draw go in?'",
-    outcome:'$284,500 draw assembled automatically · Labour overage flagged by Financial Ghost AI · Ready for lender submission',
-    Screen: Screen6,
-    color:'#06b6d4',
   },
 ]
 
@@ -488,7 +427,7 @@ export default function DemoWalkthrough() {
             A REAL WARRANTY DAY.<br/><span style={{ color:'#FFB800' }}>BUILT INTO ONE SYSTEM.</span>
           </h1>
           <p style={{ fontSize:16, color:'#888', lineHeight:1.75, maxWidth:560, margin:'0 auto 24px' }}>
-            Six steps. One Ontario builder warranty day. From the morning dashboard to the lender draw that assembles itself — this is what Combryx looks like in use.
+            Five steps. One Ontario builder warranty day. From the morning dashboard to the conciliation package — this is what Combryx looks like in use.
           </p>
           <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,184,0,0.1)', border:'1px solid rgba(255,184,0,0.3)', borderRadius:100, padding:'8px 20px' }}>
             <span style={{ width:8, height:8, borderRadius:'50%', background:'#FFB800', display:'inline-block', animation:'pulse 2s ease-in-out infinite' }}/>

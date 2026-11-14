@@ -3,15 +3,14 @@ import Link from 'next/link'
 const rows = [
   { feature:'Tarion CSS form schedule (post-May 2024)', us:true,  usNote:'Day 41, 183, 366 auto-submissions tracked per unit', them:false, themNote:'Most still reference the obsolete 30-day window' },
   { feature:'120-day BRP + RFC status tracking',        us:true,  usNote:'Tracks both periods + homeowner RFC simultaneously', them:false, themNote:'Generic deadline reminders only' },
-  { feature:'Defence Vault — conciliation-ready export',us:true,  usNote:'CPG citations, timeline, evidence — one click', them:false, themNote:'Not available in any competing platform' },
-  { feature:'Field app works offline (no signal)',       us:true,  usNote:'SQLite queue — syncs silently when signal returns', them:'partial', themNote:'Most require active internet connection' },
-  { feature:'PDI digital sign-off on tablet',           us:true,  usNote:'Dual sig, photo per item, PDF generated on-device', them:'partial', themNote:'Some offer basic digital forms' },
-  { feature:'Phase sign-off → lender draw auto-assembled',us:true, usNote:'Super signs on site, draw ready in office instantly', them:false, themNote:'Manual assembly in all competing systems' },
-  { feature:'OBC Part 9 + CPG AI answers',              us:true,  usNote:'Lex Structura — specific citations, not generic answers', them:false, themNote:'No warranty-specific AI in market' },
-  { feature:'IoT sensor → warranty case auto-created',  us:true,  usNote:'Before the homeowner calls — proactive not reactive', them:false, themNote:'No competing platform offers this' },
-  { feature:'Built by someone who worked inside Tarion', us:true,  usNote:'35+ years · 5 Ontario builders · Tarion inspector', them:false, themNote:'Zero competing founders have this background' },
-  { feature:'Modular — buy only what you need',         us:true,  usNote:'Start at $149/community · Add modules as you grow', them:false, themNote:'Monolithic platforms — all or nothing' },
-  { feature:'$0 setup fee · Cancel anytime',            us:true,  usNote:'No contract, no exit fee, full data export free', them:false, themNote:'Most charge $5k–$40k setup + annual contracts' },
+  { feature:'Conciliation Manager (add-on)',            us:true,  usNote:'Cases, CARs, cash offers, builder comments with evidence — coming to Combryx', them:false, themNote:'Not a focus of general builder software' },
+  { feature:'Low-rise, high-rise and common elements',  us:true,  usNote:'Lots, suites and common elements in one system', them:'partial', themNote:'Often built for one or the other' },
+  { feature:'OBC Part 9 + CPG AI answers',              us:true,  usNote:'Lex Structura — specific citations, not generic answers', them:false, themNote:'Rarely warranty-specific' },
+  { feature:'Automatic aging emails per site',          us:true,  usNote:'Weekly to each site\'s coordinators — set once in settings', them:'partial', themNote:'Usually a manual export' },
+  { feature:'Field app that works offline',             us:true,  usNote:'Coming — work orders, QCI and PDI without signal', them:'partial', themNote:'Most require active internet connection' },
+  { feature:'Built by someone who worked inside Tarion', us:true,  usNote:'35+ years · 5 Ontario builders · Tarion inspector', them:false, themNote:'A background few founders have' },
+  { feature:'Warranty department only — no suite to buy', us:true, usNote:'Start at $129/community · works beside your existing builder software', them:false, themNote:'Full suites — you pay for departments you do not use' },
+  { feature:'$0 setup fee · Cancel anytime',            us:true,  usNote:'No contract, no exit fee, full data export free', them:false, themNote:'Setup fees and annual contracts are common' },
 ]
 
 export default function KnowledgeGap() {
@@ -72,7 +71,7 @@ export default function KnowledgeGap() {
         {/* bottom note */}
         <div style={{ marginTop:28, display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:16 }}>
           <p style={{ fontSize:12, color:'#444', fontFamily:"'Fira Code',monospace" }}>
-            ~ Partial implementation &nbsp;·&nbsp; ✗ Not available &nbsp;·&nbsp; ✓ Fully implemented
+            ~ Partial &nbsp;·&nbsp; ✗ Not available &nbsp;·&nbsp; ✓ Available or on the roadmap where marked
           </p>
           <Link href="/pricing" style={{
             background:'#FFB800', color:'#000',
@@ -81,7 +80,7 @@ export default function KnowledgeGap() {
             padding:'12px 24px', borderRadius:6, textDecoration:'none',
             transition:'all 0.2s',
           }}>
-            Start Free — $149/community →
+            Start — $129/community →
           </Link>
         </div>
       </div>

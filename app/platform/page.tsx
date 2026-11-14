@@ -4,69 +4,66 @@ import ScrollReveal from '@/components/ScrollReveal'
 import SectorAccordion from '@/components/SectorAccordion'
 
 export const metadata: Metadata = {
-  title: 'Platform — Land Acquisition, High-Rise, Rental, Condo Corp & Property Management',
-  description: 'From the land deal to year seven. Combryx covers every stage — high-rise, low-rise, rental portfolio, condo corp, and property management. One system.',
+  title: 'Platform — Warranty Management for Low-Rise and High-Rise Builders',
+  description: 'What Combryx includes: warranty management for low-rise and high-rise, the Conciliation Manager add-on, and the Design Centre add-on (coming). Built for the warranty department only.',
   alternates: { canonical: 'https://combryx.com/platform' },
 }
 
 const sectors = [
-  { n:'01', color:'#ef4444', tag:'Land & Pre-Construction', title:'From first look at a parcel to shovel in the ground.', sub:'Acquisition pipeline · Pro-forma · Zoning · Permits · Entitlements',
+  { n:'01', color:'#FFB800', tag:'Combryx Warranty — Base', title:'The warranty department, start to finish.', sub:'Homes · Tarion import · Items · Work orders · POs · Aging',
     features:[
-      { icon:'📊', title:'AI-Assisted Pro-Forma Modelling', body:'Build acquisition scenarios with AI-suggested cost assumptions drawn from comparable projects in your portfolio. Hard costs per sq ft, soft costs, financing, sales revenue — assembled in minutes. PDF formatted for lender packages.' },
-      { icon:'🗺', title:'Live Zoning Intelligence', body:'Municipal zoning API queries per address — permitted uses, density, setbacks, height restrictions, OPA applications. No more calling the planning department for basic lookups.' },
-      { icon:'📋', title:'Permit Tracker → Phase Unlock', body:'Every active permit — status, submission date, inspections passed, outstanding items. When a permit is approved, it automatically unlocks the corresponding construction phase. No manual trigger.' },
-      { icon:'🤝', title:'Deal Pipeline & Due Diligence', body:'Active land acquisitions tracked from first contact through close. MLS comparables, due diligence checklists, key dates, and assigned team members — all in one record.' },
+      { icon:'🏠', title:'Sites, Homes & Owners', body:'Communities and towers, lots and suites, civic addresses, enrolment numbers, owners and contacts. Search by name, address, lot or unit. Bring it all in from QDef or a spreadsheet.' },
+      { icon:'📥', title:'Tarion Form Import', body:'Import a Tarion warranty form and every line becomes an item on the home, with its deadlines. Repeats from an earlier form are flagged, not duplicated. Automatic sync through the Tarion API is coming.' },
+      { icon:'🔧', title:'Work Orders & Trades', body:'Assign warranted items to a trade or an internal technician. Trades get the work order by email. Track status, completion and after photos against each item.' },
+      { icon:'💰', title:'POs & Warranty Ledger', body:'PO requests, approvals and a log per trade and per home. Warranty spend and back-charges roll up by home, site and trade, and export to QuickBooks or a spreadsheet.' },
     ],
-    ai:'AI pulls comparable project costs from your existing portfolio to pre-populate pro-forma assumptions. Permit approval fires the Build Ops phase unlock automatically.' },
-  { n:'02', color:'#f97316', tag:'Low-Rise Homebuilding', title:'Track builders, freehold communities, townhomes — with Tarion at the core.', sub:'CPM scheduling · Phase gates · Sub-trade management · Warranty · PDI',
+    ai:'AI triage rates each item for warranty risk, suggests the CPG or OBC reference and drafts inspector notes. A person confirms every decision.' },
+  { n:'02', color:'#f97316', tag:'Low-Rise & High-Rise', title:'Lots, suites and common elements in one system.', sub:'Freehold · Townhomes · Towers · Suites · Common elements',
     features:[
-      { icon:'📅', title:'Dynamic CPM Schedule — Phase-by-Phase', body:'Gantt chart per lot. Drag to reschedule and dependencies cascade automatically. Site super signs off phases from the field app — no paper, no call back to the office.' },
-      { icon:'⚖️', title:'Tarion Warranty — Built for Ontario Low-Rise', body:'CPP/PDI signature starts the Tarion clock. Day 41, 183, and 366 auto-submission windows tracked per lot. 120-day BRP monitored with escalating alerts. RFC status tracked — when a homeowner requests conciliation, the 30-day pre-conciliation BRP is added automatically. Defence Vault assembled from day one. Conciliation prep that shows up ready.' },
-      { icon:'🔧', title:'Sub-Trade Digital Sign-Off', body:'Trades receive a shareable link — no app install required. View scope, confirm completion, upload as-built photos, apply digital signature. Phase gate cannot close until all sign-offs are in.' },
-      { icon:'💰', title:'Lender Draw — Auto-Assembled on Phase Close', body:'When a phase is signed off, the lender draw request auto-assembles: completion evidence, gate photos, sub-trade sign-offs. Finance coordinator reviews and submits.' },
+      { icon:'🏡', title:'Freehold & Townhome Communities', body:'Every lot carries its forms, items, deadlines, trades and documents. The portfolio view shows each community at a glance.' },
+      { icon:'🏢', title:'Towers & Suites', body:'High-rise is built in, not bolted on. Suites are tracked by tower, floor and unit with the same forms, deadlines and work orders as a freehold lot.' },
+      { icon:'🏛', title:'Common Elements', body:'Common elements follow their own Tarion process with the condominium corporation as the owner. The Conciliation Manager switches between freehold and common elements.' },
+      { icon:'📧', title:'Aging Emails per Site', body:'Every site\'s coordinators receive a weekly email of aging items for that site. Set the recipients once in settings and it runs on its own.' },
     ],
-    ai:'Phase gate closed on site → draw request assembled in office automatically. Tarion deadlines initialized from PDI completion to the minute.' },
-  { n:'03', color:'#3b82f6', tag:'High-Rise & Mixed-Use Development', title:'Mid-rise condos, towers, mixed-use — APS through PDI through condo registration.', sub:'Sales pipeline · APS generation · Design studio · Storage assignment · Condo handoff',
+    ai:'Aging, overdue and deadline reports are built from live data per site, trade and coordinator — no manual export.' },
+  { n:'03', color:'#a855f7', tag:'Conciliation Manager — Add-on · Managers Only', title:'Built for the conciliation room.', sub:'Cases · Cycles · CARs · Cash offers · Builder comments · Coming to Combryx',
     features:[
-      { icon:'📝', title:'APS Generation & Digital Execution', body:'Agreement of Purchase and Sale generated from unit and buyer data. Digital signature via DocuSign or Dropbox Sign. On execution, the unit.sold event fires — revenue recorded, storage assigned, design studio unlocked for the buyer.' },
-      { icon:'🎨', title:'Design Studio — Buyer Selects Their Own Finishes', body:'Buyers log into their portal and select flooring, cabinets, fixtures, and colours from your pre-set options. Upgrade pricing built in. Selections locked at cutoff date. Trade packages auto-generated.' },
-      { icon:'🅿', title:'Locker & Parking Auto-Assignment', body:'Visual site plan shows all storage units colour-coded by status. Proximity algorithm assigns the closest locker and parking space to the buyer\'s floor and elevator bank.' },
-      { icon:'🔑', title:'Smart Handover — Unit Closes, Everything Reacts', body:'PDI signed → Tarion clocks start. Trade keys revoked automatically. Homeowner provisioned to smart lock, locker, and parking. Revenue confirmed in financial ledger. All from a single signed PDI.' },
+      { icon:'📋', title:'Case Stages & Timers', body:'Each case moves from inspection booked, to assessed, to CAR received, to the 30-day timer. Tarion\'s own deadlines sit on a per-case timeline.' },
+      { icon:'🔁', title:'Cycles & CARs', body:'Every re-inspection is its own cycle with its own CAR, assessment and clock, so nothing from one inspection gets mixed into another.' },
+      { icon:'💵', title:'Cash Offers & Releases', body:'Prepare, track and record cash offers and releases against the items they cover.' },
+      { icon:'🛡', title:'Builder Comments Package', body:'One document for the inspection: your comment and your chargeability exception for each item, with the evidence attached, ready to print or email.' },
     ],
-    ai:'Unit sold → revenue line, storage assignment, and welcome email fire simultaneously. Unit closed → trade keys revoke, buyer access provisions, Tarion clocks initialize — one event, no manual steps.' },
-  { n:'04', color:'#a855f7', tag:'Condominium Corporation', title:'After the builder turns over the building — the corporation runs on the same platform.', sub:'Common elements · Board reporting · Reserve fund · Amenity management · Owner portal',
+    ai:'A management control centre shows every active conciliation by community. Only users with the manager role can see this add-on.' },
+  { n:'04', color:'#3b82f6', tag:'QCI & PDI — Coming', title:'Catch it before close, not after.', sub:'Pre-close assessments · Deficiencies · Wrong or missing materials · Handover',
     features:[
-      { icon:'🏗', title:'Common Element Maintenance & Tracking', body:'Every common area tracked as a managed asset. Maintenance schedules, inspection records, vendor contracts, and work order history all in one place. Nothing falls through the cracks.' },
-      { icon:'📊', title:'Reserve Fund Planning & AI Forecasting', body:'Current reserve fund balance, contribution schedule, and expenditure projections tracked in real time. AI models capital replacement timelines based on asset age and condition scores. Board reports generated automatically.' },
-      { icon:'🎟', title:'Owner Portal & Amenity Booking', body:'Owners book amenities through the portal. On booking confirmation, the IoT module auto-issues a time-bound digital key for that space and time. No key fob hand-off. No coordinator required.' },
-      { icon:'⚖', title:'Board Meeting Packages — Auto-Generated', body:'Monthly and quarterly board packages assembled automatically from live operational data: maintenance activity, financial summary, open complaints, reserve fund status.' },
+      { icon:'🔎', title:'QCI Assessment', body:'Warranty walks the home before delivery and logs deficiencies and wrong or missing materials against the home.' },
+      { icon:'📝', title:'PDI', body:'The pre-delivery inspection recorded per home, with photos per item.' },
+      { icon:'🏗', title:'Hand-off to Construction', body:'QCI and PDI items go to the construction team to resolve before close and handover.' },
+      { icon:'➡️', title:'Carries into Warranty', body:'Anything still open at handover stays on the home\'s record and carries into warranty, so the history is never lost.' },
     ],
-    ai:'AI flags capital assets approaching end-of-life and schedules preventive maintenance before failure. Reserve fund shortfall projections trigger board alerts at 18-month and 6-month thresholds.' },
-  { n:'05', color:'#14b8a6', tag:'Rental Portfolio', title:'Purpose-built rental, investor-owned portfolios, and mixed tenure buildings.', sub:'Lease management · Tenant portal · RTA compliance · Maintenance · Vacancy tracking',
+    ai:'On the roadmap. With the Design Centre add-on, the QCI can check the owner\'s signed selections room by room.' },
+  { n:'05', color:'#14b8a6', tag:'Owner & Trade Portals — Coming', title:'Scheduling without the phone tag.', sub:'Owner link · Trade link · Scheduling · Sign-off',
     features:[
-      { icon:'📄', title:'Lease Management & RTA Compliance', body:'Digital lease agreements generated and e-signed. Ontario RTA notice periods and rent increase guidelines tracked automatically. Lease renewal alerts at 90, 60, and 30 days. N-form notices managed from within the platform.' },
-      { icon:'💬', title:'Tenant Portal & Communications', body:'Tenants submit maintenance requests, view their lease, pay rent, and communicate with property management — all from their portal. Every interaction is logged and timestamped.' },
-      { icon:'📉', title:'Vacancy Tracking & Financial Performance', body:'Vacancy rate per building, per unit type, and across the portfolio. Rental income actual vs. projected. Operating expense breakdown. AI flags underperforming units and suggests market-rate adjustments.' },
-      { icon:'🔧', title:'Maintenance Requests → Trade Dispatch', body:'Tenant submits a request. Property manager categorizes by urgency, assigns trade, trade gets push notification. Tenant auto-notified of dispatch. Status tracked to resolution.' },
+      { icon:'🔗', title:'A Link for Every Owner', body:'Each owner gets a private link to their items, status and photos. No account to create.' },
+      { icon:'📅', title:'Scheduling', body:'Owner and trade agree a date through their links. Every offer, acceptance, refusal and missed appointment is logged.' },
+      { icon:'👷', title:'Trade Link — No Login', body:'Trades tap done, scheduled with a date, or not scheduled, straight from the email.' },
+      { icon:'✍️', title:'Owner Sign-off', body:'The owner signs off completed work against the after photos, stored on the item.' },
     ],
-    ai:'AI classifies incoming maintenance requests by urgency — water issues escalated automatically. Rent increase analysis suggests optimal timing per unit based on RTA rules and local market data.' },
-  { n:'06', color:'#22c55e', tag:'Property Management Operations', title:'The full PM operation — tickets, vendors, financials, reporting — AI-powered, field-first.', sub:'Ticket management · Vendor performance · Financial reporting · AI dispatch · IoT monitoring',
+    ai:'On the roadmap. The access and contact record builds itself as appointments are offered and kept or missed.' },
+  { n:'06', color:'#22c55e', tag:'Design Centre — Add-on · Coming', title:'Owners choose online. Sales confirms in person.', sub:'Selections · Signed record · Site instructions · 360 records · AI walk-through',
     features:[
-      { icon:'🎫', title:'Ticket Management — From the Truck', body:'Property manager receives a complaint call. Opens the app. Logs ticket in 60 seconds — property, unit, category, voice description, urgency. Assigns trade with one tap. Tenant auto-notified by SMS.' },
-      { icon:'🏭', title:'Vendor Management & Performance Tracking', body:'Every vendor contract, insurance certificate, and trade assignment logged. Response time tracked per vendor. AI flags underperforming vendors and suggests alternatives from your roster.' },
-      { icon:'📈', title:'AI-Powered Financial Reporting', body:'Operating income, maintenance spend, vendor costs, and capital expenditures tracked by property and portfolio. Monthly owner reports generated automatically. Ask the AI natural language questions about your financials.' },
-      { icon:'📡', title:'IoT Sensor Monitoring — Proactive, Not Reactive', body:'Moisture, temperature, and HVAC sensors feed live data into the PM dashboard. When a reading exceeds threshold, a maintenance ticket is created and the best available plumber dispatched — before the tenant knows.' },
+      { icon:'🎨', title:'Owner Selections', body:'At purchase, owners go through their options in the portal, with features and trade-offs explained, and sign a selection. The sales centre visit confirms it against real samples.' },
+      { icon:'🧾', title:'Site Instructions & Ledger', body:'Final selections produce the site instruction list and a ledger of upgrades and credits for your main build and sales system.' },
+      { icon:'📷', title:'360 Stage Records', body:'A 360 record of every home at each stage from framing to close. Warranty gets a copy to look behind the walls when investigating an issue.' },
+      { icon:'🔍', title:'AI Walk-Through', body:'At QCI, the camera checks each room against the owner\'s signed selections and flags correct, missing or wrong. A person confirms each flag.' },
     ],
-    ai:'Incoming tenant complaint → auto-classified → trade auto-dispatched if urgent → tenant auto-SMS\'d with ETA. Sensor spike → ticket created → plumber dispatched → PM notified. All before anyone calls.' },
+    ai:'On the roadmap. Selections stay on the home\'s record, so warranty can see exactly what was chosen years later.' },
 ]
 
 const aiCards = [
-  { chip:'Lex Structura', title:'OBC & Tarion Regulatory Intelligence', trigger:'Any warranty question, CPG dispute, or deadline question', body:'RAG-enabled agent loaded with OBC Part 9, Tarion CPG tolerances, the current CSS (post-May 2024), ONHWPA, and current Registrar Bulletins. Knows the Day 41/183/366 auto-submission schedule, the 120+30 BRP structure, and how RFC timing affects the builder\'s repair window. Specific citations — not generic answers.', outcome:'Correct CSS rules. Not legacy 30-day logic.' },
-  { chip:'Financial Ghost', title:'Invoice OCR & Cost Intelligence', trigger:'Every invoice uploaded to the system', body:'Extracts vendor, amount, date, and line items from any invoice format. Auto-matches to open POs. Classifies as CapEx or OpEx. Flags anomalies — duplicates, amounts outside expected range.', outcome:'Invoice processed in seconds. Exceptions only go to humans.' },
-  { chip:'Triage Node', title:'Warranty & PM Communication Intelligence', trigger:'Every incoming homeowner or tenant submission', body:'Classifies cases by urgency, warranty category, and likely CPG classification. Drafts suggested coordinator response. For urgent PM requests auto-dispatches the fastest available certified trade.', outcome:'Right trade. Right response. Right now.' },
-  { chip:'Reserve Fund AI', title:'Capital Planning & Asset Lifecycle', trigger:'Condo Corp and PM portfolios', body:'Models capital replacement timelines based on asset age, condition scores, and maintenance history. Projects reserve fund requirements at 5, 10, and 20 years. Flags shortfalls before they become crises.', outcome:'No reserve fund surprises. Ever.' },
-  { chip:'Pro-Forma AI', title:'Land Acquisition & Development Analysis', trigger:'New land acquisition record created', body:'Pulls comparable project hard costs from your portfolio history to pre-populate pro-forma assumptions. Runs sensitivity analysis at ±1% rate and ±5% cost scenarios automatically.', outcome:'Pro-forma in minutes. Backed by your own data.' },
-  { chip:'Portfolio Intelligence', title:'Cross-Portfolio Financial Anomaly Detection', trigger:'Daily — runs across all active properties', body:'Monitors operating costs, maintenance spend, and revenue performance across every building. Flags statistical anomalies — overspend on a vendor, maintenance spike, vacancy rate trending above comparable buildings.', outcome:'Problems surfaced before they appear on the P&L.' },
+  { chip:'Lex Structura', title:'OBC & Tarion Regulatory Intelligence', trigger:'Any warranty question, CPG dispute, or deadline question', body:'Loaded with OBC Part 9, Tarion CPG tolerances, the current CSS (post-May 2024), ONHWPA, and current Registrar Bulletins. Knows the Day 41/183/366 auto-submission schedule, the 120+30 BRP structure, and how RFC timing affects the builder\'s repair window. Specific citations — not generic answers.', outcome:'Correct CSS rules. Not legacy 30-day logic.' },
+  { chip:'Triage Node', title:'Warranty Item Triage', trigger:'Every imported form item', body:'Rates each item for warranty risk, suggests the likely CPG article or OBC reference, drafts inspector notes and proposes a trade. Nothing is decided by the AI alone — a person confirms or changes it.', outcome:'A head start on every item. Your call on every decision.' },
+  { chip:'Selection Check · Coming', title:'AI Walk-Through at QCI', trigger:'Design Centre add-on', body:'Checks each room against the owner\'s signed selections and flags correct, missing or wrong. In development, and being proven on real homes before release.', outcome:'Wrong selections found before close.' },
 ]
 
 export default function PlatformPage() {
@@ -82,30 +79,30 @@ export default function PlatformPage() {
 
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-8 py-20">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.24em] text-cb-gold mb-6 flex items-center gap-3">
-            <span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>Combryx Platform · Full Lifecycle · Every Asset Type<span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>
+            <span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>Combryx Platform · Warranty Only · Low-Rise &amp; High-Rise<span style={{ display:"inline-block", width:40, height:1, background:"#FFB800", opacity:0.5 }}/>
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(32px,6vw,88px)] leading-[1.05] tracking-[0.04em] text-cb-white mb-5 max-w-5xl">
-            <span className="block text-[0.55em] font-body font-light text-cb-muted tracking-wider mb-3">From the land deal to the 7-year warranty.</span>
-            <span className="text-cb-gold">ONE SYSTEM.</span><br/>EVERY STAGE.<br/>EVERY ASSET.
+            <span className="block text-[0.55em] font-body font-light text-cb-muted tracking-wider mb-3">From the first Tarion form to the 7-year warranty.</span>
+            <span className="text-cb-gold">ONE SYSTEM.</span><br/>ONE DEPARTMENT.<br/>DONE RIGHT.
           </h1>
           <p className="animate-fade-up anim-d2 text-lg text-cb-muted max-w-2xl leading-relaxed mb-10">
-            <strong className="text-cb-white font-semibold">High-rise. Low-rise. Rental. Condo corp. Land acquisition. Property management.</strong> Combryx connects every stage of a real estate development lifecycle — so your operation runs on one platform.
+            <strong className="text-cb-white font-semibold">Built for the warranty team, and only the warranty team.</strong> Combryx works beside the construction and sales software you already use. It does not try to replace it.
           </p>
           {/* sector pills */}
           <div className="animate-fade-up anim-d3 flex flex-wrap gap-2 justify-center mb-10">
-            {[['🏔 Land Acquisition','#ef4444'],['🏡 Low-Rise','#f97316'],['🏢 High-Rise','#3b82f6'],['🏛 Condo Corp','#a855f7'],['🏘 Rental Portfolio','#14b8a6'],['⚙ Property Mgmt','#22c55e']].map(([label, color]) => (
+            {[['🛡 Warranty','#FFB800'],['🏡 Low-Rise','#f97316'],['🏢 High-Rise','#3b82f6'],['🏛 Common Elements','#a855f7'],['⚖ Conciliation','#ef4444'],['🎨 Design Centre · Coming','#14b8a6']].map(([label, color]) => (
               <span key={label} className="font-mono text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border font-medium transition-all hover:-translate-y-0.5 cursor-default"
                 style={{ borderColor:`${color}66`, color, background:`${color}1a` }}>{label}</span>
             ))}
           </div>
           <div className="animate-fade-up anim-d4 flex gap-3 justify-center flex-wrap">
-            <Link href="/pricing" className="btn-gold">See Pricing & Modules →</Link>
-            <Link href="#sectors" className="btn-ghost">Explore by Sector ↓</Link>
+            <Link href="/pricing" className="btn-gold">See Pricing →</Link>
+            <Link href="#sectors" className="btn-ghost">See What&apos;s Included ↓</Link>
           </div>
         </div>
 
         <div className="relative z-10 grid grid-cols-3 md:grid-cols-6 border-t border-[rgba(255,255,255,0.06)] divide-x divide-[rgba(255,255,255,0.06)]">
-          {[['6','Sectors'],['7','Lifecycle Stages'],['1','Connected Platform'],['AI','Automation'],['$0','Setup Fee'],['∞','Communities']].map(([n,l], i) => (
+          {[['1','Department'],['2','Add-ons'],['2','Building Types'],['AI','Triage'],['$0','Setup Fee'],['∞','Users']].map(([n,l], i) => (
             <div key={l} className="py-5 px-4 text-center bg-cb-dark2 hover:bg-cb-dark3 transition-colors">
               <div className="font-display text-2xl md:text-3xl tracking-[0.04em] leading-none mb-1"
                 style={{ color:['#ef4444','#f97316','#3b82f6','#FFB800','#22c55e','#14b8a6'][i] }}>{n}</div>
@@ -119,8 +116,8 @@ export default function PlatformPage() {
       <div className="bg-cb-dark1 py-10 px-8">
         <div className="max-w-5xl mx-auto text-center">
           <p className="font-display text-[clamp(16px,2.5vw,26px)] tracking-[0.02em] text-cb-white leading-[1.3]">
-            A unit sold in High-Rise automatically starts the Tarion clock, triggers storage assignment, and feeds the building&apos;s property management system.{' '}
-            <span className="text-cb-gold">One event. Every connected stage reacts.</span>
+            A Tarion form imported in the morning becomes items, deadlines and work orders by the afternoon.{' '}
+            <span className="text-cb-gold">One import. Everything downstream follows.</span>
           </p>
         </div>
       </div>
@@ -129,9 +126,9 @@ export default function PlatformPage() {
       <section id="sectors" className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>By Sector</div>
-            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Built for your<br/><span className="text-cb-gold">specific operation.</span></h2>
-            <p className="text-cb-muted text-base max-w-xl">You&apos;re not a &ldquo;construction company.&rdquo; You&apos;re a low-rise track builder, a mixed-use developer, a rental portfolio owner. Combryx is built around those distinctions.</p>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>What&apos;s Included</div>
+            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Built for your<br/><span className="text-cb-gold">warranty department.</span></h2>
+            <p className="text-cb-muted text-base max-w-xl">You are not buying a construction suite. You are buying the system your warranty department runs on, and only the add-ons you want. Items marked Coming are on the roadmap.</p>
           </ScrollReveal>
 
           <SectorAccordion sectors={sectors} />
@@ -143,8 +140,8 @@ export default function PlatformPage() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>The Intelligence Layer</div>
-            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">AI that actually<br/><span className="text-cb-gold">understands construction.</span></h2>
-            <p className="text-cb-muted text-base max-w-xl">Purpose-built automation agents trained on Ontario warranty law, construction finance, and property management operations. Every AI action is logged, auditable, and overridable.</p>
+            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">AI that actually<br/><span className="text-cb-gold">understands warranty.</span></h2>
+            <p className="text-cb-muted text-base max-w-xl">Purpose-built assistants loaded with Ontario warranty rules. Every AI suggestion is logged, reviewable, and confirmed by a person.</p>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.05)] rounded-xl overflow-hidden">
             {aiCards.map((a, i) => (
@@ -168,27 +165,27 @@ export default function PlatformPage() {
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="text-center mb-14">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#FFB800", opacity:0.6 }}/>One System</div>
-            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">One operator. <span className="text-cb-gold">Multiple asset types.</span><br/>Zero system switching.</h2>
-            <p className="text-cb-muted text-base max-w-xl mx-auto">A developer who builds low-rise communities, operates a rental portfolio, manages several condo corps, and acquires new land — all of that lives in one Combryx account.</p>
+            <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Works beside <span className="text-cb-gold">what you already run.</span><br/>Replaces only the spreadsheets.</h2>
+            <p className="text-cb-muted text-base max-w-xl mx-auto">Lots and owners come in from your existing builder system by import or API. Warranty data goes back out by export.</p>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="flex flex-col gap-2">
               <div className="grid grid-cols-3 gap-2">
-                {[['🏔','Land'],['🏡','Low-Rise'],['🏢','High-Rise']].map(([icon,label]) => (
+                {[['🏗','Your Build System'],['📥','Tarion Forms'],['📁','QDef Data']].map(([icon,label]) => (
                   <div key={label} className="bg-cb-dark2 border border-[rgba(255,255,255,0.06)] rounded-lg p-4 text-center hover:scale-105 transition-transform">
                     <span className="text-xl block mb-1">{icon}</span>
                     <span className="font-mono text-[9px] uppercase tracking-wider text-cb-dim">{label}</span>
                   </div>
                 ))}
               </div>
-              <div className="text-center font-mono text-cb-dim text-sm py-1">↓ all connect to ↓</div>
+              <div className="text-center font-mono text-cb-dim text-sm py-1">↓ all feed ↓</div>
               <div className="bg-[rgba(255,184,0,0.08)] border-2 border-[rgba(255,184,0,0.3)] rounded-lg p-5 text-center">
                 <div className="font-display text-2xl text-cb-gold tracking-[0.08em] mb-1">COMBRYX</div>
-                <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-cb-gold opacity-50">One Platform · All Assets · AI-Powered</div>
+                <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-cb-gold opacity-50">Warranty · Conciliation · Design Centre</div>
               </div>
-              <div className="text-center font-mono text-cb-dim text-sm py-1">↓ feeds into ↓</div>
+              <div className="text-center font-mono text-cb-dim text-sm py-1">↓ which reaches ↓</div>
               <div className="grid grid-cols-3 gap-2">
-                {[['🏛','Condo Corp'],['🏘','Rental'],['⚙','Prop Mgmt']].map(([icon,label]) => (
+                {[['👷','Trades'],['🏠','Owners'],['📊','Exports']].map(([icon,label]) => (
                   <div key={label} className="bg-cb-dark2 border border-[rgba(255,255,255,0.06)] rounded-lg p-4 text-center hover:scale-105 transition-transform">
                     <span className="text-xl block mb-1">{icon}</span>
                     <span className="font-mono text-[9px] uppercase tracking-wider text-cb-dim">{label}</span>
@@ -197,10 +194,10 @@ export default function PlatformPage() {
               </div>
             </div>
             <div className="flex flex-col gap-3">
-              {[['🔗','A unit built in your low-rise feeds its data into warranty, then into your PM system when you retain it as rental','No re-entry. The lot record, the PDI, the Tarion history — carry forward automatically.'],
-                ['📊','Your CFO sees one financial picture across every asset type and every stage','Construction budget. Rental NOI. Reserve fund balance. Land spend. One dashboard.'],
-                ['📱','Your field team uses one app — role determines what they see','Site super sees phases. Warranty tech sees jobs. PM sees tickets. One login for everyone.'],
-                ['🤖','AI learns from your entire operation, not just one building','Pro-forma assumptions from comparable projects. Cost predictions from your own vendor data.']].map(([icon,title,desc]) => (
+              {[['🔗','Your construction and sales software stays exactly where it is','Combryx takes lots and owners in by spreadsheet or API. Nobody outside warranty has to change how they work.'],
+                ['📊','One warranty picture across every community and tower','Open items, aging, deadlines and cost per home, per site and per trade.'],
+                ['🔒','Each person sees only what they should','Coordinators and technicians see their sites. The Conciliation Manager is visible to managers only.'],
+                ['📤','Your data is always yours','Every list exports to Excel or PDF, and the whole account exports on request — free.']].map(([icon,title,desc]) => (
                 <div key={title} className="flex gap-4 p-5 bg-cb-dark2 border border-[rgba(255,255,255,0.06)] rounded-lg hover:border-[rgba(255,255,255,0.12)] transition-colors">
                   <span className="text-2xl flex-shrink-0">{icon}</span>
                   <div>
@@ -218,11 +215,11 @@ export default function PlatformPage() {
       <section className="bg-cb-dark2 py-20 px-8 text-center">
         <ScrollReveal>
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">FROM<br/><span className="text-cb-gold">LAND DEAL</span><br/>TO YEAR SEVEN.</h2>
+            <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">FROM<br/><span className="text-cb-gold">FIRST FORM</span><br/>TO YEAR SEVEN.</h2>
             <p className="text-cb-muted text-base leading-relaxed mb-10">35+ years in the trade. One founder who worked inside Tarion and five Ontario builders. Every gap documented. Every workflow built from experience.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/pricing" className="btn-gold">
-                Start with Warranty Core →
+                Start with Combryx Warranty →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a Demo

@@ -18,7 +18,7 @@ const timeline = [
 
 const values = [
   { icon:'🔩', title:'Rooted in Real Experience', body:'Every feature in Combryx exists because of a real problem observed on a real job site or in a real Tarion conciliation room — not because a product manager thought it sounded useful.' },
-  { icon:'🔓', title:'Fully Tailored. Never Locked.', body:'You should not have to reshape your business to fit the software. Buy the modules you need. Custom workflows available at a transparent rate. Full data export free, always.' },
+  { icon:'🔓', title:'Fully Tailored. Never Locked.', body:'You should not have to reshape your business to fit the software. Buy the warranty system and only the add-ons you need. Custom workflows available at a transparent rate. Full data export free, always.' },
   { icon:'💰', title:'Accessible Innovation.', body:'The major builder platforms cost $10,000–$40,000 to implement. Combryx is priced per community, per month — you pay for what you actually use. No setup fee.' },
   { icon:'🧠', title:'Knowledgeable Support.', body:'When you contact Combryx support, you\'re talking to someone who understands Ontario warranty law, has been on a job site, and can give you the right answer. Same-day response.' },
 ]
@@ -153,7 +153,7 @@ export default function AboutPage() {
               Every builder asks <span style={{ color:'#FFB800' }}>Why.</span><br/>Combryx is <span style={{ color:'#FFB800' }}>x.</span>
             </h2>
             <p style={{ fontSize:16, color:'#888', lineHeight:1.8, maxWidth:600, margin:'0 auto' }}>
-              Every builder using old software is asking the same questions — Why is this late? Why did we lose that conciliation? Where is the signed PDI? Other ERPs were built by people who never lived those questions. Combryx was built by someone who did. x is the answer. Combryx is x.
+              Every builder using old software is asking the same questions — Why is this late? Why did we lose that conciliation? Where is the signed PDI? Other systems were built by people who never lived those questions. Combryx was built by someone who did. x is the answer. Combryx is x.
             </p>
           </div>
 
@@ -211,11 +211,11 @@ export default function AboutPage() {
               <text x="160" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#F5F5F5" opacity="0.9">Why did we lose that conciliation?</text>
               <text x="160" y="234" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#C8C8C8" opacity="0.8">Why did nobody track the BRP?</text>
               <text x="160" y="249" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#aaa" opacity="0.7">Where is the signed PDI?</text>
-              <text x="160" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Why is the draw still not in?</text>
+              <text x="160" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Why was that deadline missed?</text>
 
               {/* LEFT PAN LABELS — below pan */}
               <text x="160" y="330" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="14" letterSpacing="0.1em" fill="#ef4444">EVERY BUILDER WHY</text>
-              <text x="160" y="346" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">What other ERPs leave unanswered</text>
+              <text x="160" y="346" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#666">What other systems leave unanswered</text>
 
               {/* RIGHT PAN */}
               <ellipse cx="540" cy="305" rx="80" ry="13" fill="#001a08" stroke="#FFB800" strokeWidth="1.5" strokeOpacity="0.7"/>
@@ -225,7 +225,7 @@ export default function AboutPage() {
               <text x="540" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#F5F5F5" opacity="0.9">Defence Vault — conciliation ready</text>
               <text x="540" y="234" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#C8C8C8" opacity="0.8">Day 41 BRP tracked automatically</text>
               <text x="540" y="249" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#aaa" opacity="0.7">PDI signed, vaulted, timestamped</text>
-              <text x="540" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Phase signed — draw auto-assembled</text>
+              <text x="540" y="263" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#888" opacity="0.6">Deadline tracked — alert sent early</text>
 
               {/* RIGHT PAN LABELS — below pan */}
               <text x="540" y="330" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="14" letterSpacing="0.1em" fill="#22c55e">X = COMBRYX</text>
@@ -283,7 +283,7 @@ export default function AboutPage() {
             <p className="text-cb-muted text-base leading-relaxed mb-10">We&apos;re building the infrastructure for a more efficient Ontario construction industry. One that stops losing Tarion conciliations it should win.</p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link href="/pricing" className="inline-flex bg-cb-gold text-black font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 transition-all" style={{ boxShadow:'0 0 24px rgba(255,184,0,0.3)' }}>
-                Start with Warranty Core →
+                Start with Combryx Warranty →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a Demo

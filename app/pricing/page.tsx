@@ -3,23 +3,23 @@ import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Pricing — Modular, Per-Community, No Lock-In',
-  description: 'Combryx pricing: Warranty Core $149/community/month, Builder Suite $349, Enterprise $549. No setup fee, cancel anytime, full data export free.',
+  title: 'Pricing — Per-Community, No Lock-In',
+  description: 'Combryx pricing: Combryx Warranty $129 per community or tower per month. Conciliation Manager add-on $199 per builder per month. No setup fee, cancel anytime, full data export free.',
   alternates: { canonical: 'https://combryx.com/pricing' },
 }
 
 const plans = [
-  { tag:'Entry — Small Builders', name:'Warranty Core', price:'$149', period:'per community / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet on day one.',
-    color:'#FFB800', featured:false, plan:'warranty', cta:'Start Warranty Core',
-    items:['Full warranty case management','Tarion CSS form schedule — Day 41, 183 & 366 auto-submissions','Work order scheduling + tech assignment','PDI digital sign-off + PDF generation','Defence Vault + conciliation prep export','AI triage + OBC/CPG answers (Lex Structura)','Field app — tech, PDI, assessment modes','Tarion XML import · Unlimited users · Unlimited cases'],
-    addons:['Financial Ledger — add for $79/community/mo','Build Ops — add for $79/community/mo'] },
-  { tag:'Most Popular — Growing Teams', name:'Builder Suite', price:'$349', period:'per community / month · 4 modules', tagline:'Construction lifecycle from phase gate to lender draw — connected.',
-    color:'#FFB800', featured:true, plan:'builder', cta:'Start Builder Suite',
-    items:['Everything in Warranty Core','Financial Ledger — job costing, POs, invoice OCR','Lender draw packages — auto-assembled on phase sign-off','Build & Field Ops — Gantt, phase gates, subtrade sign-off','Sales module — APS, design studio, storage map','Smart Handover — unit sold cascade fires automatically','Full field app — all 13 screens, all roles','Financial Ghost AI — invoice classification'],
-    addons:['Pre-Con + IoT — add for $99/community/mo'] },
-  { tag:'Enterprise — Full Lifecycle', name:'Enterprise Stack', price:'$549', period:'per community / month · all 6 modules', tagline:'Land purchase to warranty expiry. Every module. Every role.',
-    color:'#FFB800', featured:false, plan:'enterprise', cta:'Start Enterprise Stack',
-    items:['Everything in Builder Suite','Land & Pre-Con — pipeline, pro-forma, zoning API','Permit tracking — approved permit unlocks phase','IoT & Security — Salto/Latch smart lock integration','Sensor monitoring — moisture/temp → auto warranty case','Property management tickets + tenant comms','All 14 field app screens · All 9 roles','Priority support — dedicated onboarding rep'],
+  { tag:'Base — Start Here', name:'Combryx Warranty', price:'$129', period:'per community or tower / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet.',
+    color:'#FFB800', featured:true, plan:'warranty', cta:'Start Combryx Warranty', href:'/success?plan=warranty',
+    items:['Sites, towers, lots, suites and owner records','Tarion form import — items created automatically','Statutory deadline and BRP tracking per home','AI triage + OBC/CPG answers (Lex Structura)','Work orders to trades and technicians','PO approvals + warranty cost ledger with back-charges','Aging reports + automatic weekly emails per site','QDef import · Excel/PDF export · Unlimited users · Unlimited items'],
+    addons:['Coming: Tarion API sync','Coming: owner portal and scheduling','Coming: QCI & PDI','Coming: offline field app'] },
+  { tag:'Add-on — Managers Only', name:'Conciliation Manager', price:'+$199', period:'per builder / month · flat', tagline:'Walk into every Tarion conciliation with the whole file in order.',
+    color:'#FFB800', featured:false, plan:'conciliation', cta:'Add Conciliation Manager', href:'/success?plan=conciliation',
+    items:['Cases tracked from inspection booked to CAR','Each re-inspection as its own cycle and clock','CAR tracking and 30-day timers','Cash offers and releases','Builder comments package with evidence attached','Management control centre by community','Freehold and common elements (high-rise)','Visible to the manager role only'],
+    addons:['Coming: now being built into Combryx'] },
+  { tag:'Add-on — Coming', name:'Design Centre', price:'Coming', period:'priced at launch', tagline:'Owners choose and sign their selections online before the sales centre visit.',
+    color:'#FFB800', featured:false, plan:'design', cta:'Join the Waitlist', href:'/demo#waitlist',
+    items:['Owner selections in the portal, every option explained','Signed selection record per home','Site instruction list from the final choices','Upgrade and credit ledger for your build system','360 tours and stage records, framing to close','AI walk-through checks selections at QCI','Selections visible to warranty for the life of the home'],
     addons:[] },
 ]
 
@@ -44,7 +44,7 @@ export default function PricingPage() {
             NO SETUP FEES.<br/>NO LOCKED CONTRACTS.<br/><span className="text-cb-gold">NO SURPRISES.</span>
           </h1>
           <p className="animate-fade-up anim-d2 text-lg text-cb-muted leading-relaxed max-w-xl mx-auto">
-            Priced per community, per month. Field app always included. Cancel anytime. Full data export free forever.
+            Priced per community or tower, per month. Unlimited users. Cancel anytime. Full data export free forever.
           </p>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function PricingPage() {
                 className={`p-9 relative ${p.featured ? 'bg-cb-dark1 border-2 border-cb-gold -mx-px z-10 rounded-2xl shadow-gold' : 'bg-cb-dark1'}`}>
                 {p.featured && (
                   <div className="absolute -top-px left-1/2 -translate-x-1/2 bg-cb-gold text-black font-mono text-[9px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-b-lg whitespace-nowrap">
-                    ✦ Most Popular
+                    ✦ Start Here
                   </div>
                 )}
                 <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-cb-dim mb-3">{p.tag}</div>
@@ -80,7 +80,7 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
-                <Link href={`/success?plan=${p.plan}`}
+                <Link href={p.href}
                   className={p.featured ? 'btn-gold' : ''}
                   style={p.featured ? { display:'block', textAlign:'center' } : {
                     display:'block', textAlign:'center',
@@ -101,7 +101,7 @@ export default function PricingPage() {
           <ScrollReveal className="text-center mt-10 px-4">
             <p className="text-cb-muted text-sm leading-relaxed">
               <strong className="text-cb-silver">Volume discounts:</strong> 5+ communities — 15% off &nbsp;·&nbsp; 10+ — 25% off &nbsp;·&nbsp; 20+ — contact us for custom pricing<br/>
-              All plans include <strong className="text-cb-white">unlimited users</strong> · <strong className="text-cb-white">unlimited cases</strong> · <strong className="text-cb-white">unlimited storage</strong> · <strong className="text-cb-white">field app</strong> · <strong className="text-cb-white">$0 exit fee forever</strong>
+              All plans include <strong className="text-cb-white">unlimited users</strong> · <strong className="text-cb-white">unlimited cases</strong> · <strong className="text-cb-white">unlimited storage</strong> · <strong className="text-cb-white">full data export</strong> · <strong className="text-cb-white">$0 exit fee forever</strong>
             </p>
           </ScrollReveal>
         </div>
@@ -159,10 +159,10 @@ export default function PricingPage() {
         <ScrollReveal>
           <div className="max-w-xl mx-auto">
             <h2 className="font-display text-[clamp(36px,5vw,64px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-5">READY TO<br/><span className="text-cb-gold">START?</span></h2>
-            <p className="text-cb-muted text-base mb-8">Start with Warranty Core. Running in two hours. $0 setup. Cancel anytime.</p>
+            <p className="text-cb-muted text-base mb-8">Start with Combryx Warranty. $0 setup. Cancel anytime.</p>
             <div className="flex gap-3 justify-center flex-wrap mb-6">
               <Link href="/success?plan=warranty" className="btn-gold">
-                Start Warranty Core →
+                Start Combryx Warranty →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">
                 Book a 20-Min Demo

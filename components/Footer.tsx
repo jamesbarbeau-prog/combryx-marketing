@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const cols = [
-  { title: 'Modules', links: [['Warranty Core','/pricing'],['Financial Ledger','/pricing'],['Build & Field Ops','/pricing'],['Sales & Leasing','/pricing'],['IoT & Security','/pricing']] },
-  { title: 'Platform', links: [['How It Works','/how-it-works'],['Platform Overview','/platform'],['Field App','/how-it-works#field'],['Tarion Compliance','/how-it-works#tarion'],['Download APK','#']] },
+  { title: 'Product', links: [['Combryx Warranty','/pricing'],['Conciliation Manager','/pricing'],['Design Centre (coming)','/pricing'],['What\'s Included','/platform']] },
+  { title: 'Platform', links: [['How It Works','/how-it-works'],['Platform Overview','/platform'],['Tarion Compliance','/how-it-works#tarion'],['See It Live','/demo']] },
   { title: 'Company', links: [['About','/about'],['Pricing','/pricing'],['Book a Demo','mailto:demo@combryx.com'],['Support','mailto:support@combryx.com'],['Privacy Policy','#']] },
 ]
 
@@ -19,7 +19,7 @@ export default function Footer() {
               <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:'0.1em', color:'#F5F5F5' }}>COM<span style={{ color:'#FFB800' }}>BRYX</span></span>
             </div>
             <p className="text-cb-muted text-sm leading-relaxed mb-4">
-              Modular construction ERP built for Ontario homebuilders. Tarion-compliant. Built by the trade, for the trade.
+              Warranty management software for Ontario homebuilders — low-rise and high-rise. Built around Tarion. Built by the trade, for the trade.
             </p>
             <p className="font-mono text-[10px] text-cb-dim uppercase tracking-wider">Ontario · Canada · ONHWPA Compliant</p>
           </div>
