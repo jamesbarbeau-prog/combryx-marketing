@@ -9,7 +9,7 @@ import {
 const C = {
   ink:'#0F172A', steel:'#475569', dim:'#64748B', line:'#E2E8F0', line2:'#CBD5E1',
   canvas:'#F1F3F6', tile:'#F8FAFC', navy:'#1E3A8A', navyBg:'#EFF6FF',
-  amber:'#EA580C', amberText:'#9A3412', amberBg:'#FFEDD5',
+  amber:'#D97706', amberText:'#92400E', amberBg:'#FEF3C7',
   indigo:'#4338CA', green:'#15803D', greenBg:'#DCFCE7', red:'#B91C1C',
 }
 const mono = "'Fira Code',monospace"
@@ -20,7 +20,7 @@ function Phone({ title, sub, children }: { title: string; sub: string; children:
   return (
     <div style={{ width:'100%', maxWidth:360, margin:'0 auto', background:'#FFFFFF', border:`1px solid ${C.line2}`, borderRadius:28, boxShadow:'0 2px 4px rgba(15,23,42,0.06), 0 24px 48px rgba(15,23,42,0.12)', overflow:'hidden' }}>
       <div style={{ background:C.ink, padding:'14px 18px 12px' }}>
-        <div style={{ fontFamily:mono, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:'#FB923C', marginBottom:3 }}>{sub}</div>
+        <div style={{ fontFamily:mono, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:'#FBBF24', marginBottom:3 }}>{sub}</div>
         <div style={{ fontSize:15, fontWeight:600, color:'#F8FAFC' }}>{title}</div>
       </div>
       <div style={{ padding:16, background:C.canvas, minHeight:440 }}>{children}</div>

@@ -30,11 +30,11 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="relative min-h-[85vh] flex items-end pt-14 bg-gradient-to-b from-white to-cb-dark1 overflow-hidden">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.06]"/>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(234,88,12,0.05) 0%,transparent 70%)' }}/>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.05) 0%,transparent 70%)' }}/>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 pb-20 grid md:grid-cols-2 gap-16 items-end">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-5 flex items-center gap-3">
-              <span style={{ display:"inline-block", width:32, height:1, background:"#EA580C", opacity:0.6 }}/>Founded on the job site. Forged in the warranty room.
+              <span style={{ display:"inline-block", width:32, height:1, background:"#D97706", opacity:0.6 }}/>Founded on the job site. Forged in the warranty room.
             </div>
             <h1 className="font-display text-[clamp(56px,8vw,100px)] leading-[0.93] tracking-[0.04em] text-cb-white mb-6">
               BUILT BY<br/>THE <span className="text-cb-gold">TRADE.</span><br/>FOR THE<br/>TRADE.
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-2">
             {[['01','Started with a hammer','Carpenter · High-end renovations · Trade roots'],['02','Moved into construction management','Site supervision · Major Ontario builders · Scale'],['03','Worked inside Tarion','Inspector · Warranty adjudication · Conciliation process'],['04','Documented every gap across 5 builders','Found what no software developer could see from outside'],['05','Built Builder Guardian','Because no one else could build this exact system']].map(([n,l,s]) => (
-              <div key={n} className={`flex gap-5 items-start p-5 rounded-lg border ${n==='05' ? 'border-[rgba(234,88,12,0.3)] bg-[rgba(234,88,12,0.06)]' : 'border-[rgba(15,23,42,0.1)] bg-cb-dark2'}`}>
+              <div key={n} className={`flex gap-5 items-start p-5 rounded-lg border ${n==='05' ? 'border-[rgba(217,119,6,0.3)] bg-[rgba(217,119,6,0.06)]' : 'border-[rgba(15,23,42,0.1)] bg-cb-dark2'}`}>
                 <div className={`font-display text-2xl tracking-[0.04em] leading-none flex-shrink-0 ${n==='05' ? 'text-cb-gold' : 'text-cb-gold opacity-60'}`}>{n}</div>
                 <div>
                   <div className={`font-body text-sm font-semibold mb-0.5 ${n==='05' ? 'text-cb-white' : 'text-cb-silver'}`}>{l}</div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-12">
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3">
-              <span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>The Journey
+              <span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>The Journey
             </div>
             <h2 className="font-display text-[clamp(32px,4vw,52px)] tracking-[0.04em] text-cb-white">From carpenter to<br/><span className="text-cb-gold">construction software</span> founder.</h2>
           </ScrollReveal>
@@ -84,11 +84,11 @@ export default function AboutPage() {
               <ScrollReveal key={t.era} delay={i * 80} className="grid grid-cols-[80px_20px_1fr] gap-0 gap-x-6 pb-12 last:pb-0">
                 <div className="font-mono text-[11px] text-cb-dim text-right pt-1">{t.era}</div>
                 <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-cb-gold flex-shrink-0 mt-1.5" style={{ boxShadow:'0 0 0 4px rgba(234,88,12,0.15)' }}/>
+                  <div className="w-3 h-3 rounded-full bg-cb-gold flex-shrink-0 mt-1.5" style={{ boxShadow:'0 0 0 4px rgba(217,119,6,0.15)' }}/>
                   {i < timeline.length - 1 && <div className="flex-1 w-px bg-gradient-to-b from-cb-gold to-[rgba(15,23,42,0.1)] mt-1.5"/>}
                 </div>
                 <div className="pb-2">
-                  <div className="inline-block font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 rounded mb-2 font-semibold bg-[rgba(234,88,12,0.1)] text-cb-gold">{t.tag}</div>
+                  <div className="inline-block font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 rounded mb-2 font-semibold bg-[rgba(217,119,6,0.1)] text-cb-gold">{t.tag}</div>
                   <div className="font-body text-[15px] font-bold text-cb-white mb-2">{t.title}</div>
                   <p className="text-cb-muted text-[13px] leading-relaxed">{t.desc}</p>
                 </div>
@@ -140,18 +140,18 @@ export default function AboutPage() {
       {/* ── THE BALANCE EQUATION ── */}
       <section style={{ background:'#F1F3F6', padding:'96px 0', position:'relative', overflow:'hidden' }}>
         {/* hex grid bg */}
-        <div style={{ position:'absolute', inset:0, opacity:0.04, backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='%23EA580C' stroke-width='0.8'/%3E%3C/svg%3E")`, backgroundSize:'80px 92px' }}/>
+        <div style={{ position:'absolute', inset:0, opacity:0.04, backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='%23D97706' stroke-width='0.8'/%3E%3C/svg%3E")`, backgroundSize:'80px 92px' }}/>
         <div style={{ maxWidth:1100, margin:'0 auto', padding:'0 48px', position:'relative', zIndex:1 }}>
 
           {/* header */}
           <div style={{ textAlign:'center', marginBottom:64 }}>
-            <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#EA580C', marginBottom:14, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
-              <span style={{ width:32, height:1, background:'#EA580C', opacity:0.6, display:'inline-block' }}/>
+            <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.22em', color:'#D97706', marginBottom:14, display:'flex', alignItems:'center', justifyContent:'center', gap:12 }}>
+              <span style={{ width:32, height:1, background:'#D97706', opacity:0.6, display:'inline-block' }}/>
               The Builder Guardian Formula
-              <span style={{ width:32, height:1, background:'#EA580C', opacity:0.6, display:'inline-block' }}/>
+              <span style={{ width:32, height:1, background:'#D97706', opacity:0.6, display:'inline-block' }}/>
             </div>
             <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,6vw,80px)', letterSpacing:'0.04em', lineHeight:0.95, color:'#0F172A', marginBottom:20 }}>
-              Every builder asks <span style={{ color:'#EA580C' }}>Why.</span><br/>Builder Guardian is <span style={{ color:'#EA580C' }}>x.</span>
+              Every builder asks <span style={{ color:'#D97706' }}>Why.</span><br/>Builder Guardian is <span style={{ color:'#D97706' }}>x.</span>
             </h2>
             <p style={{ fontSize:16, color:'#475569', lineHeight:1.8, maxWidth:600, margin:'0 auto' }}>
               Every builder using old software is asking the same questions — Why is this late? Why did we lose that conciliation? Where is the signed PDI? Other systems were built by people who never lived those questions. Builder Guardian was built by someone who did. x is the answer. Builder Guardian is x.
@@ -163,7 +163,7 @@ export default function AboutPage() {
             <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style={{ width:"100%", maxWidth:780 }}>
 
               {/* Equation at top */}
-              <text x="350" y="28" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#EA580C">Every Builder WHY + Builder Guardian = x</text>
+              <text x="350" y="28" textAnchor="middle" fontFamily="monospace" fontSize="13" fill="#D97706">Every Builder WHY + Builder Guardian = x</text>
               <text x="350" y="48" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#475569">x = the answer every builder is still waiting for</text>
 
               {/* Corner labels */}
@@ -173,40 +173,40 @@ export default function AboutPage() {
               <text x="640" y="80" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#64748B">Living the Whys</text>
 
               {/* Connecting lines from X circle to beam */}
-              <line x1="290" y1="155" x2="220" y2="248" stroke="#EA580C" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
-              <line x1="410" y1="155" x2="480" y2="248" stroke="#EA580C" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
+              <line x1="290" y1="155" x2="220" y2="248" stroke="#D97706" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
+              <line x1="410" y1="155" x2="480" y2="248" stroke="#D97706" strokeWidth="0.8" strokeOpacity="0.25" strokeDasharray="4 3"/>
               {/* Lines to corners */}
-              <line x1="285" y1="110" x2="100" y2="80" stroke="#EA580C" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
-              <line x1="415" y1="110" x2="600" y2="80" stroke="#EA580C" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
+              <line x1="285" y1="110" x2="100" y2="80" stroke="#D97706" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
+              <line x1="415" y1="110" x2="600" y2="80" stroke="#D97706" strokeWidth="0.8" strokeOpacity="0.18" strokeDasharray="3 3"/>
 
               {/* X = BUILDER GUARDIAN circle */}
-              <circle cx="350" cy="120" r="58" fill="#FFFFFF" stroke="#EA580C" strokeWidth="2"/>
-              <circle cx="350" cy="120" r="50" fill="#F1F3F6" stroke="#EA580C" strokeWidth="0.5" strokeOpacity="0.3"/>
-              <text x="350" y="110" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="50" letterSpacing="0.04em" fill="#EA580C">X</text>
-              <text x="350" y="132" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#EA580C" letterSpacing="0.12em">= BUILDER GUARDIAN</text>
+              <circle cx="350" cy="120" r="58" fill="#FFFFFF" stroke="#D97706" strokeWidth="2"/>
+              <circle cx="350" cy="120" r="50" fill="#F1F3F6" stroke="#D97706" strokeWidth="0.5" strokeOpacity="0.3"/>
+              <text x="350" y="110" textAnchor="middle" fontFamily="'Bebas Neue',sans-serif" fontSize="50" letterSpacing="0.04em" fill="#D97706">X</text>
+              <text x="350" y="132" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#D97706" letterSpacing="0.12em">= BUILDER GUARDIAN</text>
 
               {/* Balance beam */}
-              <rect x="100" y="248" width="500" height="9" rx="4" fill="#EA580C" fillOpacity="0.65"/>
+              <rect x="100" y="248" width="500" height="9" rx="4" fill="#D97706" fillOpacity="0.65"/>
               {/* Pivot */}
-              <circle cx="350" cy="252" r="11" fill="#EA580C"/>
+              <circle cx="350" cy="252" r="11" fill="#D97706"/>
               <circle cx="350" cy="252" r="5" fill="#F1F3F6"/>
               {/* Fulcrum stem */}
-              <rect x="343" y="261" width="14" height="80" fill="#EA580C" fillOpacity="0.65" rx="2"/>
+              <rect x="343" y="261" width="14" height="80" fill="#D97706" fillOpacity="0.65" rx="2"/>
               {/* Base triangle */}
-              <polygon points="350,341 322,378 378,378" fill="#EA580C" fillOpacity="0.8"/>
+              <polygon points="350,341 322,378 378,378" fill="#D97706" fillOpacity="0.8"/>
 
               {/* LEFT CHAIN */}
               {[0,1,2,3].map((i) => (
-                <rect key={i} x={156} y={257+i*11} width="7" height="7" rx="1" fill="#EA580C" fillOpacity="0.35"/>
+                <rect key={i} x={156} y={257+i*11} width="7" height="7" rx="1" fill="#D97706" fillOpacity="0.35"/>
               ))}
               {/* RIGHT CHAIN */}
               {[0,1,2,3].map((i) => (
-                <rect key={i} x={538} y={257+i*11} width="7" height="7" rx="1" fill="#EA580C" fillOpacity="0.35"/>
+                <rect key={i} x={538} y={257+i*11} width="7" height="7" rx="1" fill="#D97706" fillOpacity="0.35"/>
               ))}
 
               {/* LEFT PAN */}
-              <ellipse cx="160" cy="305" rx="80" ry="13" fill="#1a1200" stroke="#EA580C" strokeWidth="1.5" strokeOpacity="0.7"/>
-              <rect x="80" y="292" width="160" height="13" rx="2" fill="#FFFFFF" stroke="#EA580C" strokeWidth="1" strokeOpacity="0.4"/>
+              <ellipse cx="160" cy="305" rx="80" ry="13" fill="#1a1200" stroke="#D97706" strokeWidth="1.5" strokeOpacity="0.7"/>
+              <rect x="80" y="292" width="160" height="13" rx="2" fill="#FFFFFF" stroke="#D97706" strokeWidth="1" strokeOpacity="0.4"/>
 
               {/* LEFT WHY ITEMS — above the pan, well clear */}
               <text x="160" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#0F172A" opacity="0.9">Why did we lose that conciliation?</text>
@@ -219,8 +219,8 @@ export default function AboutPage() {
               <text x="160" y="346" textAnchor="middle" fontFamily="monospace" fontSize="9" fill="#475569">What other systems leave unanswered</text>
 
               {/* RIGHT PAN */}
-              <ellipse cx="540" cy="305" rx="80" ry="13" fill="#001a08" stroke="#EA580C" strokeWidth="1.5" strokeOpacity="0.7"/>
-              <rect x="460" y="292" width="160" height="13" rx="2" fill="#FFFFFF" stroke="#EA580C" strokeWidth="1" strokeOpacity="0.4"/>
+              <ellipse cx="540" cy="305" rx="80" ry="13" fill="#001a08" stroke="#D97706" strokeWidth="1.5" strokeOpacity="0.7"/>
+              <rect x="460" y="292" width="160" height="13" rx="2" fill="#FFFFFF" stroke="#D97706" strokeWidth="1" strokeOpacity="0.4"/>
 
               {/* RIGHT ANSWER ITEMS — above the pan, well clear */}
               <text x="540" y="218" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#0F172A" opacity="0.9">Defence Vault — conciliation ready</text>
@@ -255,7 +255,7 @@ export default function AboutPage() {
               },
             ].map((c, i) => (
               <div key={i} style={{ background:'#F1F3F6', padding:'32px 28px' }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:40, letterSpacing:'0.04em', color:'#EA580C', marginBottom:14, lineHeight:1 }}>{c.icon}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:40, letterSpacing:'0.04em', color:'#D97706', marginBottom:14, lineHeight:1 }}>{c.icon}</div>
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:20, letterSpacing:'0.04em', color:'#0F172A', marginBottom:12, lineHeight:1.1 }}>{c.title}</div>
                 <p style={{ fontSize:13, color:'#475569', lineHeight:1.7 }}>{c.body}</p>
               </div>
@@ -263,9 +263,9 @@ export default function AboutPage() {
           </div>
 
           {/* The pitch quote */}
-          <div style={{ marginTop:48, background:'#F1F3F6', border:'1px solid rgba(234,88,12,0.2)', borderRadius:12, padding:'40px 48px', textAlign:'center' }}>
+          <div style={{ marginTop:48, background:'#F1F3F6', border:'1px solid rgba(217,119,6,0.2)', borderRadius:12, padding:'40px 48px', textAlign:'center' }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(22px,3vw,36px)', letterSpacing:'0.04em', color:'#0F172A', lineHeight:1.2, marginBottom:16 }}>
-              &ldquo;Every Ontario builder using old software is asking WHY.<br/><span style={{ color:'#EA580C' }}>Builder Guardian is x. The answer they have been waiting for.</span><br/>Built by someone who lived every single one of those WHYs.&rdquo;
+              &ldquo;Every Ontario builder using old software is asking WHY.<br/><span style={{ color:'#D97706' }}>Builder Guardian is x. The answer they have been waiting for.</span><br/>Built by someone who lived every single one of those WHYs.&rdquo;
             </div>
             <div style={{ fontFamily:"'Fira Code',monospace", fontSize:10, textTransform:'uppercase', letterSpacing:'0.16em', color:'#64748B' }}>
               Builder Guardian — Former Tarion · 5 Ontario Builders · Built from the inside out
@@ -283,7 +283,7 @@ export default function AboutPage() {
             <h2 className="font-display text-[clamp(40px,6vw,72px)] tracking-[0.04em] text-cb-white leading-[0.97] mb-6">We aren&apos;t just<br/>building <span className="text-cb-gold">software.</span></h2>
             <p className="text-cb-muted text-base leading-relaxed mb-10">We&apos;re building the infrastructure for a more efficient Ontario construction industry. One that stops losing Tarion conciliations it should win.</p>
             <div className="flex gap-3 justify-center flex-wrap">
-              <Link href="/pricing" className="inline-flex bg-cb-gold text-white font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 transition-all" style={{ boxShadow:'0 0 24px rgba(234,88,12,0.3)' }}>
+              <Link href="/pricing" className="inline-flex bg-cb-gold text-white font-mono text-[11px] font-semibold uppercase tracking-widest px-8 py-4 rounded-md no-underline hover:bg-cb-gold2 transition-all" style={{ boxShadow:'0 0 24px rgba(217,119,6,0.3)' }}>
                 Start with Builder Guardian Warranty →
               </Link>
               <Link href="mailto:demo@combryx.com" className="btn-ghost">

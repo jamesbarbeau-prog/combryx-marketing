@@ -11,15 +11,15 @@ export const metadata: Metadata = {
 
 const plans = [
   { tag:'Base — Start Here', name:'Builder Guardian Warranty', price:'$129', period:'per community or tower / month', tagline:'Replace QDef, your Excel tracker, and the filing cabinet.',
-    color:'#EA580C', featured:true, plan:'warranty', cta:'Start Builder Guardian Warranty', href:'/success?plan=warranty',
+    color:'#D97706', featured:true, plan:'warranty', cta:'Start Builder Guardian Warranty', href:'/success?plan=warranty',
     items:['Sites, towers, lots, suites and owner records','Tarion form import — items created automatically','Statutory deadline and BRP tracking per home','AI triage + OBC/CPG answers (Lex Structura)','Work orders to trades and technicians','PO approvals + warranty cost ledger with back-charges','Aging reports + automatic weekly emails per site','QDef import · Excel/PDF export · Unlimited users · Unlimited items'],
     addons:['Coming: Tarion API sync','Coming: owner portal and scheduling','Coming: QCI & PDI','Coming: offline field app'] },
   { tag:'Add-on — Managers Only', name:'Conciliation Manager', price:'+$199', period:'per builder / month · flat', tagline:'Walk into every Tarion conciliation with the whole file in order.',
-    color:'#EA580C', featured:false, plan:'conciliation', cta:'Add Conciliation Manager', href:'/success?plan=conciliation',
+    color:'#D97706', featured:false, plan:'conciliation', cta:'Add Conciliation Manager', href:'/success?plan=conciliation',
     items:['Cases tracked from inspection booked to CAR','Each re-inspection as its own cycle and clock','CAR tracking and 30-day timers','Cash offers and releases','Builder comments package with evidence attached','Management control centre by community','Freehold and common elements (high-rise)','Visible to the manager role only'],
     addons:['Coming: now being built into Builder Guardian'] },
   { tag:'Add-on — Coming', name:'Design Centre', price:'Coming', period:'priced at launch', tagline:'Owners choose and sign their selections online before the sales centre visit.',
-    color:'#EA580C', featured:false, plan:'design', cta:'Join the Waitlist', href:'/demo#waitlist',
+    color:'#D97706', featured:false, plan:'design', cta:'Join the Waitlist', href:'/demo#waitlist',
     items:['Owner selections in the portal, every option explained','Signed selection record per home','Site instruction list from the final choices','Upgrade and credit ledger for your build system','360 tours and stage records, framing to close','AI walk-through checks selections at QCI','Selections visible to warranty for the life of the home'],
     addons:[] },
 ]
@@ -36,10 +36,10 @@ export default function PricingPage() {
       {/* HERO */}
       <section className="relative pt-28 pb-20 px-8 text-center bg-gradient-to-b from-white to-cb-dark1 overflow-hidden">
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.06]"/>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(234,88,12,0.06) 0%,transparent 70%)' }}/>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.06) 0%,transparent 70%)' }}/>
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-5 flex items-center justify-center gap-3">
-            <span style={{ display:"inline-block", width:32, height:1, background:"#EA580C", opacity:0.6 }}/>Simple Pricing
+            <span style={{ display:"inline-block", width:32, height:1, background:"#D97706", opacity:0.6 }}/>Simple Pricing
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(48px,7vw,88px)] leading-[0.95] tracking-[0.04em] text-cb-white mb-5">
             NO SETUP FEES.<br/>NO LOCKED CONTRACTS.<br/><span className="text-cb-gold">NO SURPRISES.</span>
@@ -89,8 +89,8 @@ export default function PricingPage() {
                     fontWeight:600, letterSpacing:'0.1em',
                     textTransform:'uppercase', padding:'16px',
                     borderRadius:8, textDecoration:'none',
-                    background:'#F8FAFC', color:'#EA580C',
-                    border:'1px solid rgba(234,88,12,0.3)',
+                    background:'#F8FAFC', color:'#D97706',
+                    border:'1px solid rgba(217,119,6,0.3)',
                     transition:'all 0.2s',
                   }}>
                   {p.cta} →
@@ -112,7 +112,7 @@ export default function PricingPage() {
       <section className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-14">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>How We Do Business</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>How We Do Business</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">We don&apos;t hold your data hostage.<br/>We don&apos;t lock you in.<br/><span className="text-cb-gold">We just have to be better every month.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Most software companies make leaving painful on purpose. That&apos;s not a business model — it&apos;s a trap. Builder Guardian works differently. If we&apos;re not earning your subscription every month, you should leave. We think that pressure makes us build a better product.</p>
           </ScrollReveal>
@@ -143,7 +143,7 @@ export default function PricingPage() {
                 <p className="text-cb-muted text-sm leading-relaxed mb-4">When you email support at Builder Guardian, you&apos;re talking to someone who understands warranty law, has been on a job site, and can give you the right answer — not a chatbot reading from a help article.</p>
                 <div className="grid grid-cols-2 gap-2">
                   {[['Same day','Support response'],['On demand','Custom development'],['Full','Data export any time'],['$0','Exit fee, forever']].map(([n,l]) => (
-                    <div key={l} className="p-4 rounded-lg border border-[rgba(234,88,12,0.2)] bg-[rgba(234,88,12,0.06)] text-center">
+                    <div key={l} className="p-4 rounded-lg border border-[rgba(217,119,6,0.2)] bg-[rgba(217,119,6,0.06)] text-center">
                       <div className="font-display text-xl text-cb-gold tracking-[0.04em] leading-none mb-1">{n}</div>
                       <div className="font-mono text-[9px] uppercase tracking-wider text-cb-dim">{l}</div>
                     </div>

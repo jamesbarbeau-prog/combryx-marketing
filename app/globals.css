@@ -8,10 +8,10 @@
   --color-cb-dark2:    #FFFFFF;
   --color-cb-dark3:    #F8FAFC;
   --color-cb-dark4:    #E2E8F0;
-  --color-cb-gold:     #C2410C;
-  --color-cb-gold2:    #9A3412;
-  --color-cb-gold3:    #EA580C;
-  --color-cb-gold-dk:  #9A3412;
+  --color-cb-gold:     #B45309;
+  --color-cb-gold2:    #92400E;
+  --color-cb-gold3:    #D97706;
+  --color-cb-gold-dk:  #92400E;
   --color-cb-white:    #0F172A;
   --color-cb-silver:   #334155;
   --color-cb-muted:    #475569;
@@ -23,9 +23,9 @@
   --font-family-mono:    'Fira Code', monospace;
 
   /* Box shadows */
-  --shadow-gold:    0 0 24px rgba(234,88,12,0.25);
-  --shadow-gold-lg: 0 0 48px rgba(234,88,12,0.35);
-  --shadow-gold-sm: 0 0 12px rgba(234,88,12,0.20);
+  --shadow-gold:    0 0 24px rgba(217,119,6,0.25);
+  --shadow-gold-lg: 0 0 48px rgba(217,119,6,0.35);
+  --shadow-gold-sm: 0 0 12px rgba(217,119,6,0.20);
 
   /* Keyframes */
   --animate-hex-drift:  hexDrift 60s linear infinite;
@@ -91,7 +91,7 @@ body {
 
 /* ══ BUTTON BASE — ensures gold always renders even if Tailwind class purged ══ */
 .btn-gold {
-  background-color: #EA580C;
+  background-color: #1E3A8A;
   color: #FFFFFF;
   font-family: 'Fira Code', monospace;
   font-size: 11px;
@@ -109,9 +109,9 @@ body {
   cursor: pointer;
 }
 .btn-gold:hover {
-  background-color: #C2410C;
+  background-color: #1E40AF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(234,88,12,0.28);
+  box-shadow: 0 8px 20px rgba(30,58,138,0.25);
 }
 .btn-ghost {
   background: #FFFFFF;
@@ -130,11 +130,11 @@ body {
   gap: 8px;
   transition: all 0.2s;
 }
-.btn-ghost:hover { border-color: #1E293B; color: #1E293B; }
+.btn-ghost:hover { border-color: #1E3A8A; color: #1E3A8A; }
 
 /* ══ NAV CTA ══ */
 .nav-cta {
-  background-color: #EA580C;
+  background-color: #D97706;
   color: #FFFFFF !important;
   font-family: 'Fira Code', monospace;
   font-size: 10px;
@@ -146,17 +146,17 @@ body {
   text-decoration: none;
   transition: all 0.2s;
   white-space: nowrap;
-  box-shadow: 0 0 16px rgba(234,88,12,0.2);
+  box-shadow: 0 0 16px rgba(217,119,6,0.2);
 }
-.nav-cta:hover { background-color: #C2410C; transform: translateY(-1px); }
+.nav-cta:hover { background-color: #B45309; transform: translateY(-1px); }
 
 /* ══ TRUST STRIP ══ */
-.trust-strip-gold { background-color: #EA580C; }
+.trust-strip-gold { background-color: #D97706; }
 .trust-strip-gold span { color: #000000; }
 
 /* ══ GOLD RADIAL GLOW ══ */
 .gold-glow-orb {
-  background: radial-gradient(ellipse, rgba(234,88,12,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(217,119,6,0.06) 0%, transparent 70%);
 }
 
 /* ══ SECTOR BODY (accordion) ══ */

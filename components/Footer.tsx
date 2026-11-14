@@ -9,7 +9,7 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer className="bg-cb-dark1 border-t border-[rgba(234,88,12,0.08)] pt-14 pb-8 px-8">
+    <footer className="bg-cb-dark1 border-t border-[rgba(217,119,6,0.08)] pt-14 pb-8 px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-[rgba(15,23,42,0.1)]">
           <div>

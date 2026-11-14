@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 const sectors = [
-  { n:'01', color:'#EA580C', tag:'Builder Guardian Warranty — Base', title:'The warranty department, start to finish.', sub:'Homes · Tarion import · Items · Work orders · POs · Aging',
+  { n:'01', color:'#D97706', tag:'Builder Guardian Warranty — Base', title:'The warranty department, start to finish.', sub:'Homes · Tarion import · Items · Work orders · POs · Aging',
     features:[
       { icon:'Home', title:'Sites, Homes & Owners', body:'Communities and towers, lots and suites, civic addresses, enrolment numbers, owners and contacts. Search by name, address, lot or unit. Bring it all in from QDef or a spreadsheet.' },
       { icon:'FileInput', title:'Tarion Form Import', body:'Import a Tarion warranty form and every line becomes an item on the home, with its deadlines. Repeats from an earlier form are flagged, not duplicated. Automatic sync through the Tarion API is coming.' },
@@ -19,7 +19,7 @@ const sectors = [
       { icon:'Receipt', title:'POs & Warranty Ledger', body:'PO requests, approvals and a log per trade and per home. Warranty spend and back-charges roll up by home, site and trade, and export to QuickBooks or a spreadsheet.' },
     ],
     ai:'AI triage rates each item for warranty risk, suggests the CPG or OBC reference and drafts inspector notes. A person confirms every decision.' },
-  { n:'02', color:'#C2410C', tag:'Low-Rise & High-Rise', title:'Lots, suites and common elements in one system.', sub:'Freehold · Townhomes · Towers · Suites · Common elements',
+  { n:'02', color:'#B45309', tag:'Low-Rise & High-Rise', title:'Lots, suites and common elements in one system.', sub:'Freehold · Townhomes · Towers · Suites · Common elements',
     features:[
       { icon:'Home', title:'Freehold & Townhome Communities', body:'Every lot carries its forms, items, deadlines, trades and documents. The portfolio view shows each community at a glance.' },
       { icon:'Building2', title:'Towers & Suites', body:'High-rise is built in, not bolted on. Suites are tracked by tower, floor and unit with the same forms, deadlines and work orders as a freehold lot.' },
@@ -76,11 +76,11 @@ export default function PlatformPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage:'repeating-linear-gradient(90deg,transparent 0px,transparent 119px,rgba(15,23,42,0.04) 119px,rgba(15,23,42,0.04) 120px)' }}/>
         {/* scan line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cb-gold to-transparent opacity-40 animate-[scanH_8s_ease-in-out_infinite]"/>
-        <div className="absolute inset-0" style={{ background:'radial-gradient(ellipse at 50% 30%,rgba(234,88,12,0.05) 0%,transparent 60%)' }}/>
+        <div className="absolute inset-0" style={{ background:'radial-gradient(ellipse at 50% 30%,rgba(217,119,6,0.05) 0%,transparent 60%)' }}/>
 
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-8 py-20">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.24em] text-cb-gold mb-6 flex items-center gap-3">
-            <span style={{ display:"inline-block", width:40, height:1, background:"#EA580C", opacity:0.5 }}/>Builder Guardian Platform · Warranty Only · Low-Rise &amp; High-Rise<span style={{ display:"inline-block", width:40, height:1, background:"#EA580C", opacity:0.5 }}/>
+            <span style={{ display:"inline-block", width:40, height:1, background:"#D97706", opacity:0.5 }}/>Builder Guardian Platform · Warranty Only · Low-Rise &amp; High-Rise<span style={{ display:"inline-block", width:40, height:1, background:"#D97706", opacity:0.5 }}/>
           </div>
           <h1 className="animate-fade-up anim-d1 font-display text-[clamp(32px,6vw,88px)] leading-[1.05] tracking-[0.04em] text-cb-white mb-5 max-w-5xl">
             <span className="block text-[0.55em] font-body font-light text-cb-muted tracking-wider mb-3">From the first Tarion form to the 7-year warranty.</span>
@@ -91,7 +91,7 @@ export default function PlatformPage() {
           </p>
           {/* sector pills */}
           <div className="animate-fade-up anim-d3 flex flex-wrap gap-2 justify-center mb-10">
-            {[['Warranty','#EA580C'],['Low-Rise','#C2410C'],['High-Rise','#1D4ED8'],['Common Elements','#4338CA'],['Conciliation','#DC2626'],['Design Centre · Coming','#0F766E']].map(([label, color]) => (
+            {[['Warranty','#D97706'],['Low-Rise','#B45309'],['High-Rise','#1D4ED8'],['Common Elements','#4338CA'],['Conciliation','#DC2626'],['Design Centre · Coming','#0F766E']].map(([label, color]) => (
               <span key={label} className="font-mono text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border font-medium transition-all hover:-translate-y-0.5 cursor-default"
                 style={{ borderColor:`${color}66`, color, background:`${color}1a` }}>{label}</span>
             ))}
@@ -106,7 +106,7 @@ export default function PlatformPage() {
           {[['1','Department'],['2','Add-ons'],['2','Building Types'],['AI','Triage'],['$0','Setup Fee'],['∞','Users']].map(([n,l], i) => (
             <div key={l} className="py-5 px-4 text-center bg-cb-dark2 hover:bg-cb-dark3 transition-colors">
               <div className="font-display text-2xl md:text-3xl tracking-[0.04em] leading-none mb-1"
-                style={{ color:['#DC2626','#C2410C','#1D4ED8','#EA580C','#15803D','#0F766E'][i] }}>{n}</div>
+                style={{ color:['#DC2626','#B45309','#1D4ED8','#D97706','#15803D','#0F766E'][i] }}>{n}</div>
               <div className="font-mono text-[9px] uppercase tracking-[0.1em] text-cb-dim">{l}</div>
             </div>
           ))}
@@ -127,7 +127,7 @@ export default function PlatformPage() {
       <section id="sectors" className="bg-cb-dark2 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>What&apos;s Included</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>What&apos;s Included</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Built for your<br/><span className="text-cb-gold">warranty department.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">You are not buying a construction suite. You are buying the system your warranty department runs on, and only the add-ons you want. Items marked Coming are on the roadmap.</p>
           </ScrollReveal>
@@ -140,7 +140,7 @@ export default function PlatformPage() {
       <section id="ai" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal className="mb-12">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>The Intelligence Layer</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>The Intelligence Layer</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">AI that actually<br/><span className="text-cb-gold">understands warranty.</span></h2>
             <p className="text-cb-muted text-base max-w-xl">Purpose-built assistants loaded with Ontario warranty rules. Every AI suggestion is logged, reviewable, and confirmed by a person.</p>
           </ScrollReveal>
@@ -148,11 +148,11 @@ export default function PlatformPage() {
             {aiCards.map((a, i) => (
               <ScrollReveal key={a.chip} delay={i * 60} className="bg-cb-dark2 p-7 relative overflow-hidden hover:bg-cb-dark3 transition-colors">
                 <div className="absolute bottom-2 right-3 font-display text-7xl text-cb-gold opacity-[0.04] leading-none">AI</div>
-                <div className="inline-block font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 rounded font-semibold mb-4 bg-[rgba(234,88,12,0.1)] text-cb-gold border border-[rgba(234,88,12,0.2)]">{a.chip}</div>
+                <div className="inline-block font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 rounded font-semibold mb-4 bg-[rgba(217,119,6,0.1)] text-cb-gold border border-[rgba(217,119,6,0.2)]">{a.chip}</div>
                 <h3 className="font-body text-[14px] font-bold text-cb-white mb-2 leading-snug">{a.title}</h3>
                 <div className="flex items-center gap-2 text-[11px] text-cb-dim font-mono mb-3"><Icon name="Zap" size={13} color="#64748B" />{a.trigger}</div>
                 <p className="text-cb-muted text-[12px] leading-relaxed mb-3">{a.body}</p>
-                <div className="inline-flex items-center gap-1.5 font-mono text-[10px] text-cb-gold bg-[rgba(234,88,12,0.08)] border border-[rgba(234,88,12,0.15)] px-3 py-1.5 rounded-md">
+                <div className="inline-flex items-center gap-1.5 font-mono text-[10px] text-cb-gold bg-[rgba(217,119,6,0.08)] border border-[rgba(217,119,6,0.15)] px-3 py-1.5 rounded-md">
                   <span>→</span>{a.outcome}
                 </div>
               </ScrollReveal>
@@ -165,7 +165,7 @@ export default function PlatformPage() {
       <section id="connected" className="bg-cb-dark1 py-24 px-8">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal className="text-center mb-14">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#EA580C", opacity:0.6 }}/>One System</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cb-gold mb-3 flex items-center justify-center gap-3"><span style={{ display:"inline-block", width:20, height:1, background:"#D97706", opacity:0.6 }}/>One System</div>
             <h2 className="font-display text-[clamp(32px,4.5vw,60px)] tracking-[0.04em] text-cb-white leading-[1.02] mb-4">Works beside <span className="text-cb-gold">what you already run.</span><br/>Replaces only the spreadsheets.</h2>
             <p className="text-cb-muted text-base max-w-xl mx-auto">Lots and owners come in from your existing builder system by import or API. Warranty data goes back out by export.</p>
           </ScrollReveal>
@@ -180,7 +180,7 @@ export default function PlatformPage() {
                 ))}
               </div>
               <div className="text-center font-mono text-cb-dim text-sm py-1">↓ all feed ↓</div>
-              <div className="bg-[rgba(234,88,12,0.08)] border-2 border-[rgba(234,88,12,0.3)] rounded-lg p-5 text-center">
+              <div className="bg-[rgba(217,119,6,0.08)] border-2 border-[rgba(217,119,6,0.3)] rounded-lg p-5 text-center">
                 <div className="font-display text-2xl text-cb-gold tracking-[0.08em] mb-1">BUILDER GUARDIAN</div>
                 <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-cb-gold opacity-50">Warranty · Conciliation · Design Centre</div>
               </div>
