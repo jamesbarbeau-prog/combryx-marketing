@@ -1,5 +1,5 @@
 const items = [
-  'Tarion Compliant','ONHWPA Ready','OBC Part 9','Field App Included',
+  'Tarion Compliant','ONHWPA Ready','OBC Part 9','Low-Rise & High-Rise',
   'No Lock-In','Full Data Export','Custom Dev On Demand','Built by the Trade',
   '35+ Years Experience','Ontario Specific',
 ]
@@ -7,7 +7,7 @@ const items = [
 export default function TrustStrip() {
   const all = [...items, ...items]
   return (
-    <div style={{ background:'#FFB800', padding:'16px 0', overflow:'hidden' }}>
+    <div style={{ background:'#0F172A', padding:'16px 0', overflow:'hidden' }}>
       <div className="marquee-track" style={{ display:'inline-flex', gap:0 }}>
         {all.map((t, i) => (
           <span key={i} style={{
@@ -15,7 +15,7 @@ export default function TrustStrip() {
             fontSize:13,
             letterSpacing:'0.16em',
             textTransform:'uppercase',
-            color:'#000000',
+            color:'#F8FAFC',
             padding:'0 32px',
             whiteSpace:'nowrap',
           }}>
