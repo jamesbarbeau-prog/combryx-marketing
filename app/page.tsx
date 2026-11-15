@@ -6,6 +6,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 import ModuleCards from '@/components/ModuleCards'
 import KnowledgeGap from '@/components/KnowledgeGap'
 import OutcomeStats from '@/components/OutcomeStats'
+import StageGallery from '@/components/StageGallery'
 
 export const metadata: Metadata = {
   title: 'Builder Guardian — Warranty Management for Ontario Builders | Tarion',
@@ -49,6 +50,11 @@ export default function HomePage() {
         <div className="absolute inset-0 hex-pattern animate-hex-drift opacity-[0.07]" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] pointer-events-none" style={{ background:'radial-gradient(ellipse,rgba(217,119,6,0.06) 0%,transparent 70%)' }} />
 
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-12 lg:px-20 pt-6">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/banner-1400.jpg" srcSet="/brand/banner-1400.jpg 1400w, /brand/banner.jpg 2172w" sizes="(min-width:1280px) 1100px, 100vw" width={1400} height={467} alt="Builder Guardian. Build, manage, protect. Warranty, Design Center and Conciliation Manager." className="w-full h-auto rounded-xl block" style={{ boxShadow:'0 24px 48px rgba(15,23,42,0.18)' }} />
+        </div>
+
         <div className="relative z-10 flex flex-col items-start justify-center flex-1 px-4 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto w-full">
           <div className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.22em] text-cb-gold mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-cb-gold opacity-60" />
@@ -84,6 +90,8 @@ export default function HomePage() {
       </section>
 
       <TrustStrip />
+
+      <StageGallery />
 
       {/* ── THE GAP ── */}
       <section className="bg-cb-dark1 py-16 px-4 md:px-8">

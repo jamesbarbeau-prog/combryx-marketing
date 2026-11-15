@@ -140,11 +140,20 @@ const House3D = dynamic(() => import('./House3D'), {
   ssr: false,
   loading: () => <div style={{ height:320, borderRadius:10, border:`1px solid ${C.line2}`, background:'#E9EDF2', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:mono, fontSize:10, color:C.dim, letterSpacing:'0.1em', textTransform:'uppercase' }}>Loading the sample home…</div>,
 })
+const rooms = [
+  { key:'kitchen', label:'Kitchen', floor:'Main floor' },
+  { key:'foyer', label:'Entry', floor:'Main floor' },
+  { key:'bath', label:'Main bath', floor:'Upper floor' },
+  { key:'bedroom', label:'Bedroom', floor:'Upper floor' },
+]
+type Pin = { room: string; floor: string; stage: number; x: number; y: number }
 function Stages360() {
-  const [stage, setStage] = useState(0)
+  const [stage, setStage] = useState(3)
+  const [room, setRoom] = useState(0)
+  const [mode, setMode] = useState<'photo' | 'walk'>('photo')
   const [asking, setAsking] = useState(false)
   const [sent, setSent] = useState(false)
-  const [pin, setPin] = useState<{ room: string; floor: string; heading: string; stage: number; img: string } | null>(null)
+  const [pin, setPin] = useState<Pin | null>(null)
   const [text, setText] = useState('')
   const viewRef = useRef<ViewInfo>({ room: 'Foyer', floor: 'Main floor', heading: 'N' })
   const notes = [
@@ -153,30 +162,56 @@ function Stages360() {
     'Wiring, plumbing and ducts in place. The last look inside the walls.',
     'The finished home on the day you take possession.',
   ]
-  const startAsk = () => {
+  const r = rooms[room]
+  const src = `/renders/${r.key}_${stage}.jpg`
+  const reset = () => { setAsking(false); setSent(false); setPin(null); setText('') }
+  const place = (e: React.MouseEvent<HTMLDivElement>) => {
+    const box = e.currentTarget.getBoundingClientRect()
+    setPin({ room: r.label, floor: r.floor, stage, x: Math.round(((e.clientX - box.left) / box.width) * 100), y: Math.round(((e.clientY - box.top) / box.height) * 100) })
+    setAsking(true); setSent(false)
+  }
+  const startAskWalk = () => {
     const v = viewRef.current
-    setPin({ room: v.room, floor: v.floor, heading: v.heading, stage, img: v.snap ? v.snap() : '' })
+    setPin({ room: v.room, floor: v.floor, stage, x: -1, y: -1 })
     setAsking(true)
   }
+  const chip = (on: boolean): React.CSSProperties => ({ flexShrink:0, fontFamily:mono, fontSize:9, fontWeight:600, letterSpacing:'0.06em', textTransform:'uppercase', padding:'7px 10px', borderRadius:6, cursor:'pointer', background: on ? C.navy : '#FFFFFF', color: on ? '#FFFFFF' : C.steel, border:`1px solid ${on ? C.navy : C.line2}` })
   return (
-    <Phone title="Your home, stage by stage" sub="3D record · Lot 48 · Sample home">
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:5, marginBottom:10 }}>
+    <Phone title="Your home, stage by stage" sub="Photo record · Lot 48 · Sample home">
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:5, marginBottom:8 }}>
         {stages.map((s, i) => (
-          <button key={s} onClick={() => { setStage(i); setAsking(false); setSent(false) }} style={{ fontFamily:mono, fontSize:8.5, fontWeight:600, letterSpacing:'0.04em', textTransform:'uppercase', padding:'8px 2px', borderRadius:6, cursor:'pointer', background: i === stage ? C.navy : '#FFFFFF', color: i === stage ? '#FFFFFF' : C.steel, border:`1px solid ${i === stage ? C.navy : C.line2}` }}>{s}</button>
+          <button key={s} onClick={() => { setStage(i); reset() }} style={{ ...chip(i === stage), fontSize:8.5, padding:'8px 2px', letterSpacing:'0.04em' }}>{s}</button>
         ))}
       </div>
-      <House3D stage={stage} viewRef={viewRef} />
-      <div style={{ fontSize:12, color:C.steel, lineHeight:1.5, margin:'10px 2px' }}>{notes[stage]} Walk every floor and every room.</div>
-      {!asking && !sent && <button style={btn(false)} onClick={startAsk}><MessageCircleQuestion size={15} color={C.navy} /> See something wrong? Ask here</button>}
+      {mode === 'photo' && (
+        <>
+          <div style={{ display:'flex', gap:6, marginBottom:8, overflowX:'auto' }}>
+            {rooms.map((k, i) => <button key={k.key} onClick={() => { setRoom(i); reset() }} style={chip(i === room)}>{k.label}</button>)}
+          </div>
+          <div onClick={place} role="button" aria-label={`${r.label}, ${stages[stage]}. Tap anything to ask about it.`} style={{ position:'relative', width:'100%', aspectRatio:'8 / 5', borderRadius:10, overflow:'hidden', border:`1px solid ${C.line2}`, background:'#E9EDF2', cursor:'crosshair' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img key={src} src={src} alt={`${r.label} at ${stages[stage].toLowerCase()}`} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+            {pin && pin.x >= 0 && pin.room === r.label && pin.stage === stage && (
+              <span style={{ position:'absolute', left:`${pin.x}%`, top:`${pin.y}%`, width:22, height:22, marginLeft:-11, marginTop:-11, borderRadius:'50%', background:C.amber, border:'3px solid #FFFFFF', boxShadow:'0 2px 8px rgba(15,23,42,0.45)' }} />
+            )}
+            {!pin && <span style={{ position:'absolute', left:8, bottom:8, fontFamily:mono, fontSize:9, letterSpacing:'0.08em', textTransform:'uppercase', background:'rgba(15,23,42,0.78)', color:'#F8FAFC', padding:'4px 8px', borderRadius:5 }}>Tap anything to ask about it</span>}
+          </div>
+        </>
+      )}
+      {mode === 'walk' && <House3D stage={stage} viewRef={viewRef} />}
+      <div style={{ fontSize:12, color:C.steel, lineHeight:1.5, margin:'10px 2px 6px' }}>{notes[stage]}</div>
+      <button onClick={() => { setMode(mode === 'photo' ? 'walk' : 'photo'); reset() }} style={{ background:'none', border:'none', padding:'0 2px 10px', cursor:'pointer', fontFamily:mono, fontSize:9.5, letterSpacing:'0.08em', textTransform:'uppercase', color:C.navy, textDecoration:'underline' }}>
+        {mode === 'photo' ? 'Or walk the 3D model' : 'Back to photo views'}
+      </button>
+      {mode === 'walk' && !asking && !sent && <button style={btn(false)} onClick={startAskWalk}><MessageCircleQuestion size={15} color={C.navy} /> See something wrong? Ask here</button>}
       {asking && !sent && pin && (
         <div style={card}>
           <div style={{ display:'flex', gap:10, marginBottom:8 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            {pin.img && <img src={pin.img} alt="The view your question is pinned to" style={{ width:96, height:72, objectFit:'cover', borderRadius:8, border:`1px solid ${C.line2}`, flexShrink:0 }} />}
+            {pin.x >= 0 && <div role="img" aria-label="The spot your question is pinned to" style={{ width:96, height:72, borderRadius:8, border:`1px solid ${C.line2}`, flexShrink:0, backgroundImage:`url(/renders/${rooms.find(k => k.label === pin.room)?.key}_${pin.stage}.jpg)`, backgroundSize:'320% auto', backgroundPosition:`${pin.x}% ${pin.y}%` }} />}
             <div style={{ minWidth:0 }}>
-              <div style={{ display:'flex', alignItems:'center', gap:4, fontFamily:mono, fontSize:9, textTransform:'uppercase', letterSpacing:'0.08em', color:C.amberText, marginBottom:3 }}><MapPin size={11} /> Pinned to this view</div>
+              <div style={{ display:'flex', alignItems:'center', gap:4, fontFamily:mono, fontSize:9, textTransform:'uppercase', letterSpacing:'0.08em', color:C.amberText, marginBottom:3 }}><MapPin size={11} /> Pinned to this spot</div>
               <div style={{ fontSize:12, fontWeight:700, color:C.ink, lineHeight:1.35 }}>{pin.room}</div>
-              <div style={{ fontSize:11, color:C.steel, lineHeight:1.4 }}>{pin.floor} · {stages[pin.stage]} · facing {pin.heading}</div>
+              <div style={{ fontSize:11, color:C.steel, lineHeight:1.4 }}>{pin.floor} · {stages[pin.stage]}</div>
             </div>
           </div>
           <textarea value={text} onChange={e => setText(e.target.value)} placeholder="Is there supposed to be an outlet on this wall?" rows={3} style={{ width:'100%', fontFamily:'inherit', fontSize:12, color:C.ink, border:`1px solid ${C.line2}`, borderRadius:8, padding:'10px 12px', background:C.tile, marginBottom:8, resize:'none' }} />
@@ -186,7 +221,7 @@ function Stages360() {
       {sent && (
         <div style={{ ...card, display:'flex', gap:10, alignItems:'flex-start' }}>
           <CircleCheck size={20} color={C.green} style={{ flexShrink:0, marginTop:1 }} />
-          <div style={{ fontSize:12, color:C.steel, lineHeight:1.5 }}><strong style={{ color:C.ink }}>Sent, pinned to this view.</strong> Your builder sees the room, the stage and exactly where you were looking. The answer appears here and in your email.</div>
+          <div style={{ fontSize:12, color:C.steel, lineHeight:1.5 }}><strong style={{ color:C.ink }}>Sent, pinned to this spot.</strong> Your builder sees the room, the stage and exactly what you pointed at. The answer appears here and in your email.</div>
         </div>
       )}
     </Phone>
