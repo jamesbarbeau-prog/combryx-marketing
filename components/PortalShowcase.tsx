@@ -1,6 +1,8 @@
 'use client'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import type { ViewInfo } from './House3D'
 import {
   Palette, Camera, Home, HardHat, Check, X, PenLine, CalendarDays, MessageCircleQuestion,
   CircleCheck, Clock, Wrench, MapPin, ChevronRight, FileText, ShieldCheck,
@@ -134,67 +136,57 @@ function DesignCentre() {
 
 /* ───────────── 2. 360 stages ───────────── */
 const stages = ['Framing', 'Insulation', 'Pre-drywall', 'At close']
-function Room({ stage }: { stage: number }) {
-  const studs = [40, 80, 120, 160, 200, 240, 280]
-  return (
-    <svg viewBox="0 0 320 200" style={{ width:'100%', display:'block', borderRadius:10, border:`1px solid ${C.line2}`, background:'#E9EDF2' }} role="img" aria-label={`Illustration of a room at the ${stages[stage]} stage`}>
-      {/* floor */}
-      <polygon points="0,200 40,150 280,150 320,200" fill={stage === 3 ? '#C8A77A' : '#B9B2A6'} />
-      {/* back wall */}
-      <rect x="40" y="20" width="240" height="130" fill={stage === 3 ? '#F4F1EA' : stage >= 1 ? '#F3D9A4' : '#DDE3EA'} />
-      {stage === 1 && studs.slice(0, -1).map(x => <rect key={x} x={x + 6} y="24" width="28" height="122" fill="#F6C8D0" opacity="0.9" />)}
-      {stage < 3 && studs.map(x => <rect key={x} x={x - 3} y="20" width="6" height="130" fill="#C99A5B" />)}
-      {stage < 3 && <><rect x="40" y="20" width="240" height="6" fill="#C99A5B" /><rect x="40" y="144" width="240" height="6" fill="#C99A5B" /></>}
-      {stage === 2 && <>
-        <polyline points="43,60 120,60 120,110 277,110" fill="none" stroke="#1D4ED8" strokeWidth="2.5" />
-        <polyline points="43,80 200,80 200,146" fill="none" stroke="#DC2626" strokeWidth="2.5" />
-        <rect x="112" y="102" width="16" height="16" rx="2" fill="#FFFFFF" stroke="#1D4ED8" strokeWidth="1.5" />
-        <line x1="240" y1="20" x2="240" y2="150" stroke="#64748B" strokeWidth="4" />
-      </>}
-      {/* window */}
-      <rect x="130" y="45" width="60" height="55" fill={stage === 3 ? '#CFE6F5' : 'none'} stroke={stage === 3 ? '#FFFFFF' : '#8A6A3A'} strokeWidth={stage === 3 ? 5 : 3} />
-      {stage === 3 && <><line x1="160" y1="45" x2="160" y2="100" stroke="#FFFFFF" strokeWidth="3" /><rect x="40" y="143" width="240" height="7" fill="#FFFFFF" /></>}
-      {/* side walls */}
-      <polygon points="0,0 40,20 40,150 0,200" fill={stage === 3 ? '#E8E4DA' : '#CBD3DC'} />
-      <polygon points="320,0 280,20 280,150 320,200" fill={stage === 3 ? '#E8E4DA' : '#CBD3DC'} />
-      <polygon points="0,0 320,0 280,20 40,20" fill={stage === 3 ? '#FBFAF7' : '#D5DBE3'} />
-    </svg>
-  )
-}
+const House3D = dynamic(() => import('./House3D'), {
+  ssr: false,
+  loading: () => <div style={{ height:320, borderRadius:10, border:`1px solid ${C.line2}`, background:'#E9EDF2', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:mono, fontSize:10, color:C.dim, letterSpacing:'0.1em', textTransform:'uppercase' }}>Loading the sample home…</div>,
+})
 function Stages360() {
   const [stage, setStage] = useState(0)
   const [asking, setAsking] = useState(false)
   const [sent, setSent] = useState(false)
+  const [pin, setPin] = useState<{ room: string; floor: string; heading: string; stage: number; img: string } | null>(null)
+  const [text, setText] = useState('')
+  const viewRef = useRef<ViewInfo>({ room: 'Foyer', floor: 'Main floor', heading: 'N' })
   const notes = [
     'Studs, headers and openings before anything is covered.',
     'Insulation in the exterior walls, before vapour barrier and drywall.',
     'Wiring, plumbing and ducts in place. The last look inside the walls.',
-    'The finished room on the day you take possession.',
+    'The finished home on the day you take possession.',
   ]
+  const startAsk = () => {
+    const v = viewRef.current
+    setPin({ room: v.room, floor: v.floor, heading: v.heading, stage, img: v.snap ? v.snap() : '' })
+    setAsking(true)
+  }
   return (
-    <Phone title="Your home, stage by stage" sub="360 record · Lot 48 · Great room">
+    <Phone title="Your home, stage by stage" sub="3D record · Lot 48 · Sample home">
       <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:5, marginBottom:10 }}>
         {stages.map((s, i) => (
           <button key={s} onClick={() => { setStage(i); setAsking(false); setSent(false) }} style={{ fontFamily:mono, fontSize:8.5, fontWeight:600, letterSpacing:'0.04em', textTransform:'uppercase', padding:'8px 2px', borderRadius:6, cursor:'pointer', background: i === stage ? C.navy : '#FFFFFF', color: i === stage ? '#FFFFFF' : C.steel, border:`1px solid ${i === stage ? C.navy : C.line2}` }}>{s}</button>
         ))}
       </div>
-      <div style={{ position:'relative' }}>
-        <Room stage={stage} />
-        <span style={{ position:'absolute', left:10, bottom:10 }}><Chip>360 · drag to look around</Chip></span>
-      </div>
-      <div style={{ fontSize:12, color:C.steel, lineHeight:1.5, margin:'10px 2px' }}>{notes[stage]}</div>
-      {!asking && !sent && <button style={btn(false)} onClick={() => setAsking(true)}><MessageCircleQuestion size={15} color={C.navy} /> See something wrong? Ask here</button>}
-      {asking && !sent && (
+      <House3D stage={stage} viewRef={viewRef} />
+      <div style={{ fontSize:12, color:C.steel, lineHeight:1.5, margin:'10px 2px' }}>{notes[stage]} Walk every floor and every room.</div>
+      {!asking && !sent && <button style={btn(false)} onClick={startAsk}><MessageCircleQuestion size={15} color={C.navy} /> See something wrong? Ask here</button>}
+      {asking && !sent && pin && (
         <div style={card}>
-          <div style={{ fontSize:12, fontWeight:700, color:C.ink, marginBottom:6 }}>Question about {stages[stage].toLowerCase()} · Great room</div>
-          <div style={{ fontSize:12, color:C.dim, border:`1px solid ${C.line2}`, borderRadius:8, padding:'10px 12px', minHeight:54, background:C.tile, marginBottom:8 }}>Is there supposed to be an outlet on the wall left of the window?</div>
+          <div style={{ display:'flex', gap:10, marginBottom:8 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            {pin.img && <img src={pin.img} alt="The view your question is pinned to" style={{ width:96, height:72, objectFit:'cover', borderRadius:8, border:`1px solid ${C.line2}`, flexShrink:0 }} />}
+            <div style={{ minWidth:0 }}>
+              <div style={{ display:'flex', alignItems:'center', gap:4, fontFamily:mono, fontSize:9, textTransform:'uppercase', letterSpacing:'0.08em', color:C.amberText, marginBottom:3 }}><MapPin size={11} /> Pinned to this view</div>
+              <div style={{ fontSize:12, fontWeight:700, color:C.ink, lineHeight:1.35 }}>{pin.room}</div>
+              <div style={{ fontSize:11, color:C.steel, lineHeight:1.4 }}>{pin.floor} · {stages[pin.stage]} · facing {pin.heading}</div>
+            </div>
+          </div>
+          <textarea value={text} onChange={e => setText(e.target.value)} placeholder="Is there supposed to be an outlet on this wall?" rows={3} style={{ width:'100%', fontFamily:'inherit', fontSize:12, color:C.ink, border:`1px solid ${C.line2}`, borderRadius:8, padding:'10px 12px', background:C.tile, marginBottom:8, resize:'none' }} />
           <button style={btn(true)} onClick={() => setSent(true)}>Send to my builder</button>
         </div>
       )}
       {sent && (
         <div style={{ ...card, display:'flex', gap:10, alignItems:'flex-start' }}>
           <CircleCheck size={20} color={C.green} style={{ flexShrink:0, marginTop:1 }} />
-          <div style={{ fontSize:12, color:C.steel, lineHeight:1.5 }}><strong style={{ color:C.ink }}>Sent, pinned to this view.</strong> Your builder sees exactly where you were looking. The answer appears here and in your email.</div>
+          <div style={{ fontSize:12, color:C.steel, lineHeight:1.5 }}><strong style={{ color:C.ink }}>Sent, pinned to this view.</strong> Your builder sees the room, the stage and exactly where you were looking. The answer appears here and in your email.</div>
         </div>
       )}
     </Phone>
