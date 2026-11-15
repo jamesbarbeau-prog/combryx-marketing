@@ -7,6 +7,7 @@ import ModuleCards from '@/components/ModuleCards'
 import KnowledgeGap from '@/components/KnowledgeGap'
 import OutcomeStats from '@/components/OutcomeStats'
 import StageGallery from '@/components/StageGallery'
+import ProductShots from '@/components/ProductShots'
 
 export const metadata: Metadata = {
   title: 'Builder Guardian — Warranty Management for Ontario Builders | Tarion',
@@ -90,6 +91,8 @@ export default function HomePage() {
       </section>
 
       <TrustStrip />
+
+      <ProductShots />
 
       <StageGallery />
 
